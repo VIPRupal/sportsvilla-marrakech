@@ -30,7 +30,7 @@ export const heroContent = {
   
   title: "Marrakech's No.1 Sports Villa",
   subtitle: "Luxury 6-Bedroom Villa with Private Padel Court",
-  description: "This villa is booked by those who want to train, relax, and play — all in one place.",
+  description: "",
   
   badges: [
     { text: "20 mins from Medina", icon: "MapPin" },
