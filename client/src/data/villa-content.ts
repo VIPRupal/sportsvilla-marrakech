@@ -106,6 +106,96 @@ export const testimonials = [
 ];
 
 // ==========================================
+// WHO THIS IS FOR SECTION
+// ==========================================
+export const whoThisIsForContent = {
+  sectionTitle: "Who This Villa Is For",
+  sectionSubtitle: "Designed for those who demand excellence and won't settle for ordinary",
+  
+  audiences: [
+    {
+      title: "Family trips with active teens",
+      description: "Give your family the perfect blend of relaxation and adventure with world-class sports facilities",
+      icon: "Users"
+    },
+    {
+      title: "Sports teams or corporate retreats",
+      description: "Train, bond, and perform at your best in a private setting designed for champions",
+      icon: "Trophy"
+    },
+    {
+      title: "Groups of friends who want sun, fun, and total privacy",
+      description: "Experience the ultimate getaway with your crew — no compromises, no crowds",
+      icon: "Palmtree"
+    },
+    {
+      title: "Clients used to Dubai-style service — but at ⅓ of the price",
+      description: "Enjoy five-star luxury and concierge service without the premium Dubai price tag",
+      icon: "Crown"
+    }
+  ]
+};
+
+// ==========================================
+// EXPERIENCE SECTION
+// ==========================================
+export const experienceContent = {
+  sectionTitle: "The Experience",
+  
+  experiences: [
+    "Wake up to <strong>fresh mint tea by the pool</strong>.",
+    "Play a padel match before your <strong>chef-prepared breakfast</strong>.",
+    "Train in your private gym while your friends shoot hoops.",
+    "Watch the <strong>sunset over the Atlas Mountains</strong> — from your heated pool."
+  ],
+  
+  closingStatement: "Everything is handled. From airport pickup to club bookings — we manage it all."
+};
+
+// ==========================================
+// PRICING SECTION
+// ==========================================
+export const pricingContent = {
+  sectionTitle: "Pricing & Availability",
+  
+  pricePerNight: "£850",
+  guestCount: 12,
+  pricePerPerson: "£70",
+  
+  features: [
+    "6 ensuite bedrooms with premium linens",
+    "Private padel court & basketball court",
+    "Heated Bali stone pool (30°C year-round)",
+    "Private chef & full concierge service",
+    "Mercedes Vito airport transfers"
+  ],
+  
+  badges: [
+    { text: "Only a few summer dates left!", icon: "Calendar" },
+    { text: "Klarna available", icon: "CreditCard" },
+    { text: "£100 Amazon Voucher bonus", icon: "Gift" }
+  ],
+  
+  bonusText: "Book this week and receive a £100 Amazon Voucher"
+};
+
+// ==========================================
+// VISUAL TOUR SECTION
+// ==========================================
+export const visualTourContent = {
+  sectionTitle: "Experience Luxury at Every Turn",
+  sectionSubtitle: "From sunrise workouts to sunset pool sessions — discover what makes this villa extraordinary"
+};
+
+// ==========================================
+// TESTIMONIALS SECTION
+// ==========================================
+export const testimonialsContent = {
+  sectionTitle: "What Our Guests Say",
+  sectionSubtitle: "Real experiences from families, athletes, and groups who've stayed with us"
+};
+
+// ==========================================
 // WHATSAPP CONFIGURATION
 // ==========================================
 export const whatsappConfig = {

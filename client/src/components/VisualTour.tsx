@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { galleryImages } from "@/data/villa-content";
+import { galleryImages, visualTourContent } from "@/data/villa-content";
 
 export default function VisualTour() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
@@ -9,10 +9,10 @@ export default function VisualTour() {
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-foreground">
-            Experience Luxury at Every Turn
+            {visualTourContent.sectionTitle}
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            From sunrise workouts to sunset pool sessions — discover what makes this villa extraordinary
+            {visualTourContent.sectionSubtitle}
           </p>
         </div>
         
