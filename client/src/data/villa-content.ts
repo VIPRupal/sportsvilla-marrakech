@@ -28,8 +28,8 @@ export const heroContent = {
   // IMAGE OPTION: Used when videoUrl is empty
   backgroundImage: heroImage,
   
-  title: "Marrakesh's #1 Sports Villa Experience",
-  subtitle: "Private 6-Bedroom Villa with Padel Court, Heated Pool & Chef Service",
+  title: "Marrakesh's #1 Sports Villa",
+  subtitle: "Luxury 6-Bedroom Villa with Private Padel Court",
   description: "This villa is booked by athletes, influencers, and elite families who want to train, relax, and play — all in one place.",
   
   badges: [
