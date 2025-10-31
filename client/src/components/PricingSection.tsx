@@ -19,9 +19,9 @@ export default function PricingSection() {
   };
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-card">
+    <section className="py-12 md:py-16 lg:py-20 bg-card">
       <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-card-foreground">
             {pricingContent.sectionTitle}
           </h2>
