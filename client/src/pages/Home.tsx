@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import VisualTour from "@/components/VisualTour";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import ExperienceSection from "@/components/ExperienceSection";
+import OurTeamSection from "@/components/OurTeamSection";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -13,6 +14,7 @@ export default function Home() {
       <VisualTour />
       <WhoThisIsFor />
       <ExperienceSection />
+      <OurTeamSection />
       <PricingSection />
       <TestimonialsSection />
       <WhatsAppButton />

@@ -153,6 +153,22 @@ export const experienceContent = {
 };
 
 // ==========================================
+// OUR TEAM SECTION
+// ==========================================
+export const ourTeamContent = {
+  sectionTitle: "Our Team",
+  description: "10yrs plus experience in Luxury Villa rentals in Marrakech. Our mission is to make client trips unforgettable."
+};
+
+// ==========================================
+// SOCIAL MEDIA LINKS
+// ==========================================
+export const socialLinks = {
+  instagram: "https://www.instagram.com/thevipgroups",
+  website: "https://www.vipatmarrakech.com"
+};
+
+// ==========================================
 // PRICING SECTION
 // ==========================================
 export const pricingContent = {
