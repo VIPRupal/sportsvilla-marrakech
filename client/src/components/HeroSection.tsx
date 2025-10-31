@@ -12,14 +12,15 @@ export default function HeroSection() {
       {heroContent.videoUrl ? (
         <div className="absolute inset-0">
           <video
-            controls
+            autoPlay
             loop
+            muted
             playsInline
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20 pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20" />
         </div>
       ) : (
         <div 
