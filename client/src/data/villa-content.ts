@@ -30,7 +30,7 @@ export const heroContent = {
   
   title: "Marrakesh's #1 Sports Villa",
   subtitle: "Luxury 6-Bedroom Villa with Private Padel Court",
-  description: "This villa is booked by families, couples, and companies who want to train, relax, and play - all in one place.",
+  description: "This villa is booked by families, couples, and companies who want to train, relax, and play — all in one place.",
   
   badges: [
     { text: "20 mins from Medina", icon: "MapPin" },
@@ -158,15 +158,15 @@ export const experienceContent = {
 export const pricingContent = {
   sectionTitle: "Pricing & Availability",
   
-  pricePerNight: "£850",
+  pricePerNight: "£650",
   guestCount: 12,
-  pricePerPerson: "£70",
+  pricePerPerson: "£55",
   
   features: [
     "6 ensuite bedrooms with premium linens",
     "Private padel court & basketball court",
     "Heated Bali stone pool (30°C year-round)",
-    "Private chef & full concierge service",
+    "Private Cook & Maid service",
     "Mercedes Vito airport transfers"
   ],
   
