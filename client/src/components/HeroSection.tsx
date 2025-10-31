@@ -4,7 +4,7 @@ import { MapPin, Users, Home, Volume2, VolumeX } from "lucide-react";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 
 export default function HeroSection() {
-  const [isMuted, setIsMuted] = useState(false);
+  const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
   
   const whatsappNumber = whatsappConfig.phoneNumber;
