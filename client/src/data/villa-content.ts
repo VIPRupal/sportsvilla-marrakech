@@ -29,7 +29,7 @@ export const heroContent = {
   backgroundImage: "",
   
   title: "Marrakech's No.1 Sports Villa",
-  subtitle: "Luxury 6-Bedroom Villa with Private Padel Court",
+  subtitle: "Luxury 6-Bed Villa with Padel Court",
   description: "",
   
   badges: [
