@@ -13,8 +13,6 @@ import padelImage from "@assets/generated_images/Pristine_padel_court_sunset_48c
 import basketballImage from "@assets/generated_images/Basketball_court_dramatic_lighting_3860707c.png";
 import outdoorTvImage from "@assets/generated_images/Outdoor_TV_entertainment_area_b52a60cb.png";
 import chefImage from "@assets/generated_images/Private_chef_plating_gourmet_103305f4.png";
-import bedroomImage from "@assets/generated_images/Luxury_ensuite_bedroom_1ba22fc6.png";
-import mercedesImage from "@assets/generated_images/Mercedes_Vito_luxury_transfer_39ea95cd.png";
 import gymImage from "@assets/generated_images/Luxury_home_gym_equipment_91ef8979.png";
 
 // ==========================================
@@ -69,14 +67,6 @@ export const galleryImages = [
   {
     src: gymImage,
     caption: "Fully-equipped gym with Atlas Mountain views"
-  },
-  {
-    src: bedroomImage,
-    caption: "6 beautiful ensuite bedrooms with premium linens"
-  },
-  {
-    src: mercedesImage,
-    caption: "Mercedes Vito airport transfers included"
   }
 ];
 
