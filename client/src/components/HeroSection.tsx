@@ -83,24 +83,23 @@ export default function HeroSection() {
       )}
       
       {/* Content Layout - Split Design */}
-      <div className="relative z-10 h-full flex flex-col">
-        {/* Title Bar at Top */}
-        <div className="w-full pt-20 pb-4 px-4 md:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="font-serif font-bold text-2xl md:text-3xl lg:text-4xl text-white text-center md:text-left leading-tight drop-shadow-lg">
+      <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-center px-4 md:px-6 lg:px-8">
+        {/* Centered Title */}
+        <div className="flex-1 flex items-center justify-center text-center">
+          <div>
+            <h1 className="font-serif font-bold text-xl md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
               {heroContent.title}
             </h1>
-            <p className="text-sm md:text-base lg:text-lg text-white/90 mt-1 text-center md:text-left drop-shadow-md">
+            <p className="text-xs md:text-sm lg:text-base text-white/90 mt-1 drop-shadow-md">
               {heroContent.subtitle}
             </p>
           </div>
         </div>
 
-        {/* Main Content Area - Mobile: Stacked, Desktop: Side Panel */}
-        <div className="flex-1 flex items-end md:items-center justify-center md:justify-end px-4 md:px-6 lg:px-8 pb-8 md:pb-0">
-          <div className="w-full md:w-auto md:mr-8 lg:mr-12">
-            {/* Info Card */}
-            <div className="bg-black/50 backdrop-blur-md rounded-lg p-4 md:p-6 border border-white/20 mx-auto md:mx-0">
+        {/* Info Card - Desktop: Right Side, Mobile: Bottom */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:relative md:bottom-auto md:left-auto md:translate-x-0 md:flex-shrink-0">
+          {/* Info Card */}
+          <div className="bg-black/50 backdrop-blur-md rounded-lg p-4 md:p-6 border border-white/20">
               {/* Feature Badges */}
               <div className="flex items-center justify-center gap-2 md:gap-3 mb-4 overflow-x-auto">
                 {heroContent.badges.map((badge, index) => {
@@ -126,14 +125,6 @@ export default function HeroSection() {
                   {heroContent.ctaText}
                 </a>
               </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
-          <div className="w-6 h-10 rounded-full border-2 border-white/50 flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-white/70 rounded-full" />
           </div>
         </div>
       </div>
