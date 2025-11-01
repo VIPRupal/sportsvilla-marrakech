@@ -2,7 +2,7 @@ import { experienceContent } from "@/data/villa-content";
 
 export default function ExperienceSection() {
   return (
-    <section className="py-6 md:py-8 lg:py-10 bg-background">
+    <section className="py-8 md:py-10 lg:py-12 bg-background">
       <div className="max-w-4xl mx-auto px-4 md:px-6">
         <div className="text-center mb-4">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold mb-3 text-foreground">
