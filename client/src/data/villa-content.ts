@@ -37,7 +37,7 @@ export const heroContent = {
   badges: [
     { text: "Padel, Pool, Basketball, Gym", icon: "Dumbbell" },
     { text: "Sleeps 12", icon: "Users" },
-    { text: "From £650/night", icon: "Home" }
+    { text: "From £600/night", icon: "Home" }
   ],
   
   ctaText: "Get Instant Quote Via WhatsApp"
