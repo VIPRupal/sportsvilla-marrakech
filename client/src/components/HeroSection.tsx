@@ -40,14 +40,13 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <video
             ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            webkit-playsinline="true"
-            disablePictureInPicture
-            disableRemotePlayback
-            className="absolute inset-0 w-full h-full object-cover [&::-webkit-media-controls]:!hidden [&::-webkit-media-controls-enclosure]:!hidden"
+            autoPlay={true}
+            loop={true}
+            muted={true}
+            playsInline={true}
+            disablePictureInPicture={true}
+            disableRemotePlayback={true}
+            className="absolute inset-0 w-full h-full object-cover"
             style={{ pointerEvents: 'none' }}
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
