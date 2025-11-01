@@ -71,27 +71,27 @@ export default function VisualTour() {
             </div>
           </div>
           
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - smaller on mobile to prevent overlap */}
           <Button
             size="icon"
             variant="outline"
-            className="absolute left-4 md:left-2 top-1/2 -translate-y-1/2 md:-translate-x-full z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
+            className="absolute left-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-9 md:h-9 md:left-2 md:-translate-x-full bg-white/95 backdrop-blur-sm border-white/30 shadow-lg p-1"
             onClick={scrollPrev}
             aria-label="Previous slide"
             data-testid="button-carousel-prev"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
           </Button>
           
           <Button
             size="icon"
             variant="outline"
-            className="absolute right-4 md:right-2 top-1/2 -translate-y-1/2 md:translate-x-full z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
+            className="absolute right-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-9 md:h-9 md:right-2 md:translate-x-full bg-white/95 backdrop-blur-sm border-white/30 shadow-lg p-1"
             onClick={scrollNext}
             aria-label="Next slide"
             data-testid="button-carousel-next"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
           </Button>
         </div>
       </div>
