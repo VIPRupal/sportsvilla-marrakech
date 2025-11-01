@@ -36,17 +36,17 @@ export default function VisualTour() {
           </p>
         </div>
         
-        <div className="relative">
+        <div className="relative md:mx-12">
           {/* Carousel Container */}
-          <div className="overflow-hidden mx-12 md:mx-16" ref={emblaRef}>
-            <div className="flex gap-3 md:gap-4">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-0 md:gap-4">
               {galleryImages.map((image, index) => (
                 <div
                   key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_calc(50%-0.75rem)] lg:flex-[0_0_calc(33.333%-1rem)] min-w-0"
+                  className="flex-[0_0_100%] md:flex-[0_0_calc(50%-1rem)] lg:flex-[0_0_calc(33.333%-1.33rem)] min-w-0"
                 >
                   <div
-                    className="group relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer hover-elevate active-elevate-2"
+                    className="group relative aspect-[4/3] overflow-hidden cursor-pointer hover-elevate active-elevate-2 md:rounded-lg"
                     onClick={() => setSelectedImage(index)}
                     data-testid={`image-gallery-${index}`}
                   >
@@ -68,11 +68,11 @@ export default function VisualTour() {
             </div>
           </div>
           
-          {/* Navigation Arrows - positioned outside the carousel */}
+          {/* Navigation Arrows - overlay on mobile, outside on desktop */}
           <Button
             size="icon"
             variant="outline"
-            className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
+            className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
             onClick={scrollPrev}
             aria-label="Previous slide"
             data-testid="button-carousel-prev"
@@ -83,7 +83,7 @@ export default function VisualTour() {
           <Button
             size="icon"
             variant="outline"
-            className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
+            className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
             onClick={scrollNext}
             aria-label="Next slide"
             data-testid="button-carousel-next"
