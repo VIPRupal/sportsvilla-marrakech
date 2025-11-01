@@ -1,5 +1,31 @@
 import { ourTeamContent } from "@/data/villa-content";
-import { Check } from "lucide-react";
+
+function WhatsAppCheck() {
+  return (
+    <svg 
+      width="20" 
+      height="20" 
+      viewBox="0 0 20 20" 
+      fill="none" 
+      className="flex-shrink-0 mt-0.5"
+    >
+      <path 
+        d="M4 10L8 14L16 6" 
+        stroke="#25D366" 
+        strokeWidth="2.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+      />
+      <path 
+        d="M7 10L11 14L19 6" 
+        stroke="#25D366" 
+        strokeWidth="2.5" 
+        strokeLinecap="round" 
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function OurTeamSection() {
   return (
@@ -11,7 +37,7 @@ export default function OurTeamSection() {
         <div className="space-y-4">
           {ourTeamContent.benefits.map((benefit, index) => (
             <div key={index} className="flex items-start gap-3" data-testid={`benefit-${index}`}>
-              <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+              <WhatsAppCheck />
               <p 
                 className="text-base md:text-lg text-card-foreground leading-relaxed"
                 dangerouslySetInnerHTML={{ __html: benefit }}
