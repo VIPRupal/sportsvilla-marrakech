@@ -125,22 +125,22 @@ export const whoThisIsForContent = {
   audiences: [
     {
       title: "5 star sports facilities",
-      description: "World-class padel court, basketball court, and fully-equipped gym designed for champions.",
+      description: "Padel court, basketball court, and fully-equipped gym.",
       icon: "Trophy"
     },
     {
       title: "Only 20mins from Medina",
-      description: "Close enough to explore Marrakech's vibrant souks and culture, far enough for peace and privacy.",
+      description: "Close to Marrakech's souks and culture, far enough for privacy.",
       icon: "MapPin"
     },
     {
-      title: "Maid, Cook and 24/7 Security Included",
-      description: "Wake up to fresh Moroccan breakfast, daily housekeeping, and round-the-clock professional security ensuring your complete comfort and safety.",
+      title: "Maid, Cook & 24/7 Security",
+      description: "Fresh breakfast daily, housekeeping, and professional security.",
       icon: "Shield"
     },
     {
       title: "Spacious Living Area",
-      description: "6 double bedrooms and generous living spaces perfect for families or groups of up to 12 guests.",
+      description: "6 double bedrooms for families or groups up to 12 guests.",
       icon: "Home"
     }
   ]
