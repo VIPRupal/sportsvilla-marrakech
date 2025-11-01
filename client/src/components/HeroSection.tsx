@@ -19,7 +19,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-[70vh] md:h-[75vh] lg:h-[80vh] w-full overflow-hidden">
       {/* Video Background - Full Screen */}
       {heroContent.videoUrl ? (
         <div className="absolute inset-0">
