@@ -19,7 +19,8 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen w-full overflow-hidden">
+      {/* Video Background - Full Screen */}
       {heroContent.videoUrl ? (
         <div className="absolute inset-0">
           <video
@@ -32,43 +33,43 @@ export default function HeroSection() {
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/30" />
           
           {/* Mute/Unmute Button */}
           <button
             onClick={toggleMute}
-            className="absolute top-6 right-6 z-20 bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
+            className="absolute top-4 right-4 z-20 bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-2.5 rounded-full transition-all duration-200 hover:scale-110"
             aria-label={isMuted ? "Unmute video" : "Mute video"}
             data-testid="button-video-mute"
           >
             {isMuted ? (
-              <VolumeX className="w-6 h-6" />
+              <VolumeX className="w-5 h-5" />
             ) : (
-              <Volume2 className="w-6 h-6" />
+              <Volume2 className="w-5 h-5" />
             )}
           </button>
-          
+
           {/* Social Media Links */}
-          <div className="absolute top-6 left-6 z-20 flex gap-3">
+          <div className="absolute top-4 left-4 z-20 flex gap-2">
             <a
               href={socialLinks.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
+              className="bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-2.5 rounded-full transition-all duration-200 hover:scale-110"
               aria-label="Visit our Instagram"
               data-testid="link-instagram"
             >
-              <Instagram className="w-6 h-6" />
+              <Instagram className="w-5 h-5" />
             </a>
             <a
               href={socialLinks.website}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
+              className="bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-2.5 rounded-full transition-all duration-200 hover:scale-110"
               aria-label="Visit our website"
               data-testid="link-website"
             >
-              <Globe className="w-6 h-6" />
+              <Globe className="w-5 h-5" />
             </a>
           </div>
         </div>
@@ -77,75 +78,62 @@ export default function HeroSection() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroContent.backgroundImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
-          
-          {/* Social Media Links */}
-          <div className="absolute top-6 left-6 z-20 flex gap-3">
-            <a
-              href={socialLinks.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
-              aria-label="Visit our Instagram"
-              data-testid="link-instagram"
-            >
-              <Instagram className="w-6 h-6" />
-            </a>
-            <a
-              href={socialLinks.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-black/50 hover:bg-black/70 backdrop-blur-sm text-white p-3 rounded-full transition-all duration-200 hover:scale-110"
-              aria-label="Visit our website"
-              data-testid="link-website"
-            >
-              <Globe className="w-6 h-6" />
-            </a>
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/30" />
         </div>
       )}
       
-      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-6 text-center text-white">
-        <h1 className="font-serif font-bold text-2xl md:text-3xl lg:text-4xl mb-3 leading-tight">
-          {heroContent.title}
-        </h1>
-        
-        <p className="text-base md:text-lg font-medium mb-2">
-          {heroContent.subtitle}
-        </p>
-        
-        {heroContent.description && (
-          <p className="text-base md:text-lg mb-6 max-w-3xl mx-auto leading-relaxed opacity-95">
-            "{heroContent.description}"
-          </p>
-        )}
-        
-        <div className="flex flex-wrap items-center justify-center gap-2 md:gap-3 max-w-3xl mx-auto mb-6">
-          {heroContent.badges.map((badge, index) => {
-            const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : Home;
-            return (
-              <div key={index} className="flex items-center gap-1.5 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
-                <IconComponent className="w-3 h-3" />
-                <span className="text-xs font-medium">{badge.text}</span>
+      {/* Content Layout - Split Design */}
+      <div className="relative z-10 h-full flex flex-col">
+        {/* Title Bar at Top */}
+        <div className="w-full pt-20 pb-4 px-4 md:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <h1 className="font-serif font-bold text-2xl md:text-3xl lg:text-4xl text-white text-center md:text-left leading-tight drop-shadow-lg">
+              {heroContent.title}
+            </h1>
+            <p className="text-sm md:text-base lg:text-lg text-white/90 mt-1 text-center md:text-left drop-shadow-md">
+              {heroContent.subtitle}
+            </p>
+          </div>
+        </div>
+
+        {/* Main Content Area - Mobile: Stacked, Desktop: Side Panel */}
+        <div className="flex-1 flex items-end md:items-center justify-center md:justify-end px-4 md:px-6 lg:px-8 pb-8 md:pb-0">
+          <div className="w-full md:w-auto md:mr-8 lg:mr-12">
+            {/* Info Card */}
+            <div className="bg-black/50 backdrop-blur-md rounded-lg p-4 md:p-6 border border-white/20 max-w-sm mx-auto md:mx-0">
+              {/* Feature Badges */}
+              <div className="space-y-2 mb-4">
+                {heroContent.badges.map((badge, index) => {
+                  const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : Home;
+                  return (
+                    <div key={index} className="flex items-center gap-2 text-white">
+                      <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="w-4 h-4" />
+                      </div>
+                      <span className="text-sm font-medium">{badge.text}</span>
+                    </div>
+                  );
+                })}
               </div>
-            );
-          })}
+              
+              {/* WhatsApp CTA */}
+              <Button 
+                asChild
+                variant="outline"
+                size="default"
+                className="w-full text-xs md:text-sm bg-white/95 backdrop-blur-sm text-foreground hover:bg-white border-white/30"
+                data-testid="button-whatsapp-hero"
+              >
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                  {heroContent.ctaText}
+                </a>
+              </Button>
+            </div>
+          </div>
         </div>
-        
-        <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-          <Button 
-            asChild
-            size="default" 
-            className="text-sm md:text-base px-6 bg-white/95 backdrop-blur-sm text-foreground hover:bg-white border border-white/30"
-            data-testid="button-whatsapp-hero"
-          >
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-              {heroContent.ctaText}
-            </a>
-          </Button>
-        </div>
-        
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
           <div className="w-6 h-10 rounded-full border-2 border-white/50 flex items-start justify-center p-2">
             <div className="w-1 h-3 bg-white/70 rounded-full" />
           </div>
