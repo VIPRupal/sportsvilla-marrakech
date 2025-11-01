@@ -13,8 +13,8 @@ export default function Home() {
       <HeroSection />
       <VisualTour />
       <WhoThisIsFor />
-      <OurTeamSection />
       <PricingSection />
+      <OurTeamSection />
       <TestimonialsSection />
       <WhatsAppButton />
       <Footer />
