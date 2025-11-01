@@ -29,11 +29,11 @@ export const heroContent = {
   backgroundImage: "",
   
   title: "Marrakech's No.1 Sports Villa",
-  subtitle: "Luxury 6-Bed Villa with Padel Court",
+  subtitle: "Luxury 6-Bed Villa with Private Padel Court",
   description: "",
   
   badges: [
-    { text: "20 mins from Medina", icon: "MapPin" },
+    { text: "Padel, Basketball, Gym", icon: "Dumbbell" },
     { text: "Sleeps 12", icon: "Users" },
     { text: "From £650/night", icon: "Home" }
   ],
