@@ -13,17 +13,41 @@ export default function HeroSection() {
 
   // Ensure video autoplays on mount
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(error => {
-        console.log("Autoplay prevented:", error);
-      });
-    }
+    const playVideo = async () => {
+      if (videoRef.current) {
+        try {
+          videoRef.current.muted = true; // Ensure muted before playing
+          await videoRef.current.play();
+        } catch (error) {
+          console.log("Autoplay prevented:", error);
+          // Retry after a small delay
+          setTimeout(() => {
+            if (videoRef.current) {
+              videoRef.current.play().catch(() => {
+                // Final attempt on user interaction
+                const handleInteraction = () => {
+                  if (videoRef.current) {
+                    videoRef.current.play();
+                    document.removeEventListener('click', handleInteraction);
+                    document.removeEventListener('touchstart', handleInteraction);
+                  }
+                };
+                document.addEventListener('click', handleInteraction, { once: true });
+                document.addEventListener('touchstart', handleInteraction, { once: true });
+              });
+            }
+          }, 100);
+        }
+      }
+    };
+    playVideo();
   }, []);
 
   const toggleMute = () => {
     if (videoRef.current) {
-      videoRef.current.muted = !videoRef.current.muted;
-      setIsMuted(!isMuted);
+      const newMutedState = !isMuted;
+      videoRef.current.muted = newMutedState;
+      setIsMuted(newMutedState);
     }
   };
 
@@ -36,8 +60,9 @@ export default function HeroSection() {
             ref={videoRef}
             autoPlay
             loop
-            muted={isMuted}
+            muted
             playsInline
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
