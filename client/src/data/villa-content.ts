@@ -38,7 +38,7 @@ export const heroContent = {
     { text: "From £650/night", icon: "Home" }
   ],
   
-  ctaText: "Chat to our team via WhatsApp"
+  ctaText: "Check Availability"
 };
 
 // ==========================================
