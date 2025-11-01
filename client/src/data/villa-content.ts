@@ -119,7 +119,7 @@ export const testimonials = [
 // WHO THIS IS FOR SECTION
 // ==========================================
 export const whoThisIsForContent = {
-  sectionTitle: "Who This Villa Is For",
+  sectionTitle: "Why This Villa?",
   sectionSubtitle: "Designed for those who demand excellence and won't settle for ordinary",
   
   audiences: [
@@ -166,7 +166,7 @@ export const experienceContent = {
 // OUR TEAM SECTION
 // ==========================================
 export const ourTeamContent = {
-  sectionTitle: "Our Team",
+  sectionTitle: "Why Book With Us?",
   description: "10yrs plus experience in Luxury Villa rentals in Marrakech. Our mission is to make client trips unforgettable."
 };
 
@@ -213,7 +213,6 @@ export const pricingContent = {
     "Heated Bali stone pool",
     "Outdoor TV & Gym",
     "Private Cook & Maid service",
-    "Mercedes Vito airport transfers included"
   ],
   
   badges: [
