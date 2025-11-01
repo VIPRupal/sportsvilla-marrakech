@@ -14,6 +14,10 @@ import basketballImage from "@assets/generated_images/Basketball_court_dramatic_
 import outdoorTvImage from "@assets/generated_images/Outdoor_TV_entertainment_area_b52a60cb.png";
 import chefImage from "@assets/generated_images/Private_chef_plating_gourmet_103305f4.png";
 import gymImage from "@assets/generated_images/Luxury_home_gym_equipment_91ef8979.png";
+import spaImage from "@assets/generated_images/Moroccan_spa_wellness_area_51eb9dac.png";
+import diningImage from "@assets/generated_images/Outdoor_dining_terrace_setup_b6468dbc.png";
+import loungeImage from "@assets/generated_images/Modern_villa_living_lounge_848444ab.png";
+import rooftopImage from "@assets/generated_images/Rooftop_terrace_mountain_views_b408a868.png";
 
 // ==========================================
 // HERO SECTION
@@ -31,12 +35,12 @@ export const heroContent = {
   description: "",
   
   badges: [
-    { text: "Padel, Pool, Basketball, Gym", icon: "Dumbbell" },
+    { text: "Heated pool, Basketball, Gym", icon: "Dumbbell" },
     { text: "Sleeps 12", icon: "Users" },
     { text: "From £650/night", icon: "Home" }
   ],
   
-  ctaText: "Get Instant Quote on WhatsApp"
+  ctaText: "Check Availability"
 };
 
 // ==========================================
@@ -67,6 +71,22 @@ export const galleryImages = [
   {
     src: gymImage,
     caption: "Fully-equipped gym with Atlas Mountain views"
+  },
+  {
+    src: spaImage,
+    caption: "Traditional Moroccan spa and hammam for ultimate relaxation"
+  },
+  {
+    src: diningImage,
+    caption: "Outdoor dining terrace with Atlas Mountain views"
+  },
+  {
+    src: loungeImage,
+    caption: "Spacious living lounge with modern Moroccan design"
+  },
+  {
+    src: rooftopImage,
+    caption: "Rooftop terrace with panoramic mountain sunset views"
   }
 ];
 
