@@ -19,51 +19,51 @@ export default function PricingSection() {
   };
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-card">
+    <section className="py-6 md:py-8 lg:py-10 bg-card">
       <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-8">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-card-foreground">
+        <div className="text-center mb-4">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-card-foreground">
             {pricingContent.sectionTitle}
           </h2>
         </div>
         
-        <Card className="p-8 md:p-12 border-2 border-primary/20">
-          <div className="text-center mb-8">
-            <div className="flex items-baseline justify-center gap-2 mb-2">
-              <span className="text-4xl md:text-6xl font-bold text-card-foreground">{pricingContent.pricePerNight}</span>
-              <span className="text-xl md:text-2xl text-muted-foreground">/night</span>
+        <Card className="p-6 md:p-8 border-2 border-primary/20">
+          <div className="text-center mb-4">
+            <div className="flex items-baseline justify-center gap-2 mb-1">
+              <span className="text-3xl md:text-5xl font-bold text-card-foreground">{pricingContent.pricePerNight}</span>
+              <span className="text-lg md:text-xl text-muted-foreground">/night</span>
             </div>
-            <p className="text-base md:text-lg text-muted-foreground">
+            <p className="text-sm md:text-base text-muted-foreground">
               Sleeps {pricingContent.guestCount} = <span className="font-semibold text-primary">{pricingContent.pricePerPerson} per person</span>
             </p>
           </div>
           
-          <div className="space-y-4 mb-8">
+          <div className="space-y-2 mb-4">
             {pricingContent.features.map((feature, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <Check className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <span className="text-base md:text-lg text-card-foreground">{feature}</span>
+              <div key={index} className="flex items-start gap-2">
+                <Check className="w-4 h-4 text-primary flex-shrink-0 mt-1" />
+                <span className="text-sm md:text-base text-card-foreground">{feature}</span>
               </div>
             ))}
           </div>
           
-          <div className="flex flex-wrap gap-3 justify-center mb-8">
+          <div className="flex flex-wrap gap-2 justify-center mb-4">
             {pricingContent.badges.map((badge, index) => {
               const IconComponent = getIcon(badge.icon);
               return (
-                <Badge key={index} variant={index === pricingContent.badges.length - 1 ? "default" : "secondary"} className="px-4 py-2 text-sm">
-                  <IconComponent className="w-4 h-4 mr-2" />
+                <Badge key={index} variant={index === pricingContent.badges.length - 1 ? "default" : "secondary"} className="px-3 py-1 text-xs md:text-sm">
+                  <IconComponent className="w-3 h-3 mr-1" />
                   {badge.text}
                 </Badge>
               );
             })}
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Button 
               asChild
               size="lg" 
-              className="flex-1 text-base md:text-lg"
+              className="flex-1 text-sm md:text-base"
               data-testid="button-whatsapp-pricing"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
@@ -72,7 +72,7 @@ export default function PricingSection() {
             </Button>
           </div>
           
-          <p className="text-center text-sm text-muted-foreground mt-6">
+          <p className="text-center text-xs md:text-sm text-muted-foreground mt-3">
             {pricingContent.bonusText}
           </p>
         </Card>

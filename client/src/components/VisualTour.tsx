@@ -5,18 +5,18 @@ export default function VisualTour() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   return (
-    <section className="py-12 md:py-16 lg:py-20 bg-background">
+    <section className="py-6 md:py-8 lg:py-10 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 text-foreground">
+        <div className="text-center mb-4 md:mb-6">
+          <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-foreground">
             {visualTourContent.sectionTitle}
           </h2>
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
             {visualTourContent.sectionSubtitle}
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
           {galleryImages.map((image, index) => (
             <div
               key={index}
