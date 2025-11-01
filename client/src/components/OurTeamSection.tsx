@@ -12,9 +12,10 @@ export default function OurTeamSection() {
           {ourTeamContent.benefits.map((benefit, index) => (
             <div key={index} className="flex items-start gap-3" data-testid={`benefit-${index}`}>
               <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-base md:text-lg text-card-foreground leading-relaxed">
-                {benefit}
-              </p>
+              <p 
+                className="text-base md:text-lg text-card-foreground leading-relaxed"
+                dangerouslySetInnerHTML={{ __html: benefit }}
+              />
             </div>
           ))}
         </div>

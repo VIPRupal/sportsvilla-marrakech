@@ -168,10 +168,10 @@ export const experienceContent = {
 export const ourTeamContent = {
   sectionTitle: "Why Book With Us?",
   benefits: [
-    "Personal concierge service - from airport transfers to the best activities we have it covered.",
-    "Instant response on WhatsApp - no waiting days for replies",
-    "UK & Marrakech based teams - to provide the same high level of service all the way through your trip.",
-    "Best Price Guarantee - found it cheaper on AIRBNB? We'll match it."
+    "<strong>Personal concierge service</strong> - from airport transfers to the best activities we have it covered.",
+    "<strong>Instant response on WhatsApp</strong> - no waiting days for replies",
+    "<strong>UK & Marrakech based teams</strong> - to provide the same high level of service all the way through your trip.",
+    "<strong>Best Price Guarantee</strong> - found it cheaper on AIRBNB? We'll match it."
   ]
 };
 
