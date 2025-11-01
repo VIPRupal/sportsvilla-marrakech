@@ -25,7 +25,7 @@ export default function VisualTour() {
   }, [emblaApi]);
 
   return (
-    <section className="py-8 md:py-10 lg:py-12 bg-background">
+    <section className="pt-8 pb-4 md:pt-10 md:pb-6 lg:pt-12 lg:pb-8 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6 mb-4 md:mb-6">
         <div className="text-center">
           <h2 className="font-serif text-2xl md:text-3xl lg:text-4xl font-semibold mb-2 text-foreground">
