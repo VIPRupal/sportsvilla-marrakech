@@ -100,17 +100,15 @@ export default function HeroSection() {
         <div className="flex-1 flex items-end md:items-center justify-center md:justify-end px-4 md:px-6 lg:px-8 pb-8 md:pb-0">
           <div className="w-full md:w-auto md:mr-8 lg:mr-12">
             {/* Info Card */}
-            <div className="bg-black/50 backdrop-blur-md rounded-lg p-4 md:p-6 border border-white/20 max-w-sm mx-auto md:mx-0">
+            <div className="bg-black/50 backdrop-blur-md rounded-lg p-4 md:p-6 border border-white/20 mx-auto md:mx-0">
               {/* Feature Badges */}
-              <div className="space-y-2 mb-4">
+              <div className="flex flex-wrap items-center justify-center gap-3 mb-4">
                 {heroContent.badges.map((badge, index) => {
                   const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : Home;
                   return (
-                    <div key={index} className="flex items-center gap-2 text-white">
-                      <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-4 h-4" />
-                      </div>
-                      <span className="text-sm font-medium">{badge.text}</span>
+                    <div key={index} className="flex items-center gap-1.5 text-white">
+                      <IconComponent className="w-4 h-4 flex-shrink-0" />
+                      <span className="text-xs md:text-sm font-medium whitespace-nowrap">{badge.text}</span>
                     </div>
                   );
                 })}
