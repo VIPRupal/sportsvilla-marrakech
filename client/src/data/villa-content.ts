@@ -33,7 +33,7 @@ export const heroContent = {
   description: "",
   
   badges: [
-    { text: "Padel, Basketball, Gym", icon: "Dumbbell" },
+    { text: "Heated pool, Basketball, Gym", icon: "Dumbbell" },
     { text: "Sleeps 12", icon: "Users" },
     { text: "From £650/night", icon: "Home" }
   ],
