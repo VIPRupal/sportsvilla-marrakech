@@ -38,7 +38,7 @@ export default function VisualTour() {
         
         <div className="relative">
           {/* Carousel Container */}
-          <div className="overflow-hidden" ref={emblaRef}>
+          <div className="overflow-hidden mx-12 md:mx-16" ref={emblaRef}>
             <div className="flex gap-3 md:gap-4">
               {galleryImages.map((image, index) => (
                 <div
@@ -68,11 +68,11 @@ export default function VisualTour() {
             </div>
           </div>
           
-          {/* Navigation Arrows */}
+          {/* Navigation Arrows - positioned outside the carousel */}
           <Button
             size="icon"
             variant="outline"
-            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
+            className="absolute left-0 md:left-2 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
             onClick={scrollPrev}
             aria-label="Previous slide"
             data-testid="button-carousel-prev"
@@ -83,7 +83,7 @@ export default function VisualTour() {
           <Button
             size="icon"
             variant="outline"
-            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
+            className="absolute right-0 md:right-2 top-1/2 -translate-y-1/2 z-10 bg-white/95 backdrop-blur-sm border-white/30 shadow-lg"
             onClick={scrollNext}
             aria-label="Next slide"
             data-testid="button-carousel-next"
