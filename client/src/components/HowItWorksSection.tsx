@@ -14,40 +14,40 @@ export default function HowItWorksSection() {
           </p>
         </div>
         
-        <Card className="p-3 md:p-6">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-3 md:mb-4">
-            <div className="flex items-center text-center md:text-left">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs md:text-sm font-bold text-primary-foreground">1</span>
+        <Card className="p-2 md:p-6">
+          <div className="flex flex-row items-center justify-between gap-1 md:gap-4 mb-2 md:mb-4">
+            <div className="flex items-center flex-1">
+              <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                <div className="w-5 h-5 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-[10px] md:text-sm font-bold text-primary-foreground">1</span>
                 </div>
-                <p className="text-xs md:text-sm text-card-foreground">
+                <p className="text-[9px] md:text-sm text-card-foreground text-center md:text-left">
                   Choose your travel dates and group size
                 </p>
               </div>
             </div>
             
-            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 rotate-90 md:rotate-0" />
+            <ArrowRight className="w-3 h-3 md:w-5 md:h-5 text-primary flex-shrink-0" />
             
-            <div className="flex items-center text-center md:text-left">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs md:text-sm font-bold text-primary-foreground">2</span>
+            <div className="flex items-center flex-1">
+              <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                <div className="w-5 h-5 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-[10px] md:text-sm font-bold text-primary-foreground">2</span>
                 </div>
-                <p className="text-xs md:text-sm text-card-foreground">
+                <p className="text-[9px] md:text-sm text-card-foreground text-center md:text-left">
                   Pay a deposit based on your length of stay
                 </p>
               </div>
             </div>
             
-            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 rotate-90 md:rotate-0" />
+            <ArrowRight className="w-3 h-3 md:w-5 md:h-5 text-primary flex-shrink-0" />
             
-            <div className="flex items-center text-center md:text-left">
-              <div className="flex items-center gap-2">
-                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs md:text-sm font-bold text-primary-foreground">3</span>
+            <div className="flex items-center flex-1">
+              <div className="flex flex-col md:flex-row items-center gap-1 md:gap-2">
+                <div className="w-5 h-5 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-[10px] md:text-sm font-bold text-primary-foreground">3</span>
                 </div>
-                <p className="text-xs md:text-sm text-card-foreground">
+                <p className="text-[9px] md:text-sm text-card-foreground text-center md:text-left">
                   Final balance is due 30 days before arrival
                 </p>
               </div>
