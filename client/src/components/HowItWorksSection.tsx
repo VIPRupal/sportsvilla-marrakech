@@ -1,60 +1,64 @@
 import { Card } from "@/components/ui/card";
-import { Calendar, CreditCard, Clock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export default function HowItWorksSection() {
-  const steps = [
-    {
-      number: "1",
-      icon: Calendar,
-      title: "Choose your travel dates and group size"
-    },
-    {
-      number: "2",
-      icon: CreditCard,
-      title: "Pay a deposit based on your length of stay"
-    },
-    {
-      number: "3",
-      icon: Clock,
-      title: "Final balance is due 30 days before arrival"
-    }
-  ];
-
   return (
-    <section className="py-6 md:py-10 lg:py-12 bg-background">
-      <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-4 md:mb-8">
-          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-3 text-foreground">
+    <section className="py-6 md:py-8 bg-background">
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <div className="text-center mb-3 md:mb-6">
+          <h2 className="font-serif text-xl md:text-3xl font-semibold mb-1 md:mb-2 text-foreground">
             🧭 How It Works
           </h2>
-          <p className="text-sm md:text-lg text-muted-foreground">
+          <p className="text-xs md:text-base text-muted-foreground">
             Booking is simple:
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-6 mb-4 md:mb-8">
-          {steps.map((step) => {
-            const Icon = step.icon;
-            return (
-              <Card key={step.number} className="p-4 md:p-6 text-center hover-elevate">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center mb-2 md:mb-3">
-                    <span className="text-lg md:text-xl font-bold text-primary">{step.number}</span>
-                  </div>
-                  <Icon className="w-6 h-6 md:w-8 md:h-8 text-primary mb-2 md:mb-3" />
-                  <p className="text-xs md:text-base text-card-foreground">
-                    {step.title}
-                  </p>
+        <Card className="p-3 md:p-6">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-4 mb-3 md:mb-4">
+            <div className="flex items-center text-center md:text-left">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs md:text-sm font-bold text-primary-foreground">1</span>
                 </div>
-              </Card>
-            );
-          })}
-        </div>
+                <p className="text-xs md:text-sm text-card-foreground">
+                  Choose your travel dates and group size
+                </p>
+              </div>
+            </div>
+            
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 rotate-90 md:rotate-0" />
+            
+            <div className="flex items-center text-center md:text-left">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs md:text-sm font-bold text-primary-foreground">2</span>
+                </div>
+                <p className="text-xs md:text-sm text-card-foreground">
+                  Pay a deposit based on your length of stay
+                </p>
+              </div>
+            </div>
+            
+            <ArrowRight className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0 rotate-90 md:rotate-0" />
+            
+            <div className="flex items-center text-center md:text-left">
+              <div className="flex items-center gap-2">
+                <div className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <span className="text-xs md:text-sm font-bold text-primary-foreground">3</span>
+                </div>
+                <p className="text-xs md:text-sm text-card-foreground">
+                  Final balance is due 30 days before arrival
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <Card className="p-3 md:p-6 bg-muted/50">
-          <p className="text-xs md:text-sm text-center text-muted-foreground">
-            <span className="font-semibold">E.g.</span> 3 nights = 1.5-night deposit · 6 or 7 nights = 3-night deposit
-          </p>
+          <div className="pt-2 md:pt-3 border-t border-border">
+            <p className="text-[10px] md:text-xs text-center text-muted-foreground">
+              <span className="font-semibold">E.g.</span> 3 nights = 1.5-night deposit · 6 or 7 nights = 3-night deposit
+            </p>
+          </div>
         </Card>
       </div>
     </section>
