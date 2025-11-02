@@ -3,16 +3,9 @@ import { socialLinks } from "@/data/villa-content";
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t border-border py-4 md:py-8">
+    <footer className="bg-card border-t border-border py-6 md:py-8">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Branding */}
-          <div className="text-center md:text-left">
-            <p className="text-sm text-muted-foreground">
-              © 2024 VIP@Marrakech. All rights reserved.
-            </p>
-          </div>
-
+        <div className="flex flex-col items-center gap-6">
           {/* Social Media Links */}
           <div className="flex items-center gap-4">
             <a
@@ -37,6 +30,22 @@ export default function Footer() {
               <Globe className="w-5 h-5" />
               <span className="text-sm">Website</span>
             </a>
+          </div>
+
+          {/* Company Information */}
+          <div className="text-center">
+            <p className="text-xs md:text-sm text-muted-foreground mb-1">
+              Registered in England and Wales: THE VIP CONCIERGE GROUP LIMITED – Company No: 12936161
+            </p>
+            <p className="text-xs md:text-sm text-muted-foreground mb-1">
+              Registered Address: 20-22 Wenlock Road, London, N1 7GU
+            </p>
+            <p className="text-xs md:text-sm text-muted-foreground mb-3">
+              Telephone: 0207 846 0075
+            </p>
+            <p className="text-xs md:text-sm text-muted-foreground font-semibold">
+              © 2024 THE VIP CONCIERGE GROUP LIMITED
+            </p>
           </div>
         </div>
       </div>
