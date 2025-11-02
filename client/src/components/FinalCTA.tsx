@@ -8,7 +8,7 @@ export default function FinalCTA() {
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
 
   return (
-    <section className="py-8 md:py-12 bg-background">
+    <section className="py-6 md:py-10 lg:py-12 bg-background">
       <div className="max-w-3xl mx-auto px-4 md:px-6 text-center">
         <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-3 md:mb-6 text-foreground">
           Ready to Book?
