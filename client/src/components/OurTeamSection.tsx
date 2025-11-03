@@ -31,7 +31,7 @@ export default function OurTeamSection() {
           </p>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
           {filteredBenefits.map((benefit, index) => {
             const IconComponent = getIcon(benefit.icon);
             return (
