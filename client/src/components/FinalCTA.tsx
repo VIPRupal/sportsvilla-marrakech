@@ -38,7 +38,7 @@ export default function FinalCTA() {
           >
             <a href={emailLink}>
               <Mail className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-              Not ready to chat? No problem, Email Us
+              Not ready to chat? Email us
             </a>
           </Button>
         </div>
