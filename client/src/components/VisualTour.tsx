@@ -56,6 +56,10 @@ export default function VisualTour() {
                     <img
                       src={image.src}
                       alt={image.caption}
+                      width={image.width}
+                      height={image.height}
+                      loading={index === 0 ? "eager" : "lazy"}
+                      fetchPriority={index === 0 ? "high" : undefined}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -119,6 +123,8 @@ export default function VisualTour() {
             <img
               src={galleryImages[selectedImage].src}
               alt={galleryImages[selectedImage].caption}
+              width={galleryImages[selectedImage].width}
+              height={galleryImages[selectedImage].height}
               className="w-full h-auto rounded-lg"
             />
             <p className="text-white text-center mt-4 text-lg">
