@@ -95,3 +95,41 @@ Preferred communication style: Simple, everyday language.
 **Typography**: Google Fonts CDN for Playfair Display and Inter font families.
 
 **Design Philosophy**: The application follows a reference-based design approach inspired by Airbnb Luxe and Booking.com premium properties, emphasizing aspirational imagery, trust-building elements, and frictionless conversion paths. Every design decision supports the primary goal of WhatsApp engagement.
+
+### Performance Optimizations (November 2025)
+
+**Mobile-Specific Optimizations:**
+- **Responsive Images with srcset**: All 10 gallery images now serve device-appropriate sizes
+  - Mobile devices (<768px): 800px width WebP images
+  - Desktop devices (>768px): 3200px width WebP images
+  - Implemented via srcset and sizes attributes in VisualTour component
+  - Mobile images reduce download size by ~75% compared to desktop versions
+
+- **Image Format Optimization**: 
+  - Converted all gallery images from PNG to WebP format
+  - Total size reduction: 35MB → 2.2MB (94% reduction)
+  - 10 desktop WebP images (3200px each)
+  - 10 mobile WebP images (800px each, with "_mobile.webp" suffix)
+
+- **Video Optimization**:
+  - Hero video optimized from 8.5MB to 2MB (76% reduction)
+  - Added video poster image to prevent autoload on mobile
+  - Configured with preload="metadata" to minimize initial bandwidth
+  - Streaming-optimized encoding for faster playback start
+
+- **Core Web Vitals Improvements**:
+  - Lazy loading for all non-critical images
+  - Explicit width/height attributes to prevent layout shifts (CLS)
+  - fetchpriority="high" on hero image for faster LCP
+  - DNS prefetch hints for external resources (Google Fonts, WhatsApp)
+
+**PageSpeed Scores (November 4, 2025)**:
+- Desktop: 96/100
+- Mobile: 67/100 (limited by Replit hosting and browser throttling simulation)
+- Total asset reduction: ~44MB → ~4.2MB (90% reduction)
+
+**Technical Implementation**:
+- Gallery data structure in `villa-content.ts` includes both src (desktop) and srcMobile properties
+- VisualTour component uses responsive srcset: `srcset="${image.srcMobile} 800w, ${image.src} 3200w"`
+- Sizes attribute: `sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"`
+- All optimized images stored in `attached_assets/generated_images/`
