@@ -96,22 +96,22 @@ export const galleryImages = [
 // Edit, add, or remove testimonials as needed
 export const testimonials = [
   {
-    quote: "Unreal! My teens were on the court while I was in the pool. Best holiday ever.",
-    name: "Jamie T.",
-    location: "UK",
-    initials: "JT"
-  },
-  {
-    quote: "Everything was smooth — transfers, chef, reservations. Felt like Dubai, but better.",
-    name: "Reema A.",
-    location: "UAE",
-    initials: "RA"
-  },
-  {
-    quote: "The padel court is world-class. We trained every morning and the chef kept us fueled. Incredible experience.",
-    name: "Marcus L.",
+    quote: "Best Crew and best service.",
+    name: "Raj S.",
     location: "USA",
-    initials: "ML"
+    initials: "RS"
+  },
+  {
+    quote: "The VIP Group were brillant at organising everything for us.",
+    name: "Gary K.",
+    location: "UK",
+    initials: "GK"
+  },
+  {
+    quote: "Friendly and attentive service from start to finish!.",
+    name: "Sophie S",
+    location: "UK",
+    initials: "SS"
   }
 ];
 
@@ -177,7 +177,7 @@ export const ourTeamContent = {
     },
     {
       title: "Personal Concierge",
-      description: "Airport transfers & activities covered.",
+      description: "Our team can plan the perfect trip.",
       icon: "Headphones"
     },
     {
@@ -269,7 +269,7 @@ export const visualTourContent = {
 // ==========================================
 export const testimonialsContent = {
   sectionTitle: "What Our Guests Say",
-  sectionSubtitle: "Real experiences from families, athletes, and groups who've stayed with us"
+  sectionSubtitle: "Real experiences from families, couples, and groups who've stayed with us"
 };
 
 // ==========================================
