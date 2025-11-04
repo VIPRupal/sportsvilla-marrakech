@@ -40,6 +40,7 @@ export default function HeroSection() {
             muted
             playsInline
             preload="metadata"
+            poster={heroContent.videoPoster}
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={heroContent.videoUrl} type="video/mp4" />

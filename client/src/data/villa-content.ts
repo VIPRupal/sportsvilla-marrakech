@@ -8,16 +8,27 @@
 // import myImage from "@assets/my-image.jpg";
 
 import heroVideo from "@assets/generated_images/video.mp4";
+import heroPoster from "@assets/generated_images/video_poster.jpg";
 import poolImage from "@assets/generated_images/swimming_pool.webp";
+import poolImageMobile from "@assets/generated_images/swimming_pool_mobile.webp";
 import padelImage from "@assets/generated_images/Bali_stone_pool.webp";
+import padelImageMobile from "@assets/generated_images/Bali_stone_pool_mobile.webp";
 import basketballImage from "@assets/generated_images/Padel_court.webp";
+import basketballImageMobile from "@assets/generated_images/Padel_court_mobile.webp";
 import outdoorTvImage from "@assets/generated_images/Football_Pitch.webp";
+import outdoorTvImageMobile from "@assets/generated_images/Football_Pitch_mobile.webp";
 import chefImage from "@assets/generated_images/Basketball_Court.webp";
+import chefImageMobile from "@assets/generated_images/Basketball_Court_mobile.webp";
 import gymImage from "@assets/generated_images/Living_Area.webp";
+import gymImageMobile from "@assets/generated_images/Living_Area_mobile.webp";
 import spaImage from "@assets/generated_images/Kitchen.webp";
+import spaImageMobile from "@assets/generated_images/Kitchen_mobile.webp";
 import diningImage from "@assets/generated_images/Bedroom_3.webp";
+import diningImageMobile from "@assets/generated_images/Bedroom_3_mobile.webp";
 import loungeImage from "@assets/generated_images/Gym.webp";
+import loungeImageMobile from "@assets/generated_images/Gym_mobile.webp";
 import rooftopImage from "@assets/generated_images/Garden_3.webp";
+import rooftopImageMobile from "@assets/generated_images/Garden_3_mobile.webp";
 
 // ==========================================
 // HERO SECTION
@@ -26,6 +37,7 @@ export const heroContent = {
   // VIDEO OPTION: Set this to your video URL to use video instead of image
   // Example: videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID" or "/path/to/your/video.mp4"
   videoUrl: heroVideo, // Leave empty to use image instead
+  videoPoster: heroPoster, // Poster image shown before video loads
   
   // IMAGE OPTION: Used when videoUrl is empty (not used when video is set)
   backgroundImage: "",
@@ -50,60 +62,70 @@ export const heroContent = {
 export const galleryImages = [
   {
     src: poolImage,
+    srcMobile: poolImageMobile,
     caption: "Enjoy your own private Bali stone pool",
     width: 3200,
     height: 2344
   },
   {
     src: padelImage,
+    srcMobile: padelImageMobile,
     caption: "Relax in the heated pool after a padel match",
     width: 3200,
     height: 2344
   },
   {
     src: basketballImage,
+    srcMobile: basketballImageMobile,
     caption: "Play Padel under the Moroccan sun",
     width: 3200,
     height: 2344
   },
   {
     src: outdoorTvImage,
+    srcMobile: outdoorTvImageMobile,
     caption: "Train on your own football pitch",
     width: 3200,
     height: 2344
   },
   {
     src: chefImage,
+    srcMobile: chefImageMobile,
     caption: "Shoot hoops on the half basketball court",
     width: 3200,
     height: 2344
   },
   {
     src: gymImage,
+    srcMobile: gymImageMobile,
     caption: "Unwind in the spacious living area",
     width: 3200,
     height: 2344
   },
   {
     src: spaImage,
+    srcMobile: spaImageMobile,
     caption: "Modern kitchen with all appliances",
     width: 3200,
     height: 2344
   },
   {
     src: diningImage,
+    srcMobile: diningImageMobile,
     caption: "6 stunning double bedrooms for families and groups",
     width: 3200,
     height: 2344
   },
   {
     src: loungeImage,
+    srcMobile: loungeImageMobile,
     caption: "Workout in your home gym before a sunset pool session",
     width: 3200,
     height: 2344
   },
   {
     src: rooftopImage,
+    srcMobile: rooftopImageMobile,
     caption: "Enjoy the stunning grounds",
     width: 3200,
     height: 2344

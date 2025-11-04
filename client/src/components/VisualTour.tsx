@@ -54,6 +54,8 @@ export default function VisualTour() {
                     data-testid={`image-gallery-${index}`}
                   >
                     <img
+                      srcSet={`${image.srcMobile} 800w, ${image.src} 3200w`}
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       src={image.src}
                       alt={image.caption}
                       width={image.width}
@@ -121,6 +123,8 @@ export default function VisualTour() {
           
           <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
             <img
+              srcSet={`${galleryImages[selectedImage].srcMobile} 800w, ${galleryImages[selectedImage].src} 3200w`}
+              sizes="(max-width: 768px) 100vw, 90vw"
               src={galleryImages[selectedImage].src}
               alt={galleryImages[selectedImage].caption}
               width={galleryImages[selectedImage].width}
