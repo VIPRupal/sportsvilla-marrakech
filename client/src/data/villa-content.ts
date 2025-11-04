@@ -50,39 +50,39 @@ export const heroContent = {
 export const galleryImages = [
   {
     src: poolImage,
-    caption: "Your own stunning Bali stone pool"
+    caption: "Your own private Bali stone swimming pool"
   },
   {
     src: padelImage,
-    caption: "Play padel under the Moroccan sun"
+    caption: "Relax in the heated pool after a padel match"
   },
   {
     src: basketballImage,
-    caption: "Full-size basketball court with dramatic lighting"
+    caption: "Play Padel under the Moroccan sun"
   },
   {
     src: outdoorTvImage,
-    caption: "Stream Netflix poolside or catch the match outdoors"
+    caption: "Train on your own football pitch"
   },
   {
     src: chefImage,
-    caption: "Private chef preparing gourmet meals daily"
+    caption: "Shoot hoops on the half basketball court"
   },
   {
     src: gymImage,
-    caption: "Fully-equipped gym with Atlas Mountain views"
+    caption: "Relax in the spacious modern living area"
   },
   {
     src: spaImage,
-    caption: "Traditional Moroccan spa and hammam for ultimate relaxation"
+    caption: "Stunning kitchen with all appliances included"
   },
   {
     src: diningImage,
-    caption: "Outdoor dining terrace with Atlas Mountain views"
+    caption: "6 stunning double bedrooms for families and groups"
   },
   {
     src: loungeImage,
-    caption: "Spacious living lounge with modern Moroccan design"
+    caption: "Workout in your home gym before a sunset pool session"
   },
   {
     src: rooftopImage,
