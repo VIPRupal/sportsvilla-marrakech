@@ -70,9 +70,9 @@ export default function HeroSection() {
         {/* Info Card - Desktop: Right Side, Mobile: Bottom */}
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:relative md:bottom-auto md:left-auto md:translate-x-0 md:flex-shrink-0">
           {/* Info Card */}
-          <div className="bg-black/50 backdrop-blur-md rounded-lg p-4 md:p-6 border border-white/20">
+          <div className="bg-black/50 backdrop-blur-md rounded-lg p-3 md:p-4 border border-white/20">
               {/* Feature Badges */}
-              <div className="flex items-center justify-center gap-2 md:gap-3 mb-4 overflow-x-auto">
+              <div className="flex items-center justify-center gap-1.5 md:gap-2 mb-3 overflow-x-auto">
                 {heroContent.badges.map((badge, index) => {
                   const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : Home;
                   return (
