@@ -1,11 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle } from "lucide-react";
 import { whatsappConfig } from "@/data/villa-content";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function FinalCTA() {
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('final_cta');
+  };
 
   return (
     <section id="book" className="py-6 md:py-10 lg:py-12 bg-background">
@@ -19,7 +24,7 @@ export default function FinalCTA() {
           className="text-sm md:text-base px-6 md:px-8"
           data-testid="button-final-cta"
         >
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
             <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Get Instant Quote Via WhatsApp
           </a>

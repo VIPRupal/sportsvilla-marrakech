@@ -1,12 +1,17 @@
 import { MessageCircle } from "lucide-react";
 import { useState } from "react";
 import { whatsappConfig } from "@/data/villa-content";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
+
+  const handleClick = () => {
+    trackWhatsAppClick('floating_button');
+  };
 
   return (
     <a
@@ -16,6 +21,7 @@ export default function WhatsAppButton() {
       className="fixed bottom-6 right-6 z-50 group"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onClick={handleClick}
       data-testid="button-whatsapp-floating"
     >
       <div className="relative">

@@ -2,6 +2,7 @@ import { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Home } from "lucide-react";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -9,6 +10,10 @@ export default function HeroSection() {
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('hero_section');
+  };
 
   // Ensure video autoplays on mount
   useEffect(() => {
@@ -87,7 +92,7 @@ export default function HeroSection() {
                 className="w-full text-xs md:text-sm bg-white/95 backdrop-blur-sm text-foreground hover:bg-white border-white/30"
                 data-testid="button-whatsapp-hero"
               >
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
                   {heroContent.ctaText}
                 </a>
               </Button>

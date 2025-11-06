@@ -3,11 +3,16 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check, Calendar, Gift, Sparkles } from "lucide-react";
 import { whatsappConfig, pricingContent, heroContent } from "@/data/villa-content";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function PricingSection() {
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
+
+  const handleWhatsAppClick = () => {
+    trackWhatsAppClick('pricing_section');
+  };
 
   const getIcon = (iconName: string) => {
     const icons: Record<string, typeof Calendar> = {
@@ -92,7 +97,7 @@ export default function PricingSection() {
               className="flex-1 text-xs md:text-base"
               data-testid="button-whatsapp-pricing"
             >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
                 {heroContent.ctaText}
               </a>
             </Button>
