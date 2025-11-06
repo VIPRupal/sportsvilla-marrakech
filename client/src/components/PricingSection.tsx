@@ -104,7 +104,7 @@ export default function PricingSection() {
             <Button 
               asChild
               size="default"
-              variant="outline"
+              variant="secondary"
               className="flex-1 text-xs md:text-base"
               data-testid="button-enquiry-form-pricing"
             >
