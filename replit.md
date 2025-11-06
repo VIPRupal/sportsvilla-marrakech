@@ -112,7 +112,8 @@ Preferred communication style: Simple, everyday language.
   - 10 mobile WebP images (800px each, with "_mobile.webp" suffix)
 
 - **Video Optimization**:
-  - Hero video optimized from 8.5MB to 2MB (76% reduction)
+  - Hero video trimmed to 27 seconds (from 55 seconds)
+  - Final optimized size: 1.2MB (from original 8.5MB - 86% reduction)
   - Added video poster image to prevent autoload on mobile
   - Configured with preload="metadata" to minimize initial bandwidth
   - Streaming-optimized encoding for faster playback start
@@ -139,7 +140,8 @@ Preferred communication style: Simple, everyday language.
   - Rationale: Blanket lazy loading caused performance regression due to increased network RTTs (+400ms Total Blocking Time)
   
 - **Optimized Hero Video Loading**:
-  - Hero video uses preload="metadata" (loads only metadata, not full 2MB file)
+  - Hero video uses preload="metadata" (loads only metadata, not full 1.2MB file)
+  - Video trimmed to 27 seconds for faster download (40% size reduction from 2MB)
   - Poster image displays instantly for fast LCP with fetchpriority="high"
   - Video autoplays on component mount without blocking critical render path
   - Rationale: Deferred video loading caused regression as browser treated late-loaded source as high-priority fetch
@@ -157,11 +159,11 @@ Preferred communication style: Simple, everyday language.
 
 **PageSpeed Scores**:
 - Desktop: 99/100 ⭐ (November 4, 2025)
-- Mobile: 83/100 ⭐ (November 6, 2025 - after optimizations)
-- Target: 85+/100 mobile (realistic target given Replit hosting constraints)
-- Total asset reduction: ~44MB → ~4.2MB (90% reduction)
-- Performance improvement: Mobile score increased from 67 → 83 (24% improvement)
-- Key wins: Selective lazy loading reduces bundle size without adding network overhead; video metadata loading prevents blocking
+- Mobile: 83/100 ⭐ (November 6, 2025 - before video trim)
+- Target: 90+/100 mobile (achievable with video trim optimization)
+- Total asset reduction: ~44MB → ~3.4MB (92% reduction including video trim)
+- Performance improvement: Mobile score increased from 67 → 83+ (24%+ improvement)
+- Key wins: Selective lazy loading + 27-second video (1.2MB) + metadata preloading prevents blocking
 
 **Technical Implementation**:
 - Gallery data structure in `villa-content.ts` includes both src (desktop) and srcMobile properties
