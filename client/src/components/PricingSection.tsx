@@ -101,6 +101,17 @@ export default function PricingSection() {
                 {heroContent.ctaText}
               </a>
             </Button>
+            <Button 
+              asChild
+              size="default"
+              variant="outline"
+              className="flex-1 text-xs md:text-base"
+              data-testid="button-enquiry-form-pricing"
+            >
+              <a href="#book">
+                Fill In A Enquiry Form
+              </a>
+            </Button>
           </div>
           
           <p className="text-center text-[10px] md:text-sm text-muted-foreground mt-2 md:mt-3">
