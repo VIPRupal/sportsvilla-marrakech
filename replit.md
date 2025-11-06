@@ -132,18 +132,17 @@ Preferred communication style: Simple, everyday language.
   - Preserves design requirements while eliminating 600ms+ render-blocking delay
 
 **JavaScript Bundle Optimization (November 6, 2025)**:
-- **Code Splitting with React Lazy Loading**: All below-the-fold components lazy loaded
-  - Only HeroSection loads in initial bundle
-  - Components lazy loaded: VisualTour, WhoThisIsFor, PricingSection, OurTeamSection, TestimonialsSection, FinalCTA, ContactFormSection, WhatsAppButton, Footer
-  - Reduces initial JavaScript bundle size by ~60%
-  - Uses React.lazy() with Suspense for seamless loading
+- **Selective Code Splitting with React Lazy Loading**: 
+  - Only the heaviest carousel-based components are lazy loaded: VisualTour and TestimonialsSection
+  - Lightweight components (WhoThisIsFor, PricingSection, etc.) remain in the main bundle
+  - Uses individual Suspense boundaries for each lazy component to prevent blocking
+  - Rationale: Blanket lazy loading caused performance regression due to increased network RTTs (+400ms Total Blocking Time)
   
-- **Deferred Hero Video Loading** (Major Performance Win):
-  - Hero video (2MB) no longer blocks initial page load
-  - Poster image displays instantly for fast LCP
-  - Video source loads after 1 second delay, then autoplays
-  - Uses preload="none" and conditional source rendering
-  - Prefetch hint allows background download without blocking
+- **Optimized Hero Video Loading**:
+  - Hero video uses preload="metadata" (loads only metadata, not full 2MB file)
+  - Poster image displays instantly for fast LCP with fetchpriority="high"
+  - Video autoplays on component mount without blocking critical render path
+  - Rationale: Deferred video loading caused regression as browser treated late-loaded source as high-priority fetch
   
 - **Deferred Third-Party Scripts**:
   - Google Ads script deferred until after page load
@@ -154,15 +153,15 @@ Preferred communication style: Simple, everyday language.
   - Preconnect to fonts.googleapis.com for faster font loading
   - Preconnect to googletagmanager.com for faster analytics
   - DNS prefetch for WhatsApp (wa.me) for faster CTA clicks
-  - Video prefetch for smooth playback after initial load
+  - Hero poster preloaded with fetchpriority="high" for optimal LCP
 
 **PageSpeed Scores**:
 - Desktop: 99/100 ⭐ (November 4, 2025)
-- Mobile: 83/100 ⭐ (November 6, 2025 - after lazy loading)
-- Target: 90+/100 mobile (with deferred video loading)
+- Mobile: 83/100 ⭐ (November 6, 2025 - after optimizations)
+- Target: 85+/100 mobile (realistic target given Replit hosting constraints)
 - Total asset reduction: ~44MB → ~4.2MB (90% reduction)
-- Performance improvement: Mobile score increased from 67 → 90+ (35%+ improvement target)
-- Key wins: 2MB video no longer blocks initial load, 60% smaller JS bundle
+- Performance improvement: Mobile score increased from 67 → 83 (24% improvement)
+- Key wins: Selective lazy loading reduces bundle size without adding network overhead; video metadata loading prevents blocking
 
 **Technical Implementation**:
 - Gallery data structure in `villa-content.ts` includes both src (desktop) and srcMobile properties

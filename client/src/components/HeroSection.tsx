@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Home } from "lucide-react";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
@@ -6,7 +6,6 @@ import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
   
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
@@ -16,28 +15,14 @@ export default function HeroSection() {
     trackWhatsAppClick('hero_section');
   };
 
-  // Defer video loading until page is interactive
+  // Ensure video autoplays on mount
   useEffect(() => {
-    // Wait for page to be fully loaded before loading video
-    const loadVideo = () => {
-      setVideoLoaded(true);
-      
-      // Load and autoplay video after source is added
-      setTimeout(() => {
-        const video = videoRef.current;
-        if (video) {
-          video.load(); // Load the video source
-          video.play().catch(() => {
-            // Autoplay was prevented, silently fail
-          });
-        }
-      }, 100);
-    };
-
-    // Load video after a short delay to prioritize initial render
-    const timer = setTimeout(loadVideo, 1000);
-    
-    return () => clearTimeout(timer);
+    const video = videoRef.current;
+    if (video) {
+      video.play().catch(() => {
+        // Autoplay was prevented, silently fail
+      });
+    }
   }, []);
 
   return (
@@ -51,11 +36,11 @@ export default function HeroSection() {
             loop
             muted
             playsInline
-            preload="none"
+            preload="metadata"
             poster={heroContent.videoPoster}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            {videoLoaded && <source src={heroContent.videoUrl} type="video/mp4" />}
+            <source src={heroContent.videoUrl} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/25 to-transparent" />
         </div>

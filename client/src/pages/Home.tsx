@@ -1,32 +1,34 @@
 import { lazy, Suspense } from "react";
 import HeroSection from "@/components/HeroSection";
+import WhoThisIsFor from "@/components/WhoThisIsFor";
+import PricingSection from "@/components/PricingSection";
+import OurTeamSection from "@/components/OurTeamSection";
+import FinalCTA from "@/components/FinalCTA";
+import ContactFormSection from "@/components/ContactFormSection";
+import WhatsAppButton from "@/components/WhatsAppButton";
+import Footer from "@/components/Footer";
 
-// Lazy load below-the-fold components
+// Only lazy load the heaviest components (carousel-based)
 const VisualTour = lazy(() => import("@/components/VisualTour"));
-const WhoThisIsFor = lazy(() => import("@/components/WhoThisIsFor"));
-const PricingSection = lazy(() => import("@/components/PricingSection"));
-const OurTeamSection = lazy(() => import("@/components/OurTeamSection"));
 const TestimonialsSection = lazy(() => import("@/components/TestimonialsSection"));
-const FinalCTA = lazy(() => import("@/components/FinalCTA"));
-const ContactFormSection = lazy(() => import("@/components/ContactFormSection"));
-const WhatsAppButton = lazy(() => import("@/components/WhatsAppButton"));
-const Footer = lazy(() => import("@/components/Footer"));
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <Suspense fallback={<div className="min-h-[50vh]" />}>
+      <Suspense fallback={<div className="min-h-[60vh] bg-background" />}>
         <VisualTour />
-        <WhoThisIsFor />
-        <PricingSection />
-        <OurTeamSection />
-        <TestimonialsSection />
-        <FinalCTA />
-        <ContactFormSection />
-        <WhatsAppButton />
-        <Footer />
       </Suspense>
+      <WhoThisIsFor />
+      <PricingSection />
+      <OurTeamSection />
+      <Suspense fallback={<div className="min-h-[40vh] bg-background" />}>
+        <TestimonialsSection />
+      </Suspense>
+      <FinalCTA />
+      <ContactFormSection />
+      <WhatsAppButton />
+      <Footer />
     </div>
   );
 }
