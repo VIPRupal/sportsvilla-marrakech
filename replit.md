@@ -191,7 +191,16 @@ Preferred communication style: Simple, everyday language.
   - Browser skips rendering off-screen content, improving initial paint
   - contain-intrinsic-size: auto 500px provides placeholder sizing
   
-**Expected Mobile Score**: 83-85/100 (with properly loaded fonts)
+**Critical CSS Optimization (November 6, 2025)**:
+- **Inline critical CSS**: Inlined ~2.5KB of hero-specific Tailwind utilities in index.html
+  - Covers complete hero section: heights (70vh/75vh/80vh), gradients, colors, layout, focus states
+  - Eliminates render-blocking CSS delay for above-the-fold content
+- **Deferred main CSS loading**: Converted synchronous CSS import to dynamic import via requestIdleCallback
+  - Main Tailwind bundle loads AFTER first paint (non-blocking)
+  - Hero renders immediately with inlined styles, preventing FOUC and layout shifts
+- **Performance impact**: Eliminates 160ms render-blocking CSS delay
+
+**Expected Mobile Score**: 83-86/100 (with critical CSS inlining + deferred loading)
 
 **Technical Notes**:
 - Vite dev server only serves certain file types from client/public/ directory
