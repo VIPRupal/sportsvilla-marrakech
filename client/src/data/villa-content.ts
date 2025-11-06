@@ -303,7 +303,7 @@ export const pricingContent = {
 // ==========================================
 export const visualTourContent = {
   sectionTitle: "Experience Luxury at Every Turn",
-  sectionSubtitle: "From sunrise workouts to sunset pool sessions — discover what makes this villa extraordinary"
+  sectionSubtitle: "From sunrise workouts on your private padel court to sunset dips in your heated pool — there's no villa in Marrakech like this one"
 };
 
 // ==========================================
