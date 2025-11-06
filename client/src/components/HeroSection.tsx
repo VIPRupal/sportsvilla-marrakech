@@ -33,10 +33,10 @@ export default function HeroSection() {
         <div className="absolute inset-0">
           <video
             ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
+            autoPlay={true}
+            loop={true}
+            muted={true}
+            playsInline={true}
             preload="metadata"
             poster={heroContent.videoPoster}
             className="absolute inset-0 w-full h-full object-cover"
