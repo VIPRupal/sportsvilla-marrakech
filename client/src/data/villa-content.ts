@@ -43,7 +43,7 @@ export const heroContent = {
   backgroundImage: "",
   
   title: "Your Private Sports Retreat in Marrakech",
-  subtitle: "6-Bed Luxury Villa • Heated Pool • Private Padel Court • Cook Included",
+  subtitle: "6-Bed Luxury Villa • Heated Pool • Private Padel Court",
   description: "",
   
   badges: [
