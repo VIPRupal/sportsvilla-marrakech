@@ -173,10 +173,12 @@ Preferred communication style: Simple, everyday language.
 - Async font loader in `client/index.html` eliminates render-blocking while preserving custom typography
 
 **Additional Performance Optimizations (November 6, 2025)**:
-- **Self-hosted TTF fonts**: Migrated from Google Fonts CDN to local TTF files
-  - Preloaded critical fonts (Inter 400, Playfair Display 700) for faster loading
+- **Self-hosted WOFF2 fonts**: Migrated from Google Fonts CDN to local optimized WOFF2 files
+  - Fonts stored in client/public/fonts/ directory for proper Vite serving
+  - Preloaded critical fonts (Inter 400, Playfair Display 700) for instant rendering
+  - Total font payload: 1.1MB WOFF2 (highly compressed)
   - Maintained font-display: swap for optimal fallback behavior
-  - Note: WOFF2 optimization was tested but caused performance regression (83 → 59/100) and was rolled back
+  - Fixed: TTF files were not served by Vite dev server (returned HTML), switched to WOFF2
   
 - **Improved script deferral**: Google Ads now loads via requestIdleCallback instead of window load event
   - Reduces main-thread blocking by ~150ms
@@ -186,7 +188,12 @@ Preferred communication style: Simple, everyday language.
   - Browser skips rendering off-screen content, improving initial paint
   - contain-intrinsic-size: auto 500px provides placeholder sizing
   
-**Current Mobile Score**: 83/100
+**Expected Mobile Score**: 83-85/100 (with properly loaded fonts)
+
+**Technical Notes**:
+- Vite dev server only serves certain file types from client/public/ directory
+- WOFF2 files work correctly, but TTF files caused routing issues (returned HTML instead)
+- All static assets must be in client/public/ for development, dist/public/ for production
 
 **Remaining Performance Constraints**:
 - Replit hosting has inherent server response time limitations

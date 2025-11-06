@@ -1,9 +1,11 @@
+/* Self-hosted Google Fonts (WOFF2 format) for better performance */
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/fonts/inter-400.woff2) format('woff2');
+  src: url('/fonts/inter-400.woff2') format('woff2');
 }
 
 @font-face {
@@ -11,7 +13,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url(/fonts/inter-500.woff2) format('woff2');
+  src: url('/fonts/inter-500.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,7 +21,7 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url(/fonts/inter-600.woff2) format('woff2');
+  src: url('/fonts/inter-600.woff2') format('woff2');
 }
 
 @font-face {
@@ -27,5 +29,5 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/fonts/playfair-700.woff2) format('woff2');
+  src: url('/fonts/playfair-700.woff2') format('woff2');
 }
