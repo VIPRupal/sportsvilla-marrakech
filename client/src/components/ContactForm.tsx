@@ -28,7 +28,7 @@ export default function ContactForm() {
 
   const submitEnquiry = useMutation({
     mutationFn: async (data: InsertEnquiry) => {
-      return await apiRequest("/api/enquiries", "POST", data);
+      return await apiRequest("POST", "/api/enquiries", data);
     },
     onSuccess: () => {
       setIsSubmitted(true);
