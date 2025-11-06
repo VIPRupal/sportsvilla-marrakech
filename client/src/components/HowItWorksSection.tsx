@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function HowItWorksSection() {
   return (
-    <section className="py-6 md:py-8 bg-background">
+    <section id="how-it-works" className="py-6 md:py-8 bg-background">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
         <div className="text-center mb-3 md:mb-6">
           <h2 className="font-serif text-xl md:text-3xl font-semibold mb-1 md:mb-2 text-foreground">
