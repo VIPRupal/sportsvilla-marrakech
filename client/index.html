@@ -13,10 +13,25 @@
     
     <link rel="icon" type="image/png" href="/favicon.png" />
     
-    <!-- Self-hosted fonts (WOFF2) for better performance -->
+    <!-- Self-hosted fonts (WOFF2) - Inlined to prevent render blocking -->
     <link rel="preload" as="font" href="/fonts/inter-400.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" as="font" href="/fonts/playfair-700.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="stylesheet" href="/fonts/fonts.css">
+    <style>
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('/fonts/inter-400.woff2') format('woff2');
+      }
+      @font-face {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url('/fonts/playfair-700.woff2') format('woff2');
+      }
+    </style>
     
     <!-- Preconnect to external domains for faster resource loading -->
     <link rel="preconnect" href="https://www.googletagmanager.com">

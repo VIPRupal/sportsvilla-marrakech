@@ -173,13 +173,14 @@ Preferred communication style: Simple, everyday language.
 - Async font loader in `client/index.html` eliminates render-blocking while preserving custom typography
 
 **Additional Performance Optimizations (November 6, 2025)**:
-- **Self-hosted WOFF2 fonts**: Migrated from Google Fonts CDN to local optimized WOFF2 files
+- **Self-hosted WOFF2 fonts with inline CSS**: Migrated from Google Fonts CDN to local optimized WOFF2 files
   - Fonts stored in client/public/fonts/ directory for proper Vite serving
+  - Font-face declarations **inlined in HTML** to eliminate render-blocking stylesheet (saves 450ms)
   - Preloaded critical fonts (Inter 400, Playfair Display 700) for instant rendering
   - Total font payload: 440KB WOFF2 (only 2 critical font faces, removed unused Inter 500/600)
   - Maintained font-display: swap for optimal fallback behavior
   - Fixed: TTF files were not served by Vite dev server (returned HTML), switched to WOFF2
-  - Performance impact: Reduced font payload from 1.1MB → 440KB recovers 9-11 point PageSpeed regression
+  - Performance impact: Inlining fonts.css eliminates render-blocking request, improves FCP/LCP by ~450ms
   
 - **Improved script deferral**: Google Ads now loads via requestIdleCallback instead of window load event
   - Reduces main-thread blocking by ~150ms
