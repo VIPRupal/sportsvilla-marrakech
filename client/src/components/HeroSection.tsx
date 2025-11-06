@@ -68,7 +68,7 @@ export default function HeroSection() {
         </div>
 
         {/* Info Card - Desktop: Right Side, Mobile: Bottom */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 md:relative md:bottom-auto md:left-auto md:translate-x-0 md:flex-shrink-0">
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 md:relative md:bottom-auto md:left-auto md:translate-x-0 md:flex-shrink-0">
           {/* Info Card */}
           <div className="bg-black/50 backdrop-blur-md rounded-lg p-3 md:p-4 border border-white/20">
               {/* Feature Badges */}
