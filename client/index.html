@@ -16,9 +16,13 @@
     <!-- Preconnect to external domains for faster resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://wa.me">
     
     <!-- Preload critical hero poster for faster LCP -->
     <link rel="preload" as="image" href="/attached_assets/generated_images/video_poster.jpg" fetchpriority="high">
+    
+    <!-- Prefetch video for smoother playback after initial load -->
+    <link rel="prefetch" as="video" href="/attached_assets/generated_images/video.mp4">
     
     <!-- Google tag (gtag.js) - Deferred for better performance -->
     <script>
