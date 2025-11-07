@@ -78,4 +78,12 @@ app.use((req, res, next) => {
   }, () => {
     log(`serving on port ${port}`);
   });
+
+  // Keep-alive ping to prevent Replit container from sleeping
+  // Pings every 5 minutes to keep server active
+  setInterval(() => {
+    const timestamp = new Date().toISOString();
+    // Simple activity to keep event loop active
+    log(`Keep-alive ping at ${timestamp}`);
+  }, 5 * 60 * 1000); // 5 minutes
 })();
