@@ -15,7 +15,7 @@ export default function Home() {
       <HeroSection />
       <VisualTour />
       <PricingSection />
-      <WhoThisIsFor />
+      {/* <WhoThisIsFor /> */}
       <OurTeamSection />
       <TestimonialsSection />
       <FinalCTA />
