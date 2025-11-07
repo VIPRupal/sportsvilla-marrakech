@@ -144,10 +144,10 @@ export default function HeroSection() {
               {/* Feature Badges */}
               <div className="flex items-center justify-center gap-1 md:gap-1.5 mb-2 overflow-x-auto">
                 {heroContent.badges.map((badge, index) => {
-                  const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : Home;
+                  const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : badge.icon === 'Home' ? Home : null;
                   return (
                     <div key={index} className="flex items-center gap-0.5 text-white flex-shrink-0">
-                      <IconComponent className="w-3 h-3" />
+                      {IconComponent && <IconComponent className="w-3 h-3" />}
                       <span className="text-xs font-medium whitespace-nowrap">{badge.text}</span>
                     </div>
                   );

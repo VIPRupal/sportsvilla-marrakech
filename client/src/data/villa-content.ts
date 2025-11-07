@@ -47,7 +47,7 @@ export const heroContent = {
   description: "",
   
   badges: [
-    { text: "⚡ Autumn Sale", icon: "Dumbbell" },
+    { text: "⚡ Autumn Sale", icon: "" },
     { text: "Sleeps 12", icon: "Users" },
     { text: "From £600/night", icon: "Home" }
   ],
