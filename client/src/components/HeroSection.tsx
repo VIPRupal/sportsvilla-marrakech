@@ -131,7 +131,7 @@ export default function HeroSection() {
             <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
               {heroContent.title}
             </h1>
-            <p className="text-xs md:text-sm lg:text-base text-white/90 mt-1 drop-shadow-md">
+            <p className="text-xs md:text-sm lg:text-base text-white/90 mt-1 drop-shadow-md whitespace-pre-line">
               {heroContent.subtitle}
             </p>
           </div>
