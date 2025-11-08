@@ -3,6 +3,9 @@
 // ==========================================
 // Edit this file to customize all text, images, and videos for your landing page
 
+// Import SEO content (auto-syncs with meta tags)
+import { seoContent } from "./seo-content";
+
 // Import your own images here - replace these with your actual villa photos
 // To add your own images: Place them in the 'attached_assets' folder and import like this:
 // import myImage from "@assets/my-image.jpg";
@@ -42,8 +45,10 @@ export const heroContent = {
   // IMAGE OPTION: Used when videoUrl is empty (not used when video is set)
   backgroundImage: "",
   
-  title: "Marrakech's No.1 6 Bed Luxury Sports Villa",
-  subtitle: "Sleeps 12 • Heated Pool • Private Padel Court • Fully Staffed",
+  // NOTE: Title and subtitle are now synced from seo-content.ts
+  // This ensures meta tags automatically update when you change the hero text
+  title: seoContent.heroTitle,
+  subtitle: seoContent.heroSubtitle,
   description: "",
   
   badges: [
