@@ -35,7 +35,7 @@ export default function ContactForm() {
       form.reset();
       toast({
         title: "Message sent!",
-        description: "We'll get back to you within 24 hours.",
+        description: "We'll get back to you within 2 hours.",
       });
     },
     onError: (error: Error) => {
@@ -62,7 +62,7 @@ export default function ContactForm() {
             Thank You!
           </h3>
           <p className="text-muted-foreground mb-6">
-            We've received your enquiry and will get back to you within 24 hours.
+            We've received your enquiry and will get back to you within 2 hours.
           </p>
           <Button 
             onClick={() => setIsSubmitted(false)}
@@ -181,7 +181,7 @@ export default function ContactForm() {
         </Button>
 
         <p className="text-xs md:text-sm text-center text-muted-foreground">
-          We'll respond within 24 hours. For urgent enquiries, WhatsApp us directly.
+          We'll respond within 2 hours. For urgent enquiries, WhatsApp us directly.
         </p>
       </form>
     </Card>
