@@ -38,7 +38,7 @@ export default function ContactFormSection() {
             Get in Touch
           </h2>
           <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            Have questions about the villa? Send us a message and we'll respond within 24 hours.
+            We reply within 2 hours to all Marrakech villa enquiries
           </p>
         </div>
         
