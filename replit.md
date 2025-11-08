@@ -30,11 +30,11 @@ Preferred communication style: Simple, everyday language.
 - **Server Framework**: Express.js with Node.js and TypeScript (for Replit development).
 - **Development**: Vite middleware integration for HMR.
 - **Build Process**: Vite for frontend (`dist/public`), esbuild for backend.
-- **Contact Form**: Uses Tally.so embedded form (https://tally.so/r/VLE4Za) - no backend API required.
-  - Sends email notifications directly to Rupal@thevipgroups.com
-  - No API keys or environment variables needed
-  - 100% reliable email delivery
-  - Previous Cloudflare Functions implementation (`functions/api/enquiries.ts`) replaced with Tally.so embed
+- **Contact Form**: Cloudflare Pages Function for contact form submissions.
+  - Uses Resend API for email notifications to Rupal@thevipgroups.com
+  - Requires environment variables in Cloudflare: `RESEND_API_KEY` and `NOTIFICATION_EMAIL`
+  - Function implementation at `functions/api/enquiries.ts`
+  - Alternative option available: Tally.so form (https://tally.so/r/VLE4Za) for no-API-key solution
 
 ### Data Storage
 - **Current**: In-memory storage (`MemStorage`) for rapid development.
