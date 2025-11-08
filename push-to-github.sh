@@ -1,24 +1,21 @@
 #!/bin/bash
-# Quick script to push SEO changes to GitHub
+# Push latest form fixes to GitHub for Cloudflare deployment
 
-echo "🚀 Pushing SEO meta tags to GitHub..."
+echo "🚀 Pushing latest code to GitHub..."
 echo ""
 
 # Remove any lock file
 rm -f .git/index.lock
 
-# Stage all the new SEO files
-git add client/src/data/seo-content.ts
-git add client/src/data/villa-content.ts
-git add client/index.html
-git add SEO_SYNC_GUIDE.md
-git add replit.md
+# Stage all changes
+git add -A
 
 # Commit with a clear message
-git commit -m "Add comprehensive SEO meta tags with auto-sync system"
+git commit -m "Push latest form fixes and SEO updates to production"
 
 # Push to GitHub
 git push origin main
 
 echo ""
-echo "✅ Done! Check Cloudflare Pages in 1-2 minutes for deployment."
+echo "✅ Done! Cloudflare will rebuild in 2-3 minutes."
+echo "The form should work after the deployment completes!"
