@@ -257,7 +257,7 @@ export const socialLinks = {
 // PRICING SECTION
 // ==========================================
 export const pricingContent = {
-  sectionTitle: "Pricing & Availability",
+  sectionTitle: "Autumn Sale – Save £150/Night\nLimited Dates Available – Book Direct & Save",
   
   guestCount: 12,
   
