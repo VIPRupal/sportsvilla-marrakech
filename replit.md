@@ -14,7 +14,9 @@ Preferred communication style: Simple, everyday language.
 - **State Management**: React Query for server state, with most content managed via static TypeScript configuration.
 - **UI Components**: Shadcn/ui built on Radix UI primitives, using a consistent design system defined in Tailwind CSS.
 - **Styling**: Tailwind CSS with custom CSS variables, Google Fonts (Playfair Display, Inter), and a mobile-first responsive approach. Custom utility classes for hover/active states.
-- **Content Management**: All content (text, images, testimonials, pricing) is centralized in `client/src/data/villa-content.ts` for easy updates.
+- **Content Management**: 
+    - All page content (text, images, testimonials, pricing) is centralized in `client/src/data/villa-content.ts` for easy updates.
+    - **SEO Content System**: `client/src/data/seo-content.ts` serves as the single source of truth for all SEO-related text (hero titles, meta descriptions, keywords). This file is imported by `villa-content.ts` to automatically update the hero section. Meta tags in `client/index.html` must be manually synced (clearly marked with comments). See `SEO_SYNC_GUIDE.md` for complete documentation.
 - **Component Structure**: Modular, section-based components (Hero, VisualTour, WhoThisIsFor, Experience, Pricing, Testimonials) and a persistent floating WhatsApp button. No traditional navigation.
 - **Performance Optimizations**:
     - **Image Optimization**: Responsive images (srcset) with WebP format, significantly reducing file sizes. Lazy loading for non-critical images.
