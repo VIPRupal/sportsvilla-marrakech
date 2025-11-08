@@ -283,7 +283,7 @@ export const pricingContent = {
   ],
   
   features: [
-    "6 double bedrooms",
+    "Sleep 12 across 6 double bedrooms",
     "Padel & basketball Court",
     "Bali stone pool (heating optional)",
     "Football Pitch, Gym & Outdoor TV",
