@@ -26,7 +26,7 @@ export default function FinalCTA() {
         >
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
             <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
-            Get Instant Quote Via WhatsApp
+            Check Dates & Get Instant Quote (WhatsApp)
           </a>
         </Button>
       </div>
