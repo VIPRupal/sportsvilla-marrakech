@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-xs text-muted-foreground">
-            © 2024 THE VIP CONCIERGE GROUP LIMITED. All rights reserved.
+            © 2025 The VIP Concierge Group Ltd · All Rights Reserved · Proudly based in Marrakech & London
           </p>
         </div>
       </div>
