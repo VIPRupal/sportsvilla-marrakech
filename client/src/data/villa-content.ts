@@ -302,7 +302,7 @@ export const pricingContent = {
 // ==========================================
 export const visualTourContent = {
   sectionTitle: "Experience Luxury at Every Turn",
-  sectionSubtitle: "From sunrise workouts on your private padel court to sunset dips in your heated pool — there's no villa in Marrakech like this one.\nPerfect for groups up to 12 guests seeking the ultimate Marrakech sports villa experience"
+  sectionSubtitle: "Sunrise workouts. Sunset swims. Marrakech's Only sport villa for 12 guests - with a private padel court, heated pool, and pure luxury at every turn."
 };
 
 // ==========================================
