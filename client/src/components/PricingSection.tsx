@@ -108,7 +108,7 @@ export default function PricingSection() {
               data-testid="button-enquiry-form-pricing"
             >
               <a href="#contact">
-                Fill In Enquiry Form
+                Prefer Email? Fill in Enquiry Form.
               </a>
             </Button>
           </div>
