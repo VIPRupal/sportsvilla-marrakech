@@ -159,7 +159,7 @@ export default function HeroSection() {
                 asChild
                 variant="outline"
                 size="default"
-                className="w-full text-xs md:text-sm bg-white/95 backdrop-blur-sm text-foreground hover:bg-white border-white/30"
+                className="w-full text-xs md:text-sm bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
                 data-testid="button-whatsapp-hero"
               >
                 <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>

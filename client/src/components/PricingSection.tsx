@@ -93,7 +93,7 @@ export default function PricingSection() {
             <Button 
               asChild
               size="default"
-              className="flex-1 text-xs md:text-base"
+              className="flex-1 text-xs md:text-base bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
               data-testid="button-whatsapp-pricing"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
