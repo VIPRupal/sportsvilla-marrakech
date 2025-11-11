@@ -31,6 +31,11 @@ export default function ContactForm() {
       return await apiRequest("POST", "/api/enquiries", data);
     },
     onSuccess: () => {
+      // Track form submission conversion
+      if (typeof window !== 'undefined' && (window as any).gtag_report_conversion) {
+        (window as any).gtag_report_conversion();
+      }
+      
       setIsSubmitted(true);
       form.reset();
       toast({
