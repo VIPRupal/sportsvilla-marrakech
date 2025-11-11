@@ -103,8 +103,7 @@ export default function PricingSection() {
             <Button 
               asChild
               size="default"
-              variant="secondary"
-              className="flex-1 text-xs md:text-base"
+              className="flex-1 text-xs md:text-base bg-[#FF8C42] hover:bg-[#FF7629] text-white border-[#FF8C42]"
               data-testid="button-enquiry-form-pricing"
             >
               <a href="#contact">
