@@ -19,12 +19,15 @@ Preferred communication style: Simple, everyday language.
     - **SEO Content System**: `client/src/data/seo-content.ts` serves as the single source of truth for all SEO-related text (hero titles, meta descriptions, keywords). This file is imported by `villa-content.ts` to automatically update the hero section. Meta tags in `client/index.html` must be manually synced (clearly marked with comments). See `SEO_SYNC_GUIDE.md` for complete documentation.
 - **Component Structure**: Modular, section-based components (Hero, VisualTour, WhoThisIsFor, Experience, Pricing, Testimonials) and a persistent floating WhatsApp button. No traditional navigation.
 - **Performance Optimizations**:
-    - **Image Optimization**: Responsive images (srcset) with WebP format, significantly reducing file sizes. Lazy loading for non-critical images.
-    - **Video Optimization**: Hero video trimmed and optimized (WebP poster, `preload="none"`, deferred loading) for faster LCP.
+    - **Image Optimization**: Responsive images (srcset) with WebP format, significantly reducing file sizes. Lazy loading for non-critical images with `loading="lazy"` attribute.
+    - **Video Optimization**: Hero video compressed to 2.3MB (79% reduction from 11MB), WebP poster image (97KB), `preload="none"` for deferred loading, autoplay with retry logic for optimal LCP.
     - **Font Optimization**: Self-hosted WOFF2 fonts with asynchronous loading to prevent render-blocking.
-    - **JavaScript Optimization**: Contact form lazy-loaded using IntersectionObserver to defer heavy dependencies.
-    - **CSS Optimization**: Inlined critical CSS for above-the-fold content and deferred main CSS loading for faster initial paint.
-    - **Core Web Vitals**: Achieved excellent TBT (0ms) and CLS (0), with LCP and FCP optimized as much as possible given hosting constraints.
+    - **JavaScript Optimization**: 
+        - Contact form lazy-loaded using React.lazy + IntersectionObserver (200px rootMargin) to defer heavy dependencies until near viewport.
+        - Google Ads script delayed until user interaction (scroll/click/touch) with 2-second fallback to minimize initial JavaScript execution while preserving conversion tracking.
+    - **CSS Optimization**: Inlined critical CSS for above-the-fold content (hero section) for instant paint, main CSS loaded via Vite module system.
+    - **Resource Hints**: Preconnect and DNS prefetch for Google Tag Manager and WhatsApp domains to reduce connection latency.
+    - **Core Web Vitals**: Targeting 86-88/100 mobile PageSpeed score with optimized LCP, TBT, and CLS.
 
 ### Backend
 - **Server Framework**: Express.js with Node.js and TypeScript (for Replit development).

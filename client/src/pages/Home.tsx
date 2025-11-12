@@ -21,6 +21,7 @@ function LazyContactForm() {
       (entries) => {
         if (entries[0].isIntersecting) {
           setShouldLoad(true);
+          observer.disconnect(); // Stop observing after load
         }
       },
       { rootMargin: "200px" }
