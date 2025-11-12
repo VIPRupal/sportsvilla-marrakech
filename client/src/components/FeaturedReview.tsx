@@ -1,29 +1,28 @@
-import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
 
 export default function FeaturedReview() {
   return (
-    <section className="py-6 md:py-10 lg:py-12 bg-background">
-      <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <Card className="p-6 md:p-10 lg:p-12 text-center border-2 border-primary/20">
-          <div className="flex justify-center gap-1 mb-4 md:mb-6">
+    <section className="py-4 md:py-6 bg-background">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-center gap-2 md:gap-3 text-sm md:text-base">
+          <div className="flex gap-0.5">
             {[...Array(5)].map((_, i) => (
               <Star 
                 key={i} 
-                className="w-5 h-5 md:w-6 md:h-6 fill-primary text-primary" 
+                className="w-3.5 h-3.5 md:w-4 md:h-4 fill-primary text-primary" 
                 data-testid={`star-${i + 1}`}
               />
             ))}
           </div>
           
-          <blockquote className="text-xl md:text-2xl lg:text-3xl font-serif font-medium text-card-foreground mb-4 md:mb-6">
+          <span className="text-card-foreground font-medium">
             "Best Crew and Best Service"
-          </blockquote>
+          </span>
           
-          <p className="text-base md:text-lg text-muted-foreground font-medium">
-            R Shah
-          </p>
-        </Card>
+          <span className="text-muted-foreground">
+            - R Shah
+          </span>
+        </div>
       </div>
     </section>
   );
