@@ -21,7 +21,7 @@ export const enquiries = pgTable("enquiries", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   name: text("name").notNull(),
   email: text("email").notNull(),
-  phone: text("phone").notNull(),
+  phone: text("phone"),
   message: text("message").notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
@@ -32,7 +32,6 @@ export const insertEnquirySchema = createInsertSchema(enquiries).omit({
 }).extend({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
-  phone: z.string().min(10, "Please enter a valid phone number"),
   message: z.string().min(1, "Please enter a message"),
 });
 

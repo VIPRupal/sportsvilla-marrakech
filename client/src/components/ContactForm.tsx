@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, User, MessageSquare, Loader2 } from "lucide-react";
+import { Mail, User, MessageSquare, Loader2 } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { insertEnquirySchema, type InsertEnquiry } from "@shared/schema";
@@ -21,7 +21,6 @@ export default function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
-      phone: "",
       message: "",
     },
   });
@@ -124,26 +123,6 @@ export default function ContactForm() {
               </p>
             )}
           </div>
-        </div>
-
-        <div className="space-y-2">
-          <Label htmlFor="phone" className="text-sm md:text-base">
-            <Phone className="w-4 h-4 inline mr-2" />
-            Phone Number *
-          </Label>
-          <Input
-            id="phone"
-            type="tel"
-            placeholder="+44 7700 900000"
-            {...form.register("phone")}
-            data-testid="input-phone"
-            className="text-sm md:text-base"
-          />
-          {form.formState.errors.phone && (
-            <p className="text-xs md:text-sm text-destructive">
-              {form.formState.errors.phone.message}
-            </p>
-          )}
         </div>
 
         <div className="space-y-2">

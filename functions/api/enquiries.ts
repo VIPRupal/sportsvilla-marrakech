@@ -9,7 +9,7 @@ interface Env {
 interface EnquiryData {
   name: string;
   email: string;
-  phone: string;
+  phone?: string;
   message: string;
 }
 
@@ -38,11 +38,6 @@ function validateEnquiry(data: any): { valid: boolean; errors?: string; data?: E
     return { valid: false, errors: 'Please enter a valid email address' };
   }
   
-  // Validate phone (minimum 10 characters)
-  if (!data.phone || typeof data.phone !== 'string' || data.phone.replace(/\D/g, '').length < 10) {
-    return { valid: false, errors: 'Please enter a valid phone number' };
-  }
-  
   // Validate message
   if (!data.message || typeof data.message !== 'string' || data.message.trim().length < 1) {
     return { valid: false, errors: 'Please enter a message' };
@@ -53,7 +48,7 @@ function validateEnquiry(data: any): { valid: boolean; errors?: string; data?: E
     data: {
       name: data.name.trim(),
       email: data.email.trim().toLowerCase(),
-      phone: data.phone.trim(),
+      phone: data.phone ? data.phone.trim() : undefined,
       message: data.message.trim(),
     }
   };
@@ -106,7 +101,6 @@ export async function onRequestPost(context: { request: Request; env: Env }): Pr
         // Escape all user-supplied fields to prevent HTML/JS injection
         const escapedName = escapeHtml(enquiryData.name);
         const escapedEmail = escapeHtml(enquiryData.email);
-        const escapedPhone = escapeHtml(enquiryData.phone);
         const escapedMessage = escapeHtml(enquiryData.message).replace(/\n/g, '<br>');
         
         const emailResponse = await fetch('https://api.resend.com/emails', {
@@ -123,7 +117,6 @@ export async function onRequestPost(context: { request: Request; env: Env }): Pr
               <h2>New Enquiry Received</h2>
               <p><strong>Name:</strong> ${escapedName}</p>
               <p><strong>Email:</strong> ${escapedEmail}</p>
-              <p><strong>Phone:</strong> ${escapedPhone}</p>
               <p><strong>Message:</strong></p>
               <p>${escapedMessage}</p>
               <hr />

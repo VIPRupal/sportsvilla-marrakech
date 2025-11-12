@@ -24,7 +24,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
               <h2>New Enquiry Received</h2>
               <p><strong>Name:</strong> ${validatedData.name}</p>
               <p><strong>Email:</strong> ${validatedData.email}</p>
-              <p><strong>Phone:</strong> ${validatedData.phone}</p>
               <p><strong>Message:</strong></p>
               <p>${validatedData.message}</p>
               <hr />
