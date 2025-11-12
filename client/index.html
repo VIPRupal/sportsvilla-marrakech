@@ -125,13 +125,34 @@
     <!-- Preload critical hero poster for faster LCP -->
     <link rel="preload" as="image" href="/attached_assets/generated_images/hero_video_poster_new.jpg" fetchpriority="high">
     
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-930043638"></script>
+    <!-- Google tag (gtag.js) - Optimized with delayed loading -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-930043638');
+      
+      // Delay gtag.js loading for better performance
+      function loadGoogleAds() {
+        if (window.gtagLoaded) return;
+        window.gtagLoaded = true;
+        
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-930043638';
+        document.head.appendChild(script);
+        
+        script.onload = function() {
+          gtag('js', new Date());
+          gtag('config', 'AW-930043638');
+        };
+      }
+
+      // Load on user interaction (scroll, click, touch) or after 2 seconds
+      ['scroll', 'mousemove', 'touchstart', 'click'].forEach(function(event) {
+        window.addEventListener(event, loadGoogleAds, { once: true });
+      });
+      
+      // Fallback: load after 2 seconds to ensure tracking works
+      setTimeout(loadGoogleAds, 2000);
     </script>
     
     <!-- Event snippet for Submit lead form (2) conversion page -->
