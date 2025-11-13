@@ -15,7 +15,7 @@ export default function ContactFormSection() {
           <div className="flex items-center justify-center gap-2 mb-2">
             <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
             <p className="text-xs md:text-sm text-foreground">
-              London & Marrakech teams
+              London team with a Marrakech office
             </p>
           </div>
           <p className="text-xs md:text-sm text-muted-foreground">
