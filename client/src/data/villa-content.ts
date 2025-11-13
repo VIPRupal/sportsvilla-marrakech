@@ -295,11 +295,10 @@ export const pricingContent = {
   ],
   
   badges: [
-    { text: "Dates are going quickly", icon: "Calendar" },
-    { text: "£100 Amazon Voucher bonus", icon: "Gift" }
+    { text: "Dates are going quickly", icon: "Calendar" }
   ],
   
-  bonusText: "Book this week and receive a £100 Amazon Voucher"
+  bonusText: ""
 };
 
 // ==========================================
