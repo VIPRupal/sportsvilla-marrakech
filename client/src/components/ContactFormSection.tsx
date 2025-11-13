@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import { MapPin } from "lucide-react";
 
 export default function ContactFormSection() {
   return (
@@ -11,8 +12,14 @@ export default function ContactFormSection() {
           <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-2 md:mb-3 text-foreground">
             Get in Touch
           </h2>
-          <p className="text-sm md:text-base text-muted-foreground max-w-2xl mx-auto">
-            We reply within 2 hours to all Marrakech villa enquiries
+          <div className="flex items-center justify-center gap-2 mb-2">
+            <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
+            <p className="text-sm md:text-base text-foreground">
+              London team with a Marrakech office, specialising in luxury villa experiences
+            </p>
+          </div>
+          <p className="text-sm md:text-base text-muted-foreground">
+            We will reply within 2hrs
           </p>
         </div>
         
