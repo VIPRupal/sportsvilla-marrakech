@@ -105,7 +105,7 @@ export default function LeadMagnetSection() {
             className="text-white transition-colors hover:opacity-90 disabled:opacity-50 flex-shrink-0"
             style={{
               backgroundColor: '#C48A3E',
-              height: '30px',
+              height: '28px',
               paddingLeft: '12px',
               paddingRight: '12px',
               borderRadius: '6px',
