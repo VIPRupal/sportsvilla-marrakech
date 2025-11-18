@@ -126,11 +126,13 @@ export async function onRequestPost(context: { request: Request; env: Env }): Pr
         });
         
         if (!emailResponse.ok) {
-          console.error('Failed to send email:', await emailResponse.text());
+          const errorText = await emailResponse.text();
+          console.error('Resend API error:', errorText);
+          throw new Error(`Email delivery failed: ${errorText}`);
         }
       } catch (emailError) {
         console.error('Email sending error:', emailError);
-        // Don't fail the request if email fails - still return success to user
+        throw emailError; // Propagate error to outer catch block
       }
     }
     
