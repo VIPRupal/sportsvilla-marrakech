@@ -27,6 +27,7 @@ export default function HeroSection() {
 
     // Ensure video is muted for autoplay
     video.muted = true;
+    video.volume = 0;
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
     video.setAttribute('webkit-playsinline', '');
@@ -52,19 +53,37 @@ export default function HeroSection() {
               console.log('Showing manual play button');
             } else {
               // Retry a few times
-              setTimeout(attemptPlay, 1000);
+              setTimeout(attemptPlay, 500);
             }
           });
       }
     };
 
-    // Try to play after a short delay
-    const timer = setTimeout(attemptPlay, 100);
+    // Try to play when video metadata is loaded
+    const handleLoadedMetadata = () => {
+      attemptPlay();
+    };
+
+    // Try to play when video can play through
+    const handleCanPlayThrough = () => {
+      if (!isPlaying) {
+        attemptPlay();
+      }
+    };
+
+    video.addEventListener('loadedmetadata', handleLoadedMetadata);
+    video.addEventListener('canplaythrough', handleCanPlayThrough);
+
+    // Also try immediately in case video is already loaded
+    if (video.readyState >= 3) {
+      attemptPlay();
+    }
 
     return () => {
-      clearTimeout(timer);
+      video.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      video.removeEventListener('canplaythrough', handleCanPlayThrough);
     };
-  }, []);
+  }, [isPlaying]);
 
   const handleManualPlay = () => {
     const video = videoRef.current;
@@ -90,7 +109,7 @@ export default function HeroSection() {
             loop={true}
             muted={true}
             playsInline={true}
-            preload="metadata"
+            preload="auto"
             poster={heroContent.videoPoster}
             className="absolute inset-0 w-full h-full object-cover"
           >
