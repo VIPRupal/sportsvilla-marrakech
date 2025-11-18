@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import LeadMagnetSection from "@/components/LeadMagnetSection";
 import VisualTour from "@/components/VisualTour";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import PricingSection from "@/components/PricingSection";
@@ -13,6 +14,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
+      <LeadMagnetSection />
       <VisualTour />
       <PricingSection />
       {/* <WhoThisIsFor /> */}
