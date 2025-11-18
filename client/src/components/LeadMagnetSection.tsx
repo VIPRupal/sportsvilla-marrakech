@@ -53,26 +53,26 @@ export default function LeadMagnetSection() {
   };
 
   return (
-    <section className="py-3 md:py-4 bg-primary/5 border-y border-primary/10">
-      <div className="max-w-4xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+    <section className="py-2 bg-card border-y border-border">
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-3">
           {/* Left: Heading with icon */}
           <div className="flex items-center gap-2 text-center md:text-left">
-            <Gift className="w-4 h-4 md:w-5 md:h-5 text-primary flex-shrink-0" />
-            <h3 className="font-semibold text-xs md:text-sm text-foreground">
-              <span className="text-primary font-bold">FREE GUIDE:</span> Don't Book a Marrakech Villa Before Reading this
-            </h3>
+            <Gift className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+            <p className="text-xs md:text-sm text-foreground">
+              <span className="font-bold text-foreground">FREE GUIDE:</span> <span className="font-normal">Don't Book a Marrakech Villa Before Reading this</span>
+            </p>
           </div>
           
           {/* Right: Email form */}
-          <form onSubmit={handleSubmit} className="flex gap-2 w-full md:w-auto md:min-w-[300px]">
+          <form onSubmit={handleSubmit} className="flex gap-2 w-full md:w-auto md:min-w-[280px]">
             <Input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               disabled={mutation.isPending}
-              className="flex-1 text-xs md:text-sm h-8"
+              className="flex-1 text-xs h-8"
               data-testid="input-lead-email"
               required
             />
@@ -80,10 +80,10 @@ export default function LeadMagnetSection() {
               type="submit" 
               disabled={mutation.isPending}
               size="sm"
-              className="text-xs md:text-sm whitespace-nowrap"
+              className="text-xs whitespace-nowrap h-8"
               data-testid="button-submit-lead"
             >
-              {mutation.isPending ? "Sending..." : "Get Guide"}
+              {mutation.isPending ? "..." : "Get Guide"}
             </Button>
           </form>
         </div>
