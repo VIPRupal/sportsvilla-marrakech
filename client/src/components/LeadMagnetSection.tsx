@@ -51,10 +51,9 @@ export default function LeadMagnetSection() {
 
   return (
     <section 
-      className="w-full border-b"
+      className="w-full"
       style={{ 
         backgroundColor: '#FFF9F3',
-        borderBottomColor: '#EDE6DD',
         width: '100%',
         paddingTop: '5px',
         paddingBottom: '5px',
