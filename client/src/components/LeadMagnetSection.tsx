@@ -22,8 +22,8 @@ export default function LeadMagnetSection() {
     },
     onSuccess: () => {
       toast({
-        title: "Success!",
-        description: "Check your email for the free guide.",
+        title: "Success",
+        description: "One of our team will email you our expert guide shortly",
       });
       setEmail("");
     },
