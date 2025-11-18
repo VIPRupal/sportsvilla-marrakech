@@ -63,18 +63,19 @@ export default function LeadMagnetSection() {
       }}
     >
       <div className="w-full px-4 md:px-6">
-        {/* Line 1: Text - centered */}
+        {/* Line 1: Text - centered, two lines */}
         <div className="w-full text-center mb-1">
-          <p 
+          <div 
             style={{ 
               fontSize: '12px',
-              fontWeight: 600,
               textAlign: 'center',
-              color: '#6B583F'
+              color: '#6B583F',
+              lineHeight: '1.3'
             }}
           >
-            FREE GUIDE: Before You Book a Marrakech Villa
-          </p>
+            <div style={{ fontWeight: 700 }}>FREE GUIDE</div>
+            <div style={{ fontWeight: 400 }}>Before You Book a Marrakech Villa</div>
+          </div>
         </div>
         
         {/* Line 2: Form - centered as a group */}
