@@ -63,27 +63,12 @@ export default function LeadMagnetSection() {
       }}
     >
       <div className="w-full px-4 md:px-6">
-        {/* Line 1: Text - centered, two lines */}
-        <div className="w-full text-center mb-1">
-          <div 
-            style={{ 
-              fontSize: '12px',
-              textAlign: 'center',
-              color: '#6B583F',
-              lineHeight: '1.3'
-            }}
-          >
-            <div style={{ fontWeight: 700 }}>FREE GUIDE</div>
-            <div style={{ fontWeight: 400 }}>Before You Book a Marrakech Villa</div>
-          </div>
-        </div>
-        
-        {/* Line 2: Form - centered as a group */}
+        {/* Form - centered */}
         <form onSubmit={handleSubmit} className="flex justify-center items-center gap-2">
           {/* Email input */}
           <input
             type="email"
-            placeholder="Your email"
+            placeholder="FREE GUIDE TO RENTING A VILLA IN MARRAKECH, enter email here"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={mutation.isPending}
@@ -94,10 +79,11 @@ export default function LeadMagnetSection() {
               height: '34px',
               borderRadius: '6px',
               width: '68%',
-              maxWidth: '240px',
-              fontSize: '13px',
+              maxWidth: '300px',
+              fontSize: '11px',
               borderColor: '#DDD6CE',
-              paddingLeft: '10px'
+              paddingLeft: '10px',
+              textAlign: 'center'
             }}
           />
           
