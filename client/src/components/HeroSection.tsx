@@ -1,13 +1,12 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Home, Play, Pause } from "lucide-react";
+import { MapPin, Users, Home } from "lucide-react";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasInteracted, setHasInteracted] = useState(false);
-  const [isPlaying, setIsPlaying] = useState(false);
   
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
@@ -15,21 +14,6 @@ export default function HeroSection() {
 
   const handleWhatsAppClick = () => {
     trackWhatsAppClick('hero_section');
-  };
-
-  const togglePlayPause = () => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    if (video.paused) {
-      video.play().then(() => {
-        setIsPlaying(true);
-        setHasInteracted(true);
-      });
-    } else {
-      video.pause();
-      setIsPlaying(false);
-    }
   };
 
   // Play video on first user interaction (scroll, touch, click)
@@ -53,7 +37,6 @@ export default function HeroSection() {
           .then(() => {
             console.log('Video playing after interaction');
             setHasInteracted(true);
-            setIsPlaying(true);
           })
           .catch((error) => {
             console.log('Play attempt failed:', error.name);
@@ -69,7 +52,6 @@ export default function HeroSection() {
           .then(() => {
             console.log('Video autoplay successful');
             setHasInteracted(true);
-            setIsPlaying(true);
           })
           .catch(() => {
             // Silent fail, will wait for user interaction
@@ -150,20 +132,6 @@ export default function HeroSection() {
             <p className="text-xs md:text-sm lg:text-base text-white/90 mt-1 drop-shadow-md whitespace-pre-line">
               {heroContent.subtitle}
             </p>
-            
-            {/* Play Button - Only show if video is not playing */}
-            {!isPlaying && (
-              <div className="mt-6 flex justify-center">
-                <button
-                  onClick={togglePlayPause}
-                  data-testid="button-video-play"
-                  className="group flex items-center justify-center w-16 h-16 rounded-full bg-white/20 backdrop-blur-md border-2 border-white/30 hover:bg-white/30 transition-all duration-300 hover:scale-110"
-                  aria-label="Play video"
-                >
-                  <Play className="w-8 h-8 text-white drop-shadow-lg ml-1" />
-                </button>
-              </div>
-            )}
           </div>
         </div>
 
