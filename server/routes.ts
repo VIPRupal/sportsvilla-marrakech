@@ -86,19 +86,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
           // Check if Resend returned an error in the response
           if (result.error) {
             console.error("Resend API error:", result.error);
-            return res.status(500).json({ 
-              success: false, 
-              error: "Email service error. Please check API configuration." 
-            });
+          } else {
+            console.log("Email sent successfully via Resend:", result);
           }
-          
-          console.log("Email sent successfully via Resend:", result);
         } catch (emailError) {
           console.error("Failed to send lead notification:", emailError);
-          return res.status(500).json({ 
-            success: false, 
-            error: "Failed to send notification" 
-          });
         }
       } else {
         console.warn("Email not sent: Resend or NOTIFICATION_EMAIL not configured");
