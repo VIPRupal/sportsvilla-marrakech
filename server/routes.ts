@@ -21,7 +21,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         try {
           const result = await resend.emails.send({
             from: 'Villa Enquiries <enquiries@vipatmarrakech.com>',
-            to: process.env.NOTIFICATION_EMAIL,
+            to: [process.env.NOTIFICATION_EMAIL],
             subject: `New Villa Enquiry from ${validatedData.name}`,
             html: `
               <h2>New Enquiry Received</h2>
@@ -72,7 +72,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           console.log("Attempting to send email via Resend...");
           const result = await resend.emails.send({
             from: 'Villa Enquiries <enquiries@vipatmarrakech.com>',
-            to: process.env.NOTIFICATION_EMAIL,
+            to: [process.env.NOTIFICATION_EMAIL],
             subject: `New Lead: Free Guide Request`,
             html: `
               <h2>New Lead Magnet Submission</h2>
