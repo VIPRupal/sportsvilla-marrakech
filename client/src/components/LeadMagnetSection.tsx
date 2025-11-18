@@ -63,23 +63,22 @@ export default function LeadMagnetSection() {
       }}
     >
       <div className="w-full px-4 md:px-6">
-        {/* Line 1: Text - centered */}
+        {/* Line 1: Text - centered, full width */}
         <div className="w-full text-center mb-2">
           <p 
             style={{ 
               fontSize: '13px',
               fontWeight: 600,
               textAlign: 'center',
-              color: '#333',
-              whiteSpace: 'nowrap'
+              color: '#333'
             }}
           >
             FREE GUIDE: Don't Book a Marrakech Villa Before Reading This
           </p>
         </div>
         
-        {/* Line 2: Form - centered */}
-        <form onSubmit={handleSubmit} className="flex justify-center items-center">
+        {/* Line 2: Form - centered, prevents overflow */}
+        <form onSubmit={handleSubmit} className="flex justify-center items-center flex-wrap">
           {/* Email input */}
           <input
             type="email"
@@ -89,12 +88,13 @@ export default function LeadMagnetSection() {
             disabled={mutation.isPending}
             required
             data-testid="input-lead-email"
-            className="px-3 border focus:outline-none focus:ring-1 focus:ring-opacity-50"
+            className="px-3 border focus:outline-none focus:ring-1 focus:ring-opacity-50 flex-shrink-0"
             style={{
               height: '32px',
               borderRadius: '6px',
               width: '70%',
               maxWidth: '260px',
+              minWidth: '150px',
               fontSize: '13px',
               borderColor: '#D8D4CD',
               marginRight: '8px'
@@ -106,7 +106,7 @@ export default function LeadMagnetSection() {
             type="submit" 
             disabled={mutation.isPending}
             data-testid="button-submit-lead"
-            className="text-white transition-colors hover:opacity-90 disabled:opacity-50"
+            className="text-white transition-colors hover:opacity-90 disabled:opacity-50 flex-shrink-0"
             style={{
               backgroundColor: '#C48A3E',
               color: 'white',
