@@ -71,7 +71,7 @@ export default function LeadMagnetSection() {
               color: '#6B583F'
             }}
           >
-            <span style={{ fontWeight: 700 }}>FREE GUIDE</span>
+            <span style={{ fontWeight: 900 }}>FREE GUIDE</span>
             <span style={{ fontWeight: 400 }}> to choosing the Perfect Marrakech Villa</span>
           </p>
         </div>
