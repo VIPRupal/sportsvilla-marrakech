@@ -72,7 +72,7 @@ export default function LeadMagnetSection() {
             }}
           >
             <span style={{ fontWeight: 700 }}>FREE GUIDE</span>
-            <span style={{ fontWeight: 400 }}> - How to Choose the Right Marrakech Villa</span>
+            <span style={{ fontWeight: 400 }}> to choosing the Perfect Marrakech Villa</span>
           </p>
         </div>
         
