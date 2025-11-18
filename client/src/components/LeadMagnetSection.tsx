@@ -66,14 +66,12 @@ export default function LeadMagnetSection() {
         {/* Line 1: Text - centered, full width */}
         <div className="w-full text-center mb-2">
           <p 
+            className="text-[10px] md:text-[13px]"
             style={{ 
-              fontSize: '13px',
               fontWeight: 600,
               textAlign: 'center',
               color: '#333',
-              whiteSpace: 'nowrap',
-              overflow: 'hidden',
-              textOverflow: 'ellipsis'
+              whiteSpace: 'nowrap'
             }}
           >
             FREE GUIDE: Don't Book a Marrakech Villa Before Reading This
