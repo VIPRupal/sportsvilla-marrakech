@@ -55,29 +55,28 @@ export default function LeadMagnetSection() {
       style={{ 
         backgroundColor: '#FAF7F2',
         borderBottomColor: '#E6DED5',
-        height: '42px',
         marginTop: '10px',
         marginBottom: '12px',
-        paddingTop: '4px',
-        paddingBottom: '4px'
+        paddingTop: '8px',
+        paddingBottom: '8px'
       }}
     >
-      <div className="w-full px-4 md:px-6 h-full">
-        <form onSubmit={handleSubmit} className="flex flex-row items-center h-full" style={{ gap: '12px' }}>
-          {/* Text */}
+      <div className="w-full px-4 md:px-6">
+        {/* Line 1: Text - centered */}
+        <div className="w-full text-center mb-2">
           <p 
-            className="flex-shrink-0"
             style={{ 
               fontSize: '12px',
               fontWeight: 600,
-              color: '#333',
-              marginRight: 'auto',
-              whiteSpace: 'nowrap'
+              color: '#333'
             }}
           >
             FREE GUIDE: Don't Book a Marrakech Villa Before Reading This
           </p>
-          
+        </div>
+        
+        {/* Line 2: Form - centered */}
+        <form onSubmit={handleSubmit} className="flex justify-center items-center" style={{ gap: '12px' }}>
           {/* Email input */}
           <input
             type="email"
@@ -87,7 +86,7 @@ export default function LeadMagnetSection() {
             disabled={mutation.isPending}
             required
             data-testid="input-lead-email"
-            className="px-3 border focus:outline-none focus:ring-1 focus:ring-opacity-50 flex-shrink-0"
+            className="px-3 border focus:outline-none focus:ring-1 focus:ring-opacity-50"
             style={{
               height: '28px',
               borderRadius: '6px',
@@ -102,7 +101,7 @@ export default function LeadMagnetSection() {
             type="submit" 
             disabled={mutation.isPending}
             data-testid="button-submit-lead"
-            className="text-white transition-colors hover:opacity-90 disabled:opacity-50 flex-shrink-0"
+            className="text-white transition-colors hover:opacity-90 disabled:opacity-50"
             style={{
               backgroundColor: '#C48A3E',
               height: '28px',
