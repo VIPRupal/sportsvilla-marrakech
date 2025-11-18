@@ -93,7 +93,7 @@ export default function LeadMagnetSection() {
               borderRadius: '4px',
               width: '68%',
               maxWidth: '200px',
-              fontSize: '13px',
+              fontSize: '16px',
               borderColor: '#DDD6CE',
               paddingLeft: '8px',
               boxSizing: 'border-box'
