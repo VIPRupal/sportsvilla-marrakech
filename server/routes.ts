@@ -45,6 +45,52 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Lead magnet email capture endpoint
+  app.post("/api/lead-magnet", async (req, res) => {
+    try {
+      const { email } = req.body;
+      
+      if (!email || !email.includes('@')) {
+        return res.status(400).json({ 
+          success: false, 
+          error: "Valid email is required" 
+        });
+      }
+      
+      // Send notification email to owner with the lead's email
+      if (resend && process.env.NOTIFICATION_EMAIL) {
+        try {
+          await resend.emails.send({
+            from: 'Villa Enquiries <enquiries@vipatmarrakech.com>',
+            to: process.env.NOTIFICATION_EMAIL,
+            subject: `New Lead: Free Guide Request`,
+            html: `
+              <h2>New Lead Magnet Submission</h2>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Guide:</strong> "Don't Book a Marrakech Villa Before Reading this"</p>
+              <hr />
+              <p><small>Received: ${new Date().toLocaleString()}</small></p>
+            `,
+          });
+        } catch (emailError) {
+          console.error("Failed to send lead notification:", emailError);
+          return res.status(500).json({ 
+            success: false, 
+            error: "Failed to send notification" 
+          });
+        }
+      }
+      
+      res.json({ success: true, message: "Guide will be sent to your email" });
+    } catch (error) {
+      console.error("Lead magnet submission error:", error);
+      res.status(500).json({ 
+        success: false, 
+        error: error instanceof Error ? error.message : "Failed to process request" 
+      });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
