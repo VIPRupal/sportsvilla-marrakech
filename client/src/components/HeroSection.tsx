@@ -112,6 +112,15 @@ export default function HeroSection() {
         </div>
       )}
       
+      {/* Black Friday Sale Banner - Top */}
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
+        <div className="bg-black/60 backdrop-blur-md rounded-lg px-4 py-2 border border-yellow-400/50">
+          <p className="text-yellow-300 text-sm md:text-base font-bold text-center whitespace-nowrap">
+            ⚡ Black Friday Sale – Save £150/night ⚡
+          </p>
+        </div>
+      </div>
+      
       {/* Content Layout - Split Design */}
       <div className="relative z-10 h-full flex flex-col md:flex-row items-center justify-center px-4 md:px-6 lg:px-8">
         {/* Centered Title */}
@@ -126,24 +135,6 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Info Card - Desktop: Right Side, Mobile: Bottom */}
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 md:relative md:bottom-auto md:left-auto md:translate-x-0 md:flex-shrink-0">
-          {/* Info Card */}
-          <div className="bg-black/50 backdrop-blur-md rounded-lg p-2 md:p-3 border border-white/20">
-              {/* Feature Badges */}
-              <div className="flex items-center justify-center gap-1 md:gap-1.5 overflow-x-auto">
-                {heroContent.badges.map((badge, index) => {
-                  const IconComponent = badge.icon === 'MapPin' ? MapPin : badge.icon === 'Users' ? Users : badge.icon === 'Home' ? Home : null;
-                  return (
-                    <div key={index} className="flex items-center gap-0.5 text-white flex-shrink-0">
-                      {IconComponent && <IconComponent className="w-3 h-3" />}
-                      <span className="text-xs font-medium whitespace-nowrap">{badge.text}</span>
-                    </div>
-                  );
-                })}
-              </div>
-          </div>
-        </div>
       </div>
     </section>
   );
