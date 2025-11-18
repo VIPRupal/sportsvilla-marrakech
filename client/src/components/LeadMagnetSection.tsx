@@ -95,7 +95,8 @@ export default function LeadMagnetSection() {
               maxWidth: '200px',
               fontSize: '13px',
               borderColor: '#DDD6CE',
-              paddingLeft: '8px'
+              paddingLeft: '8px',
+              boxSizing: 'border-box'
             }}
           />
           
@@ -109,10 +110,15 @@ export default function LeadMagnetSection() {
               backgroundColor: '#C48A3E',
               color: 'white',
               height: '28px',
+              paddingTop: '0',
+              paddingBottom: '0',
               paddingLeft: '10px',
               paddingRight: '10px',
               borderRadius: '4px',
-              fontSize: '12px'
+              fontSize: '12px',
+              lineHeight: '28px',
+              boxSizing: 'border-box',
+              border: 'none'
             }}
           >
             {mutation.isPending ? "..." : "Get Guide"}
