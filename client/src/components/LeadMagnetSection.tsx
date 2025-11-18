@@ -51,30 +51,32 @@ export default function LeadMagnetSection() {
 
   return (
     <section 
-      className="w-full border-b py-2"
+      className="w-full border-b"
       style={{ 
-        backgroundColor: '#F8F4EF',
-        borderBottomColor: '#E8E1D9',
-        minHeight: '45px',
-        maxHeight: '55px'
+        backgroundColor: '#FAF7F2',
+        borderBottomColor: '#E6DED5',
+        height: '48px',
+        marginTop: '8px',
+        marginBottom: '8px',
+        paddingTop: '6px',
+        paddingBottom: '6px'
       }}
     >
       <div className="w-full px-4 md:px-6 h-full">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-2 h-full">
+        <div className="flex flex-row items-center justify-between h-full">
           {/* Left: Text */}
           <p 
-            className="text-left"
             style={{ 
-              fontSize: '13px',
-              fontWeight: 500,
-              color: '#3A3A3A'
+              fontSize: '12.5px',
+              fontWeight: 600,
+              color: '#333'
             }}
           >
-            <span style={{ fontWeight: 600 }}>FREE GUIDE:</span> Don't Book a Marrakech Villa Before Reading This
+            FREE GUIDE: Don't Book a Marrakech Villa Before Reading This
           </p>
           
           {/* Right: Email form */}
-          <form onSubmit={handleSubmit} className="flex gap-2 flex-shrink-0">
+          <form onSubmit={handleSubmit} className="flex flex-shrink-0" style={{ gap: '12px' }}>
             <input
               type="email"
               placeholder="Your email"
@@ -83,24 +85,27 @@ export default function LeadMagnetSection() {
               disabled={mutation.isPending}
               required
               data-testid="input-lead-email"
-              className="px-3 text-sm border border-gray-300 focus:outline-none focus:ring-2 focus:ring-opacity-50"
+              className="px-3 border focus:outline-none focus:ring-1 focus:ring-opacity-50"
               style={{
-                height: '32px',
+                height: '30px',
                 borderRadius: '6px',
-                minWidth: '200px',
-                fontSize: '13px'
+                width: '150px',
+                fontSize: '12px',
+                borderColor: '#D8D4CD'
               }}
             />
             <button 
               type="submit" 
               disabled={mutation.isPending}
               data-testid="button-submit-lead"
-              className="px-4 font-medium text-white transition-colors hover:opacity-90 disabled:opacity-50"
+              className="text-white transition-colors hover:opacity-90 disabled:opacity-50"
               style={{
                 backgroundColor: '#C48A3E',
-                height: '32px',
+                height: '30px',
+                paddingLeft: '12px',
+                paddingRight: '12px',
                 borderRadius: '6px',
-                fontSize: '13px'
+                fontSize: '12px'
               }}
             >
               {mutation.isPending ? "..." : "Get Guide"}
