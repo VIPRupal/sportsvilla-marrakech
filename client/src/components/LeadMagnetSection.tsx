@@ -63,12 +63,26 @@ export default function LeadMagnetSection() {
       }}
     >
       <div className="w-full px-4 md:px-6">
+        {/* Header text - centered */}
+        <div className="w-full text-center mb-1">
+          <p 
+            style={{ 
+              fontSize: '12px',
+              fontWeight: 600,
+              textAlign: 'center',
+              color: '#6B583F'
+            }}
+          >
+            FREE GUIDE - How to Choose the Right Marrakech Villa
+          </p>
+        </div>
+        
         {/* Form - centered */}
         <form onSubmit={handleSubmit} className="flex justify-center items-center gap-2">
           {/* Email input */}
           <input
             type="email"
-            placeholder="FREE GUIDE TO RENTING A VILLA IN MARRAKECH, enter email here"
+            placeholder="Your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             disabled={mutation.isPending}
@@ -79,11 +93,10 @@ export default function LeadMagnetSection() {
               height: '34px',
               borderRadius: '6px',
               width: '68%',
-              maxWidth: '300px',
-              fontSize: '11px',
+              maxWidth: '240px',
+              fontSize: '16px',
               borderColor: '#DDD6CE',
-              paddingLeft: '10px',
-              textAlign: 'center'
+              paddingLeft: '10px'
             }}
           />
           
