@@ -27,12 +27,12 @@ export default function WhatsAppButton() {
       <div className="relative">
         <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-75" />
         
-        <div className="relative flex items-center gap-3 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl pr-5">
-          <div className="w-14 h-14 flex items-center justify-center">
-            <MessageCircle className="w-7 h-7" />
+        <div className="relative flex items-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl pr-4">
+          <div className="w-11 h-11 flex items-center justify-center">
+            <MessageCircle className="w-5 h-5" />
           </div>
           
-          <span className="text-sm font-semibold whitespace-nowrap">
+          <span className="text-xs font-semibold whitespace-nowrap">
             Get Quote
           </span>
         </div>
