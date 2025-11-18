@@ -77,7 +77,7 @@ export default function LeadMagnetSection() {
         </div>
         
         {/* Form - centered */}
-        <form onSubmit={handleSubmit} className="flex justify-center items-center gap-2">
+        <form onSubmit={handleSubmit} className="flex flex-col items-center gap-2 w-full">
           {/* Email input */}
           <input
             type="email"
@@ -87,12 +87,11 @@ export default function LeadMagnetSection() {
             disabled={mutation.isPending}
             required
             data-testid="input-lead-email"
-            className="border focus:outline-none focus:ring-1 focus:ring-opacity-50"
+            className="border focus:outline-none focus:ring-1 focus:ring-opacity-50 w-full"
             style={{
               height: '34px',
               borderRadius: '6px',
-              width: '68%',
-              maxWidth: '240px',
+              maxWidth: '400px',
               fontSize: '16px',
               borderColor: '#DDD6CE',
               paddingLeft: '10px'
@@ -104,13 +103,12 @@ export default function LeadMagnetSection() {
             type="submit" 
             disabled={mutation.isPending}
             data-testid="button-submit-lead"
-            className="text-white transition-colors hover:opacity-90 disabled:opacity-50"
+            className="text-white transition-colors hover:opacity-90 disabled:opacity-50 w-full"
             style={{
               backgroundColor: '#C48A3E',
               color: 'white',
               height: '34px',
-              paddingLeft: '12px',
-              paddingRight: '12px',
+              maxWidth: '400px',
               borderRadius: '6px',
               fontSize: '13px'
             }}
