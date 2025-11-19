@@ -53,12 +53,13 @@ export default function LeadMagnetSection() {
     <section 
       className="w-full"
       style={{ 
-        backgroundColor: '#FFF9F3',
+        backgroundColor: '#FFF7E9',
         width: '100%',
         paddingTop: '5px',
         paddingBottom: '5px',
         marginTop: '6px',
-        marginBottom: '6px'
+        marginBottom: '6px',
+        borderBottom: '1px solid #E5DED3'
       }}
     >
       <div className="w-full px-4 md:px-6">
@@ -66,13 +67,13 @@ export default function LeadMagnetSection() {
         <div className="w-full text-center mb-1">
           <p 
             style={{ 
-              fontSize: '12px',
+              fontSize: '10.8px',
               textAlign: 'center',
               color: '#6B583F',
               fontWeight: 700
             }}
           >
-            👉 MARRAKECH VILLAS - Avoid these 7 Mistakes!
+            MARRAKECH VILLAS - Avoid these 7 Mistakes!
           </p>
         </div>
         
