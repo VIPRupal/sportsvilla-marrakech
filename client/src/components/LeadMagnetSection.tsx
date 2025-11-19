@@ -73,7 +73,7 @@ export default function LeadMagnetSection() {
               fontWeight: 700
             }}
           >
-            MARRAKECH VILLAS - Avoid these 7 Mistakes!
+            BOOKING A MARRAKECH VILLA - AVOID THESE 7 MISTAKES
           </p>
         </div>
         
