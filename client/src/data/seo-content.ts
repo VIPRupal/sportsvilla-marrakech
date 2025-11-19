@@ -29,7 +29,7 @@ export const seoContent = {
   heroTitle: "Marrakech's No.1 6 Bed Luxury Sports Villa",
   
   // Hero Section Subtitle
-  heroSubtitle: "Where guests stay together, play together & create memories you can't get in hotels.",
+  heroSubtitle: "Sleeps 12 • Heated Pool • Private Padel Court • Fully Staffed",
   
   // Open Graph Title (for Facebook/WhatsApp/social sharing)
   ogTitle: "Marrakech's No.1 6 Bed Luxury Sports Villa | Save £150/Night",
