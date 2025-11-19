@@ -65,8 +65,8 @@ export default function LeadMagnetSection() {
         {/* Header text - centered */}
         <div className="w-full text-center mb-1">
           <p 
+            className="text-[9px] xs:text-[10px] sm:text-[11px] md:text-[12px] whitespace-nowrap"
             style={{ 
-              fontSize: '12px',
               textAlign: 'center',
               color: '#6B583F',
               fontWeight: 700,
