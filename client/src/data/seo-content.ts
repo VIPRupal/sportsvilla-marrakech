@@ -29,7 +29,7 @@ export const seoContent = {
   heroTitle: "Your Private Sports Resort to make Memories",
   
   // Hero Section Subtitle
-  heroSubtitle: "Sleeps 12 • Heated Pool • Private Padel Court • Fully Staffed",
+  heroSubtitle: "6-Bed Luxury Sports Villa • Heated Pool • Padel Court • Private Staff",
   
   // Open Graph Title (for Facebook/WhatsApp/social sharing)
   ogTitle: "Marrakech's No.1 6 Bed Luxury Sports Villa | Save £150/Night",
