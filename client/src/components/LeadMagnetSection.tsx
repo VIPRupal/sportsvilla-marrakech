@@ -136,8 +136,7 @@ export default function LeadMagnetSection() {
               textAlign: 'center',
               color: '#6B583F',
               fontWeight: 400,
-              opacity: 0.8,
-              fontStyle: 'italic'
+              opacity: 0.8
             }}
           >
             Trusted by 15,000+ Marrakech travellers since 2016
