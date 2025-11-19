@@ -212,7 +212,7 @@ export const experienceContent = {
 // ==========================================
 export const ourTeamContent = {
   sectionTitle: "Why Book With Us?",
-  sectionSubtitle: "Trusted by 150+ UK groups each year – your dream villa in Marrakech awaits",
+  sectionSubtitle: "Trusted by 150+ UK groups each year",
   
   benefits: [
     {

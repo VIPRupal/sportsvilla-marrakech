@@ -29,6 +29,9 @@ export default function OurTeamSection() {
           <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
             {ourTeamContent.sectionSubtitle}
           </p>
+          <p className="text-xs md:text-sm text-muted-foreground mt-2 md:mt-3">
+            ⭐ 4.9/5 Rated  🏆 Established 2016  🔒 Secure Booking
+          </p>
         </div>
         
         <div className="grid grid-cols-3 gap-2 md:gap-4">
