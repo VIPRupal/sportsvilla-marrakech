@@ -26,9 +26,6 @@ export default function OurTeamSection() {
           <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-card-foreground">
             {ourTeamContent.sectionTitle}
           </h2>
-          <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
-            {ourTeamContent.sectionSubtitle}
-          </p>
           <p className="text-xs md:text-sm text-muted-foreground mt-2 md:mt-3">
             ⭐ 4.9/5 Rated  🏆 Established 2016  🔒 Secure Booking
           </p>
