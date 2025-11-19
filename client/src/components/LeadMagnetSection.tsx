@@ -127,6 +127,21 @@ export default function LeadMagnetSection() {
             {mutation.isPending ? "..." : "Get My Free Guide"}
           </button>
         </form>
+        
+        {/* Trust badge text */}
+        <div className="w-full text-center mt-1">
+          <p 
+            style={{ 
+              fontSize: '10px',
+              textAlign: 'center',
+              color: '#6B583F',
+              fontWeight: 400,
+              opacity: 0.8
+            }}
+          >
+            Trusted by 15,000+ Marrakech travellers since 2016
+          </p>
+        </div>
       </div>
     </section>
   );
