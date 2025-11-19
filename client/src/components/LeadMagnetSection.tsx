@@ -73,7 +73,7 @@ export default function LeadMagnetSection() {
               textTransform: 'uppercase'
             }}
           >
-            Booking a Marrakech Villa? Avoid These 7 Mistakes!
+            👉 Booking a Marrakech Villa? Avoid These 7 Mistakes!
           </p>
         </div>
         
