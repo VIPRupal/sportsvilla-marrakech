@@ -73,7 +73,7 @@ export default function LeadMagnetSection() {
               textTransform: 'uppercase'
             }}
           >
-            Become a Marrakech Villa Expert in just 5 minutes!
+            Avoid These 7 Mistakes When Booking a Marrakech Villa
           </p>
         </div>
         
