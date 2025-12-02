@@ -52,7 +52,7 @@ export const heroContent = {
   description: "",
   
   badges: [
-    { text: "⚡ Black Friday Sale – Save £150/night ⚡", icon: "" }
+    { text: "🎄 Xmas Sale – Save £100/night 🎄", icon: "" }
   ],
   
   ctaText: "Check Dates & Get Instant Quote"
@@ -268,20 +268,20 @@ export const pricingContent = {
     {
       name: "Low Season",
       regularPrice: "£750",
-      onlinePrice: "£600",
-      savings: "£150"
+      onlinePrice: "£650",
+      savings: "£100"
     },
     {
       name: "Mid Season",
       regularPrice: "£850",
-      onlinePrice: "£700",
-      savings: "£150"
+      onlinePrice: "£750",
+      savings: "£100"
     },
     {
       name: "High Season",
       regularPrice: "£950",
-      onlinePrice: "£800",
-      savings: "£150"
+      onlinePrice: "£850",
+      savings: "£100"
     }
   ],
   
@@ -296,7 +296,7 @@ export const pricingContent = {
   
   badges: [
     { text: "Dates are going quickly", icon: "Calendar" },
-    { text: "Sale Ends 30th Nov", icon: "Sparkles" }
+    { text: "Xmas Sale – Ends 31st Dec", icon: "Sparkles" }
   ],
   
   bonusText: ""
