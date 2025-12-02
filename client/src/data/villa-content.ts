@@ -296,7 +296,7 @@ export const pricingContent = {
   
   badges: [
     { text: "Dates are going quickly", icon: "Calendar" },
-    { text: "Xmas Sale – Ends 31st Dec", icon: "Sparkles" }
+    { text: "Xmas Sale – Ends Fri 26th Dec", icon: "Sparkles" }
   ],
   
   bonusText: ""
