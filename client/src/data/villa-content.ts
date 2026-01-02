@@ -52,7 +52,7 @@ export const heroContent = {
   description: "",
   
   badges: [
-    { text: "🎄 Xmas Sale – Save £100/night 🎄", icon: "" }
+    { text: "🚗 Free Airport Transfer on Arrival 🚗", icon: "" }
   ],
   
   ctaText: "Check Dates & Get Instant Quote"
@@ -296,7 +296,7 @@ export const pricingContent = {
   
   badges: [
     { text: "Dates are going quickly", icon: "Calendar" },
-    { text: "Xmas Sale – Ends Fri 26th Dec", icon: "Sparkles" }
+    { text: "Free Airport Transfer Included", icon: "Gift" }
   ],
   
   bonusText: ""
