@@ -50,8 +50,12 @@ export default function PricingSection() {
                   </div>
                 </div>
                 
-                <p className="text-[9px] md:text-sm text-muted-foreground">
+                <p className="text-[9px] md:text-sm text-muted-foreground mb-1">
                   Sleeps {pricingContent.guestCount}
+                </p>
+                
+                <p className="text-[9px] md:text-sm text-primary font-semibold">
+                  Free Airport Transfer
                 </p>
               </div>
             </Card>
