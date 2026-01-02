@@ -268,20 +268,20 @@ export const pricingContent = {
     {
       name: "Low Season",
       regularPrice: "£750",
-      onlinePrice: "£650",
-      savings: "£100"
+      onlinePrice: "£750",
+      savings: ""
     },
     {
       name: "Mid Season",
       regularPrice: "£850",
-      onlinePrice: "£750",
-      savings: "£100"
+      onlinePrice: "£850",
+      savings: ""
     },
     {
       name: "High Season",
       regularPrice: "£950",
-      onlinePrice: "£850",
-      savings: "£100"
+      onlinePrice: "£950",
+      savings: ""
     }
   ],
   

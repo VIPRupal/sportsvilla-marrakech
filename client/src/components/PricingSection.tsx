@@ -31,7 +31,7 @@ export default function PricingSection() {
             {pricingContent.sectionTitle}
           </h2>
           <h3 className="text-xs md:text-base lg:text-lg font-medium text-card-foreground mt-1 md:mt-2">
-            Limited Dates Available – Book Direct & Save
+            Limited Dates Available – Book Direct
           </h3>
         </div>
         
@@ -44,18 +44,9 @@ export default function PricingSection() {
                 </h3>
                 
                 <div className="mb-1 md:mb-3">
-                  <div className="text-[10px] md:text-sm text-muted-foreground line-through mb-0.5 md:mb-1">
-                    {season.regularPrice}
-                  </div>
-                  <div className="text-[9px] md:text-xs text-primary font-bold mb-0.5">
-                    Special Sale Price
-                  </div>
                   <div className="flex items-baseline justify-center gap-0.5 md:gap-2">
                     <span className="text-base md:text-3xl font-bold text-primary">{season.onlinePrice}</span>
                     <span className="text-[10px] md:text-base text-muted-foreground">/nt</span>
-                  </div>
-                  <div className="text-[9px] md:text-sm text-primary font-semibold mt-0.5 md:mt-1">
-                    Save {season.savings}
                   </div>
                 </div>
                 
