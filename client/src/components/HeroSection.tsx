@@ -8,6 +8,9 @@ export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasInteracted, setHasInteracted] = useState(false);
   
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  const videoSrc = isMobile ? '/hero_video_mobile.mp4' : '/hero_video_desktop.mp4';
+
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
@@ -99,7 +102,7 @@ export default function HeroSection() {
             poster={heroContent.videoPoster}
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src={heroContent.videoUrl} type="video/mp4" />
+            <source src={videoSrc} type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-700/50 via-gray-600/25 to-transparent" />
         </div>
