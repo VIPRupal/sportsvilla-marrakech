@@ -322,7 +322,7 @@ export const testimonialsContent = {
 // WHATSAPP CONFIGURATION
 // ==========================================
 export const whatsappConfig = {
-  phoneNumber: "+447728586430",
+  phoneNumber: "+447789915588",
   defaultMessage: "Hi! I saw the Sports Villa online — can I get a quote?"
 };
 
