@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Home } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
@@ -16,12 +16,10 @@ export default function HeroSection() {
     trackWhatsAppClick('hero_section');
   };
 
-  // Play video on first user interaction (scroll, touch, click)
   useEffect(() => {
     const video = videoRef.current;
     if (!video || hasInteracted) return;
 
-    // Ensure video is properly configured for autoplay
     video.muted = true;
     video.volume = 0;
     video.setAttribute('muted', '');
@@ -30,63 +28,43 @@ export default function HeroSection() {
 
     const attemptPlay = () => {
       if (hasInteracted) return;
-      
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise
-          .then(() => {
-            console.log('Video playing after interaction');
-            setHasInteracted(true);
-          })
-          .catch((error) => {
-            console.log('Play attempt failed:', error.name);
-          });
+          .then(() => { setHasInteracted(true); })
+          .catch(() => {});
       }
     };
 
-    // Try immediate autoplay first (works on desktop)
     const tryImmediatePlay = () => {
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise
-          .then(() => {
-            console.log('Video autoplay successful');
-            setHasInteracted(true);
-          })
-          .catch(() => {
-            // Silent fail, will wait for user interaction
-          });
+          .then(() => { setHasInteracted(true); })
+          .catch(() => {});
       }
     };
 
-    // Listen for ANY user interaction
-    const handleInteraction = () => {
-      attemptPlay();
-    };
-
-    // Try immediate play when ready
     if (video.readyState >= 3) {
       tryImmediatePlay();
     } else {
       video.addEventListener('canplay', tryImmediatePlay, { once: true });
     }
 
-    // Set up interaction listeners
-    window.addEventListener('scroll', handleInteraction, { once: true, passive: true });
-    window.addEventListener('touchstart', handleInteraction, { once: true, passive: true });
-    window.addEventListener('click', handleInteraction, { once: true });
+    window.addEventListener('scroll', attemptPlay, { once: true, passive: true });
+    window.addEventListener('touchstart', attemptPlay, { once: true, passive: true });
+    window.addEventListener('click', attemptPlay, { once: true });
 
     return () => {
-      window.removeEventListener('scroll', handleInteraction);
-      window.removeEventListener('touchstart', handleInteraction);
-      window.removeEventListener('click', handleInteraction);
+      window.removeEventListener('scroll', attemptPlay);
+      window.removeEventListener('touchstart', attemptPlay);
+      window.removeEventListener('click', attemptPlay);
       video.removeEventListener('canplay', tryImmediatePlay);
     };
   }, [hasInteracted]);
 
   return (
-    <section id="home" className="relative h-[70vh] md:h-[75vh] lg:h-[80vh] w-full overflow-hidden bg-gray-500">
-      {/* Video Background - Full Screen */}
+    <section id="home" className="relative h-[85vh] md:h-[90vh] w-full overflow-hidden bg-gray-800">
       {heroContent.videoUrl ? (
         <div className="absolute inset-0">
           <video
@@ -101,34 +79,52 @@ export default function HeroSection() {
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-700/50 via-gray-600/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
         </div>
       ) : (
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${heroContent.backgroundImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-700/40 via-transparent to-gray-600/30" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70" />
         </div>
       )}
-      
-      {/* Content Layout - Bottom Aligned */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-end pb-4 md:pb-6 lg:pb-8 px-4 md:px-6 lg:px-8">
-        {/* Bottom Aligned Title */}
-        <div className="text-center">
-          <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
-            {heroContent.title}
-          </h1>
-          <p className="text-xs md:text-sm lg:text-base text-white/90 mt-1 drop-shadow-md whitespace-pre-line">
-            {heroContent.subtitle}
+
+      <div className="relative z-10 h-full flex flex-col items-center justify-center px-4 md:px-8 text-center">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-white/80 text-xs md:text-sm font-medium tracking-widest uppercase mb-3 md:mb-4">
+            Marrakech, Morocco
           </p>
-        </div>
-        
-        {/* Free Airport Transfer Banner - Bottom */}
-        <div className="mt-3">
-          <div className="bg-black/60 backdrop-blur-md rounded px-2 py-1 border border-primary/50">
-            <p className="text-white text-xs md:text-sm font-bold text-center whitespace-nowrap">
-              🚗 Free Airport Transfer on Arrival 🚗
+          <h1 className="font-serif font-bold text-2xl md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-lg mb-3 md:mb-5">
+            6-Bed Luxury Sports Villa in Marrakech
+          </h1>
+          <p className="text-sm md:text-xl text-white/90 mb-2 md:mb-3 drop-shadow-md">
+            Private padel court, heated pool & full staff.
+          </p>
+          <p className="text-sm md:text-xl text-white/90 mb-4 md:mb-6 drop-shadow-md">
+            Perfect for groups of 8–12.
+          </p>
+
+          <div className="inline-block bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 mb-5 md:mb-8">
+            <p className="text-white text-xs md:text-sm font-semibold">
+              Limited availability — weekends book fast
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center gap-2 md:gap-3">
+            <Button
+              asChild
+              size="lg"
+              className="w-full max-w-xs md:max-w-sm text-sm md:text-base font-bold bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] px-6 md:px-10 py-3 md:py-4 rounded-full shadow-lg"
+              data-testid="button-whatsapp-hero"
+            >
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
+                <MessageCircle className="w-5 h-5 mr-2" />
+                Check Availability on WhatsApp
+              </a>
+            </Button>
+            <p className="text-white/70 text-xs">
+              Takes 30 seconds • No commitment • Fast reply
             </p>
           </div>
         </div>

@@ -164,28 +164,28 @@ export const testimonials = [
 // WHY THIS VILLA SECTION
 // ==========================================
 export const whoThisIsForContent = {
-  sectionTitle: "Why this is our No.1 Villa",
-  sectionSubtitle: "Everything you need for an unforgettable Marrakech experience",
+  sectionTitle: "Why groups book this villa:",
+  sectionSubtitle: "",
   
   audiences: [
     {
-      title: "5 star sports facilities",
-      description: "Padel & basketball court, football pitch & home gym.",
+      title: "Private padel court + football pitch",
+      description: "World-class sports facilities right on your doorstep.",
       icon: "Trophy"
     },
     {
-      title: "Only 20/25mins from Medina",
-      description: "Close to Marrakech's souks and culture, far enough for privacy.",
-      icon: "MapPin"
-    },
-    {
-      title: "Maid & Cook Included",
-      description: "No stress - let the staff take care of you.",
+      title: "Heated pool + full staff",
+      description: "Cook and maid included — relax and let us take care of everything.",
       icon: "Shield"
     },
     {
-      title: "Spacious Living Area",
-      description: "6 double bedrooms for families or groups up to 12 guests.",
+      title: "Perfect for birthdays, stags & group trips",
+      description: "We specialise in group getaways and know exactly what you need.",
+      icon: "Users"
+    },
+    {
+      title: "Sleeps 8–12 in 6 bedrooms",
+      description: "Spacious double bedrooms so everyone has their own space.",
       icon: "Home"
     }
   ]
@@ -314,8 +314,8 @@ export const visualTourContent = {
 // TESTIMONIALS SECTION
 // ==========================================
 export const testimonialsContent = {
-  sectionTitle: "What Our Guests Say",
-  sectionSubtitle: "Real experiences from families, couples, and groups who've stayed with us"
+  sectionTitle: "Trusted by 100+ groups",
+  sectionSubtitle: "Real experiences from families, couples, and groups who've stayed with us."
 };
 
 // ==========================================
@@ -323,7 +323,7 @@ export const testimonialsContent = {
 // ==========================================
 export const whatsappConfig = {
   phoneNumber: "+447454454984",
-  defaultMessage: "Hi! I saw the Sports Villa online — can I get a quote?"
+  defaultMessage: "Hi — interested in the Sports Villa 👌\n\nDates:\nNumber of guests:\n\nCan you confirm availability?"
 };
 
 // ==========================================

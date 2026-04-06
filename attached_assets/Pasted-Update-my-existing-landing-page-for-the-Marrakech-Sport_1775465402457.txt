@@ -1,0 +1,302 @@
+Update my existing landing page for the Marrakech Sports Villa so it matches this new conversion-focused structure and works beautifully on both mobile and desktop.
+
+Goal:
+Increase WhatsApp clicks and make WhatsApp the main conversion action. The page should feel premium, clean, modern, luxury, and high-converting. It must keep the villa’s upscale Marrakech feel, but simplify the user journey so visitors are pushed toward clicking WhatsApp.
+
+Important rules:
+- Mobile-first design, but fully polished on desktop too
+- Remove distractions and reduce competing actions
+- WhatsApp is the main CTA throughout the page
+- Keep the design elegant, premium, and trustworthy
+- Use responsive spacing, typography, image scaling, and button sizing for both mobile and desktop
+- Preserve fast loading speed
+- Keep the floating WhatsApp button visible on all screen sizes
+- Use my existing brand feel where possible: luxury, warm neutrals, premium villa aesthetic, clean typography
+- Make the layout feel intentionally designed, not template-like
+
+Please update the page to this exact section order:
+
+1. HERO SECTION
+Purpose:
+Grab attention instantly, explain the villa clearly, create urgency, and push the first WhatsApp click.
+
+Layout:
+- Full-width hero image using the strongest villa image
+- Dark overlay so text is easy to read
+- Centered or slightly left-aligned content depending on screen size
+- Large headline
+- Clear supporting text
+- Urgency bar or small highlighted urgency line
+- Large green WhatsApp CTA button
+- Small trust/microcopy below button
+
+Copy:
+Headline:
+6-Bed Luxury Sports Villa in Marrakech
+
+Subheadline:
+Private padel court, heated pool & full staff.
+Perfect for groups of 8–12.
+
+Urgency line:
+Limited availability — weekends book fast
+
+Primary CTA button:
+Check Availability on WhatsApp
+
+Microcopy under CTA:
+Takes 30 seconds • No commitment • Fast reply
+
+Mobile requirements:
+- Headline must fit nicely without awkward wrapping
+- CTA button must be large and thumb-friendly
+- Hero image should crop nicely without hiding key focal point
+- Content spacing must feel premium, not cramped
+
+Desktop requirements:
+- Hero should feel luxurious and spacious
+- Text should not stretch too wide
+- CTA should remain obvious above the fold
+
+2. WHY GROUPS BOOK THIS VILLA
+Purpose:
+Quickly sell the main benefits in a scannable way.
+
+Layout:
+- Clean section on light background
+- Strong section heading
+- 4 benefit blocks or icons/cards
+- Secondary WhatsApp CTA below
+- On mobile: stacked or 2x2 grid
+- On desktop: 4 across
+
+Copy:
+Section title:
+Why groups book this villa:
+
+Benefit 1:
+Private padel court + football pitch
+
+Benefit 2:
+Heated pool + full staff
+
+Benefit 3:
+Perfect for birthdays, stags & group trips
+
+Benefit 4:
+Sleeps 8–12 in 6 bedrooms
+
+CTA button:
+Check Availability Now
+
+Small text below button:
+We reply within minutes
+
+3. HOW IT WORKS
+Purpose:
+Remove friction and make the process feel easy.
+
+Layout:
+- 3-step process
+- On mobile: stacked vertical steps
+- On desktop: horizontal 3-column steps
+- Clear icons or numbers for each step
+- CTA underneath
+
+Copy:
+Section title:
+How it works:
+
+Step 1:
+Send your dates on WhatsApp
+Small text: It takes 30 seconds.
+
+Step 2:
+We confirm availability instantly
+Small text: Real-time & accurate.
+
+Step 3:
+We organise everything for your group
+Small text: Sit back and relax.
+
+CTA button:
+Message Now on WhatsApp
+
+4. THE VILLA EXPERIENCE
+Purpose:
+Sell the emotional outcome, not just the features.
+
+Layout:
+- Split section with a strong villa lifestyle image and text beside it on desktop
+- On mobile, image first then text
+- Elegant, premium layout
+
+Copy:
+Headline:
+This isn’t just a villa — it’s your trip sorted.
+
+Bullets:
+No stress planning
+Everything arranged for your group
+The kind of place people don’t want to leave
+
+CTA button:
+Plan My Trip on WhatsApp
+
+5. PRICING & AVAILABILITY
+Purpose:
+Show pricing clearly, but still drive people toward WhatsApp for exact availability.
+
+Layout:
+- Clear section heading
+- Small urgency/supporting line above pricing cards
+- 3 pricing cards
+- Feature list underneath
+- Strong CTA beneath pricing
+
+Copy:
+Section title:
+Pricing & Availability
+
+Supporting line:
+Prices vary depending on dates — message for exact availability
+
+Pricing cards:
+Low Season
+£750 /nt
+Sleeps 12
+Free Airport Transfer
+
+Mid Season
+£850 /nt
+Sleeps 12
+Free Airport Transfer
+
+High Season
+£950 /nt
+Sleeps 12
+Free Airport Transfer
+
+Feature list:
+Sleep 12 across 6 double bedrooms
+Padel & basketball court
+Bali stone pool (heating optional)
+Football pitch, gym & outdoor TV
+20–25 mins from city centre
+Cook & maid service included
+
+CTA button:
+Send Your Dates — Check Availability Instantly
+
+6. TRUST / TESTIMONIALS
+Purpose:
+Build credibility and reduce hesitation.
+
+Layout:
+- Clean premium testimonial section
+- 3 testimonials cards
+- Trust badges or trust bar below
+- On mobile: stacked cards
+- On desktop: 3-column layout
+
+Copy:
+Section title:
+Trusted by 100+ groups
+
+Subtitle:
+Real experiences from families, couples, and groups who’ve stayed with us.
+
+Testimonial 1:
+“Best crew and best service. Villa was incredible.”
+Raj S. — USA
+
+Testimonial 2:
+“The VIP Group were brilliant at organising everything.”
+Gary K. — UK
+
+Testimonial 3:
+“Friendly and attentive service from start to finish.”
+Sophie S. — UK
+
+Trust bar items:
+4.9/5 Rated
+Established 2016
+Secure Booking
+UK-Based Team
+
+7. FINAL CTA SECTION
+Purpose:
+Give one last strong push to WhatsApp.
+
+Layout:
+- Strong closing section with background image or dark luxury background
+- Clear urgency message
+- Large WhatsApp button
+- Small reassuring microcopy under button
+
+Copy:
+Headline:
+Ready to book your dates?
+
+Subheadline:
+Dates go quickly — especially weekends.
+
+CTA button:
+Check Availability on WhatsApp
+
+Microcopy:
+We reply fast • No pressure • Just real availability
+
+REMOVE OR CHANGE THESE FROM THE CURRENT PAGE:
+- Remove the email capture bar at the top
+- Remove the contact form as a main focus
+- Remove mixed CTA language like “Send Enquiry” or “Get Quote”
+- Standardise all major CTAs around WhatsApp
+- Reduce clutter and simplify visual hierarchy
+- Keep only one primary action across the page: WhatsApp
+
+WHATSAPP BEHAVIOUR:
+- Every CTA button should open WhatsApp
+- Use a prefilled message:
+Hi — interested in the Sports Villa 👌
+
+Dates:
+Number of guests:
+
+Can you confirm availability?
+
+- Keep a sticky/floating WhatsApp button visible on mobile and desktop
+- Floating button text:
+Check Availability
+
+DESIGN DIRECTION:
+- Premium luxury villa aesthetic
+- Neutral/light backgrounds with dark elegant text
+- Rich green WhatsApp buttons
+- Soft shadows, rounded corners, refined spacing
+- Elegant serif headings paired with clean sans-serif body text
+- No clutter, no cheap-looking gradients, no overcrowding
+- Make it feel high-end and conversion-focused
+
+RESPONSIVE REQUIREMENTS:
+- Must look excellent on iPhone and desktop
+- Buttons should be large and easy to tap on mobile
+- Text should scale properly across breakpoints
+- Images should crop responsively and remain visually strong
+- Grids should collapse elegantly on smaller screens
+- Consistent spacing and alignment across all screen sizes
+- Avoid oversized desktop text and cramped mobile text
+- Ensure hero, CTA buttons, pricing cards, testimonials, and benefit blocks all adapt smoothly
+- Floating WhatsApp CTA should not block important content on mobile
+
+TECHNICAL REQUEST:
+Please modify my existing landing page code rather than starting from scratch unless needed.
+Keep the page performant, responsive, and cleanly structured.
+Use semantic HTML, clean CSS, and responsive layout best practices.
+If helpful, refactor the page into clear reusable sections/components.
+Make sure the final result feels polished on both mobile and desktop, not just resized.
+
+At the end, also give me:
+1. A short summary of what was changed
+2. Any image recommendations for each section
+3. Any CSS or content I may want to tweak later for conversion testing

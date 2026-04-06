@@ -1,27 +1,25 @@
 import HeroSection from "@/components/HeroSection";
-import LeadMagnetSection from "@/components/LeadMagnetSection";
-import VisualTour from "@/components/VisualTour";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
+import HowItWorks from "@/components/HowItWorks";
+import VillaExperience from "@/components/VillaExperience";
+import VisualTour from "@/components/VisualTour";
 import PricingSection from "@/components/PricingSection";
-import OurTeamSection from "@/components/OurTeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTA from "@/components/FinalCTA";
-import ContactFormSection from "@/components/ContactFormSection";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background">
-      <LeadMagnetSection />
       <HeroSection />
+      <WhoThisIsFor />
+      <HowItWorks />
+      <VillaExperience />
       <VisualTour />
       <PricingSection />
-      {/* <WhoThisIsFor /> */}
-      <OurTeamSection />
       <TestimonialsSection />
       <FinalCTA />
-      <ContactFormSection />
       <WhatsAppButton />
       <Footer />
     </div>
