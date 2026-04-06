@@ -33,6 +33,7 @@ export default function HowItWorks() {
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-foreground">
             How it works:
           </h2>
+          <div className="gold-divider mt-3" />
         </div>
 
         <div className="flex flex-col md:flex-row gap-6 md:gap-4 mb-8 md:mb-12 relative">

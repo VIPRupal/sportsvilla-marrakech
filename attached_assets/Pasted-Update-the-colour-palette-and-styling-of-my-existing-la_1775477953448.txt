@@ -1,0 +1,125 @@
+Update the colour palette and styling of my existing landing page to match a premium luxury villa aesthetic, consistent across mobile and desktop.
+
+Goal:
+Create a high-end, elegant, Marrakech luxury feel using a consistent colour system that improves trust and conversions, while keeping strong WhatsApp visibility.
+
+Do NOT redesign the layout — only update colours, styling, and visual consistency.
+
+---
+
+PRIMARY COLOUR SYSTEM:
+
+1. Background Colours:
+
+* Main background: #F7F5F2 (soft warm off-white)
+* Section alternate background: #FFFFFF (pure white)
+* Dark overlay (for hero sections): rgba(0, 0, 0, 0.45)
+
+2. Text Colours:
+
+* Primary heading text: #1A1A1A (deep charcoal, not pure black)
+* Body text: #4F4F4F (soft dark grey)
+* Subtle text: #7A7A7A
+
+3. Accent / Luxury Colour:
+
+* Gold accent: #C8A96A
+  Use for:
+* Small highlights
+* Icons
+* Subtle borders
+* Underlines or dividers
+
+Do NOT overuse gold — keep it minimal and premium.
+
+4. WhatsApp Primary CTA Colour:
+
+* Button green: #25D366
+* Hover state (desktop): #1EBE5D
+
+This is the MOST important colour on the page — it must stand out clearly against all backgrounds.
+
+5. Borders & Dividers:
+
+* Light border: #EAE7E2
+* Card backgrounds: #FFFFFF
+* Soft shadows instead of heavy borders
+
+---
+
+COMPONENT STYLING RULES:
+
+Buttons:
+
+* Rounded corners (8px–12px radius)
+* Primary CTA = green (#25D366)
+* White text on buttons
+* Medium-bold font weight
+* Add subtle shadow for depth
+* Ensure strong contrast on all backgrounds
+
+Cards (pricing, testimonials, features):
+
+* Background: white
+* Border: very light or none
+* Use soft shadow (not heavy outlines)
+* Keep spacing generous
+
+Sections:
+
+* Alternate between #F7F5F2 and #FFFFFF
+* Avoid harsh colour changes
+* Maintain calm, luxury feel
+
+Hero Section:
+
+* Keep image
+* Add dark overlay (rgba black 40–50%)
+* Text must be white (#FFFFFF)
+* CTA button must be bright green and highly visible
+
+Icons:
+
+* Use gold (#C8A96A) or dark grey
+* Keep minimal and elegant
+
+---
+
+TYPOGRAPHY STYLE:
+
+* Headings: elegant serif or premium-feel font (if already set, keep but refine colour/spacing)
+* Body: clean sans-serif
+* Increase line spacing slightly for readability
+* Avoid overly bold or aggressive styles
+
+---
+
+MOBILE + DESKTOP CONSISTENCY:
+
+* Ensure colours render consistently across devices
+* Check contrast on mobile (especially buttons)
+* Ensure CTA buttons stand out clearly on smaller screens
+* Avoid washed-out or low-contrast sections
+
+---
+
+IMPORTANT DESIGN PRINCIPLES:
+
+* Keep it clean and minimal
+* Avoid too many colours
+* Prioritise contrast for CTAs
+* Maintain a luxury, calm, premium feel
+* Every section should feel intentional and consistent
+
+---
+
+OUTPUT:
+
+Apply these styles directly to my existing landing page code.
+Use consistent CSS variables or classes so colours are easy to manage globally.
+
+At the end, show me:
+
+1. The updated CSS (or styling system)
+2. Any variables or theme settings used
+3. Where I can easily tweak colours in the future

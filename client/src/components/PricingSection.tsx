@@ -20,7 +20,8 @@ export default function PricingSection() {
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-foreground">
             {pricingContent.sectionTitle}
           </h2>
-          <p className="text-xs md:text-sm text-muted-foreground mt-2">
+          <div className="gold-divider mt-3 mb-3" />
+          <p className="text-xs md:text-sm text-muted-foreground">
             Prices vary depending on dates — message for exact availability
           </p>
         </div>

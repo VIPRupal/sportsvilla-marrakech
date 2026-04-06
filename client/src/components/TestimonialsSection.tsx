@@ -18,7 +18,8 @@ export default function TestimonialsSection() {
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-card-foreground">
             {testimonialsContent.sectionTitle}
           </h2>
-          <p className="text-xs md:text-base text-muted-foreground mt-2 max-w-2xl mx-auto">
+          <div className="gold-divider mt-3 mb-3" />
+          <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
             {testimonialsContent.sectionSubtitle}
           </p>
         </div>

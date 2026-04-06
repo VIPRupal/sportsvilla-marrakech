@@ -23,6 +23,7 @@ export default function WhoThisIsFor() {
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-card-foreground">
             {whoThisIsForContent.sectionTitle}
           </h2>
+          <div className="gold-divider mt-3" />
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-8 md:mb-10">
