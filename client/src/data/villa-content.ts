@@ -179,7 +179,7 @@ export const whoThisIsForContent = {
       icon: "Shield"
     },
     {
-      title: "Perfect for birthdays, stags & group trips",
+      title: "Perfect for birthdays, couples & group trips",
       description: "We specialise in group getaways and know exactly what you need.",
       icon: "Users"
     },
