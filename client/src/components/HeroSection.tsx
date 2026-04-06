@@ -98,11 +98,8 @@ export default function HeroSection() {
           <h1 className="font-serif font-bold text-2xl md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-lg mb-3 md:mb-5">
             6-Bed Luxury Sports Villa in Marrakech
           </h1>
-          <p className="text-sm md:text-xl text-white/90 mb-2 md:mb-3 drop-shadow-md">
-            Private padel court, heated pool & full staff.
-          </p>
           <p className="text-sm md:text-xl text-white/90 mb-4 md:mb-6 drop-shadow-md">
-            Perfect for groups of 8–12.
+            Private padel court, heated pool & full staff.
           </p>
 
           <div className="inline-block bg-white/15 backdrop-blur-sm border border-white/30 rounded-full px-4 py-1.5 mb-5 md:mb-8">
