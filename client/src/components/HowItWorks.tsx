@@ -31,7 +31,7 @@ export default function HowItWorks() {
       <div className="max-w-4xl mx-auto px-4 md:px-6">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-serif text-2xl md:text-4xl font-semibold text-foreground">
-            How it works:
+            Booking is easier than you think:
           </h2>
           <div className="gold-divider mt-3" />
         </div>
@@ -56,7 +56,7 @@ export default function HowItWorks() {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center gap-2">
           <Button
             asChild
             size="lg"
@@ -65,9 +65,10 @@ export default function HowItWorks() {
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('how_it_works')}>
               <MessageCircle className="w-5 h-5 mr-2" />
-              Message Now on WhatsApp
+              Send Your Dates — Takes 30 Seconds
             </a>
           </Button>
+          <p className="text-xs text-muted-foreground">No forms. No phone calls. Just WhatsApp.</p>
         </div>
       </div>
     </section>

@@ -1,7 +1,9 @@
 import { Card } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Quote, Star, Shield, Award, Users, MapPin } from "lucide-react";
-import { testimonials, testimonialsContent } from "@/data/villa-content";
+import { Quote, Star, Shield, Award, Users, MapPin, MessageCircle } from "lucide-react";
+import { testimonials, testimonialsContent, whatsappConfig } from "@/data/villa-content";
+import { trackWhatsAppClick } from "@/lib/tracking";
 
 const trustBadges = [
   { icon: Star, label: "4.9/5 Rated" },
@@ -11,6 +13,10 @@ const trustBadges = [
 ];
 
 export default function TestimonialsSection() {
+  const whatsappNumber = whatsappConfig.phoneNumber;
+  const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
+  const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
+
   return (
     <section id="testimonials" className="py-10 md:py-16 bg-card">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
@@ -55,7 +61,7 @@ export default function TestimonialsSection() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-2xl mx-auto mb-8 md:mb-10">
           {trustBadges.map((badge, index) => {
             const IconComponent = badge.icon;
             return (
@@ -65,6 +71,25 @@ export default function TestimonialsSection() {
               </div>
             );
           })}
+        </div>
+
+        {/* CTA placed right after social proof — highest-intent moment */}
+        <div className="text-center flex flex-col items-center gap-2">
+          <p className="text-xs md:text-sm text-muted-foreground mb-1">
+            Join 100+ groups who've already booked
+          </p>
+          <Button
+            asChild
+            size="lg"
+            className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold px-8 rounded-full"
+            data-testid="button-whatsapp-testimonials"
+          >
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('testimonials_section')}>
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Check Live Availability on WhatsApp
+            </a>
+          </Button>
+          <p className="text-xs text-muted-foreground">No commitment — we reply instantly</p>
         </div>
       </div>
     </section>

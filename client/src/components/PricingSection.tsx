@@ -59,7 +59,7 @@ export default function PricingSection() {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className="text-center flex flex-col items-center gap-2">
           <Button
             asChild
             size="lg"
@@ -71,6 +71,7 @@ export default function PricingSection() {
               Send Your Dates — Check Availability Instantly
             </a>
           </Button>
+          <p className="text-xs text-muted-foreground">No deposit needed to check availability · We reply instantly</p>
         </div>
       </div>
     </section>

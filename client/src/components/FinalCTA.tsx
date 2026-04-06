@@ -16,11 +16,14 @@ export default function FinalCTA() {
     <section id="book" className="py-14 md:py-20 bg-gray-900 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900" />
       <div className="relative z-10 max-w-2xl mx-auto px-4 md:px-6 text-center">
+        <p className="text-xs md:text-sm text-primary font-semibold tracking-widest uppercase mb-3">
+          Don't miss out
+        </p>
         <h2 className="font-serif text-2xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4 text-white">
-          Ready to book your dates?
+          Your group trip starts with one message.
         </h2>
         <p className="text-sm md:text-lg text-white/70 mb-6 md:mb-8">
-          Dates go quickly — especially weekends.
+          Tell us your dates — we'll confirm availability in minutes and handle everything from there.
         </p>
         <div className="flex flex-col items-center gap-2 md:gap-3">
           <Button
@@ -31,11 +34,11 @@ export default function FinalCTA() {
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
               <MessageCircle className="w-5 h-5 mr-2" />
-              Check Availability on WhatsApp
+              Check Live Availability on WhatsApp
             </a>
           </Button>
           <p className="text-white/50 text-xs">
-            We reply fast • No pressure • Just real availability
+            Takes 30 seconds · No commitment · We reply instantly
           </p>
         </div>
       </div>

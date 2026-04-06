@@ -62,10 +62,10 @@ export default function WhoThisIsFor() {
           >
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('features_section')}>
               <MessageCircle className="w-5 h-5 mr-2" />
-              Check Availability Now
+              Check Live Availability on WhatsApp
             </a>
           </Button>
-          <p className="text-xs text-muted-foreground">We reply within minutes</p>
+          <p className="text-xs text-muted-foreground">No commitment — we reply instantly</p>
         </div>
       </div>
     </section>

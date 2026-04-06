@@ -6,9 +6,9 @@ import poolImage from "@assets/generated_images/swimming_pool.webp";
 import poolImageMobile from "@assets/generated_images/swimming_pool_mobile.webp";
 
 const bullets = [
-  "No stress planning",
-  "Everything arranged for your group",
-  "The kind of place people don't want to leave"
+  "No stress — we arrange everything for your group",
+  "Sports, pool, food & transfers — all taken care of",
+  "The kind of trip your group will talk about for years"
 ];
 
 export default function VillaExperience() {
@@ -50,17 +50,20 @@ export default function VillaExperience() {
               ))}
             </ul>
 
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold px-8 rounded-full w-full md:w-auto"
-              data-testid="button-whatsapp-experience"
-            >
-              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('experience_section')}>
-                <MessageCircle className="w-5 h-5 mr-2" />
-                Plan My Trip on WhatsApp
-              </a>
-            </Button>
+            <div className="flex flex-col items-start gap-2">
+              <Button
+                asChild
+                size="lg"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold px-8 rounded-full w-full md:w-auto"
+                data-testid="button-whatsapp-experience"
+              >
+                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick('experience_section')}>
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  Plan My Trip on WhatsApp
+                </a>
+              </Button>
+              <p className="text-xs text-muted-foreground">We reply fast · No commitment needed</p>
+            </div>
           </div>
         </div>
       </div>
