@@ -53,7 +53,7 @@ export default function HeroSection() {
   }, [hasInteracted]);
 
   return (
-    <section id="home" className="relative min-h-[90vh] md:min-h-screen w-full overflow-hidden bg-gray-900">
+    <section id="home" className="relative h-[88vh] md:h-screen w-full overflow-hidden bg-gray-900">
       {/* Background video */}
       {heroContent.videoUrl ? (
         <div className="absolute inset-0">
@@ -117,7 +117,7 @@ export default function HeroSection() {
       </div>
 
       {/* Main hero content */}
-      <div className="relative z-10 h-full flex flex-col justify-end md:justify-center pb-10 md:pb-0 px-4 md:px-12 lg:px-20 pt-20 md:pt-24">
+      <div className="relative z-10 h-full flex flex-col justify-center px-4 md:px-12 lg:px-20 pt-16 md:pt-20">
         <div className="max-w-2xl">
           {/* Headline */}
           <h1 className="font-serif font-bold text-3xl md:text-5xl lg:text-6xl text-white leading-tight drop-shadow-lg mb-2 md:mb-3">
@@ -129,8 +129,8 @@ export default function HeroSection() {
             For Groups, Events &amp; Unforgettable Stays
           </p>
 
-          {/* Feature icons row */}
-          <div className="flex flex-wrap gap-3 md:gap-5 mb-4 md:mb-5">
+          {/* Feature icons — 2x2 grid on mobile, single row on desktop */}
+          <div className="grid grid-cols-2 md:flex md:flex-wrap gap-3 md:gap-5 mb-4 md:mb-5">
             {featureIcons.map((item, i) => {
               const Icon = item.icon;
               return (
@@ -153,11 +153,11 @@ export default function HeroSection() {
           </div>
 
           {/* CTA */}
-          <div className="flex flex-col items-start gap-2">
+          <div className="flex flex-col items-stretch md:items-start gap-2">
             <Button
               asChild
               size="lg"
-              className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold px-7 rounded-full shadow-lg text-sm md:text-base"
+              className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold px-7 rounded-full shadow-lg text-sm md:text-base w-full md:w-auto max-w-xs"
               data-testid="button-whatsapp-hero"
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>

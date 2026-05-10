@@ -50,20 +50,19 @@ export default function HowItWorks() {
               From enquiry to an unforgettable trip.
             </p>
 
-            {/* Steps */}
-            <div className="flex flex-col md:flex-row gap-4 md:gap-2 mb-7 md:mb-8 relative">
+            {/* Steps — vertical on mobile, horizontal on desktop */}
+            <div className="flex flex-col md:flex-row gap-5 md:gap-2 mb-7 md:mb-8">
               {steps.map((step, index) => (
                 <div key={index} className="flex md:flex-col gap-3 md:gap-2 md:flex-1 items-start md:items-center md:text-center" data-testid={`step-${index}`}>
-                  {/* Number circle */}
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg shadow-sm relative z-10">
-                    {step.number}
-                  </div>
-                  {/* Arrow between (desktop only) */}
-                  {index < steps.length - 1 && (
-                    <div className="hidden md:flex absolute items-center" style={{ left: `${(index + 1) * 25 - 4}%`, top: "18px", transform: "translateX(-50%)" }}>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground/40" />
+                  <div className="flex-shrink-0 flex items-center gap-2 md:flex-col md:items-center">
+                    <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif font-bold text-lg shadow-sm">
+                      {step.number}
                     </div>
-                  )}
+                    {/* Arrow on desktop between steps */}
+                    {index < steps.length - 1 && (
+                      <ArrowRight className="hidden md:block w-4 h-4 text-muted-foreground/30 absolute" style={{ display: "none" }} />
+                    )}
+                  </div>
                   <div>
                     <h3 className="font-semibold text-sm text-foreground leading-snug mb-0.5">
                       {step.title}

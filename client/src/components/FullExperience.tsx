@@ -26,7 +26,7 @@ export default function FullExperience() {
               We Organise Your Full Marrakech Experience
             </h2>
 
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-5">
+            <div className="grid grid-cols-4 gap-3 md:gap-5">
               {services.map((service, index) => {
                 const Icon = service.icon;
                 return (

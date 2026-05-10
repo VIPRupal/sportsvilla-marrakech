@@ -40,7 +40,7 @@ export default function VillaFeatures() {
             </ul>
           </div>
 
-          {/* Right: two stacked images */}
+          {/* Right: two stacked images — show both on desktop, one on mobile */}
           <div className="w-full md:w-[48%] flex flex-col gap-3 flex-shrink-0">
             <div className="rounded-xl overflow-hidden shadow-md">
               <img
@@ -52,20 +52,20 @@ export default function VillaFeatures() {
                 height={2344}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-44 md:h-52 object-cover"
+                className="w-full h-52 md:h-52 object-cover"
               />
             </div>
-            <div className="rounded-xl overflow-hidden shadow-md">
+            <div className="hidden md:block rounded-xl overflow-hidden shadow-md">
               <img
                 srcSet={`${livingImageMobile} 800w, ${livingImage} 3200w`}
-                sizes="(max-width: 768px) 100vw, 48vw"
+                sizes="48vw"
                 src={livingImage}
                 alt="Luxury living area at the villa"
                 width={3200}
                 height={2344}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-44 md:h-52 object-cover"
+                className="w-full h-52 object-cover"
               />
             </div>
           </div>
