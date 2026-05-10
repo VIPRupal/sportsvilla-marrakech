@@ -35,8 +35,8 @@ export default function HeroSection() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ objectPosition: "center 40%" }}
       />
-      {/* Dark overlay — heavier at top and bottom, lighter in middle so villa shows */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/65" />
+      {/* Dark overlay — heavier at bottom so text is always readable */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80" />
 
       {/* Top bar */}
       <div className="relative z-20 w-full px-4 md:px-8 pt-4 md:pt-5 flex items-center justify-between">
@@ -67,8 +67,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Hero content — sits just below the top bar on mobile, left-aligned on desktop */}
-      <div className="relative z-10 flex flex-col px-4 md:px-12 lg:px-20 pt-6 pb-10 md:pt-28 md:pb-20">
+      {/* Hero content — pinned to the bottom of the hero image */}
+      <div className="relative z-10 flex flex-col justify-end px-4 md:px-12 lg:px-20 pb-10 md:pb-16" style={{ minHeight: "100svh" }}>
         <div className="w-full max-w-2xl mx-auto md:mx-0 flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="font-serif font-bold text-[2.1rem] leading-[1.12] md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-2 md:mb-3">
             The Ultimate Sports Villa in Marrakech
