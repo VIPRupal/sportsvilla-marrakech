@@ -1,8 +1,8 @@
 import HeroSection from "@/components/HeroSection";
-import WhoThisIsFor from "@/components/WhoThisIsFor";
+import PressBar from "@/components/PressBar";
 import HowItWorks from "@/components/HowItWorks";
-import VillaExperience from "@/components/VillaExperience";
-import VisualTour from "@/components/VisualTour";
+import VillaFeatures from "@/components/VillaFeatures";
+import FullExperience from "@/components/FullExperience";
 import PricingSection from "@/components/PricingSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -13,10 +13,10 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <WhoThisIsFor />
+      <PressBar />
       <HowItWorks />
-      <VillaExperience />
-      <VisualTour />
+      <VillaFeatures />
+      <FullExperience />
       <PricingSection />
       <TestimonialsSection />
       <FinalCTA />
