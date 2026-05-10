@@ -1,31 +1,25 @@
 export default function PressBar() {
   const publications = [
-    { name: "Forbes", style: "font-bold tracking-tight text-base md:text-lg" },
-    { name: "Luxury Travel", style: "font-serif italic text-sm md:text-base tracking-wide" },
-    { name: "Traveller", style: "font-semibold tracking-widest text-xs md:text-sm uppercase" },
-    { name: "Bloomberg", style: "font-bold tracking-tight text-base md:text-lg" },
-    { name: "Yahoo Finance", style: "font-bold text-sm md:text-base" },
+    { name: "Forbes", cls: "font-bold text-sm md:text-base tracking-tight" },
+    { name: "Luxury Travel", cls: "font-serif italic text-xs md:text-sm" },
+    { name: "Traveller", cls: "font-semibold text-[10px] md:text-xs tracking-widest uppercase" },
+    { name: "Bloomberg", cls: "font-bold text-sm md:text-base tracking-tight" },
+    { name: "yahoo!", cls: "font-bold text-sm md:text-base" },
   ];
 
   return (
-    <section className="py-4 md:py-5 bg-card border-y border-border">
+    <section className="py-3 md:py-4 bg-white border-y border-gray-100">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
-        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
-          <p className="text-xs text-muted-foreground tracking-widest uppercase font-medium whitespace-nowrap">
+        <div className="flex items-center justify-center gap-3 md:gap-6 flex-wrap">
+          <span className="text-[9px] md:text-[10px] text-gray-400 tracking-[0.2em] uppercase font-semibold whitespace-nowrap">
             As featured in
-          </p>
-          <div className="hidden md:block w-px h-4 bg-border" />
-          <div className="flex flex-wrap items-center justify-center gap-5 md:gap-8">
-            {publications.map((pub, i) => (
-              <span
-                key={i}
-                className={`text-muted-foreground/70 hover-elevate select-none ${pub.style}`}
-                data-testid={`press-logo-${i}`}
-              >
-                {pub.name}
-              </span>
-            ))}
-          </div>
+          </span>
+          <div className="w-px h-3 bg-gray-200 hidden md:block" />
+          {publications.map((pub, i) => (
+            <span key={i} className={`text-gray-400 select-none ${pub.cls}`} data-testid={`press-logo-${i}`}>
+              {pub.name}
+            </span>
+          ))}
         </div>
       </div>
     </section>

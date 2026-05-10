@@ -15,58 +15,66 @@ const features = [
 
 export default function VillaFeatures() {
   return (
-    <section id="features" className="py-10 md:py-16 bg-card">
+    <section id="features" className="py-10 md:py-16 bg-[#1C1A14]">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
-        <div className="flex flex-col md:flex-row gap-8 md:gap-14 items-center">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-center">
 
           {/* Left: content */}
           <div className="w-full md:w-[52%]">
-            <p className="text-xs font-semibold tracking-[0.2em] text-primary uppercase mb-2">
+            <p className="text-[10px] font-bold tracking-[0.22em] text-primary uppercase mb-2">
               Every detail. Every comfort.
             </p>
-            <h2 className="font-serif text-2xl md:text-4xl font-semibold text-card-foreground mb-6 md:mb-8 leading-snug">
+            <h2 className="font-serif text-2xl md:text-4xl font-semibold text-white mb-6 md:mb-8 leading-snug">
               A Private Sports Resort Built for Memories
             </h2>
 
             <ul className="space-y-3 md:space-y-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-center gap-3" data-testid={`feature-${index}`}>
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/15 flex items-center justify-center">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center">
                     <Check className="w-3 h-3 text-primary" />
                   </div>
-                  <span className="text-sm md:text-base text-card-foreground font-medium">{feature}</span>
+                  <span className="text-sm md:text-base text-white/90 font-medium">{feature}</span>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Right: two stacked images — show both on desktop, one on mobile */}
-          <div className="w-full md:w-[48%] flex flex-col gap-3 flex-shrink-0">
-            <div className="rounded-xl overflow-hidden shadow-md">
+          {/* Right: images — side by side on desktop, single image on mobile */}
+          <div className="w-full md:w-[48%] flex-shrink-0">
+            {/* Mobile: one image full width */}
+            <div className="md:hidden rounded-xl overflow-hidden shadow-lg">
               <img
                 srcSet={`${poolImageMobile} 800w, ${poolImage} 3200w`}
-                sizes="(max-width: 768px) 100vw, 48vw"
+                sizes="100vw"
                 src={poolImage}
-                alt="Heated Bali stone pool at the villa"
-                width={3200}
-                height={2344}
-                loading="lazy"
-                decoding="async"
-                className="w-full h-52 md:h-52 object-cover"
-              />
-            </div>
-            <div className="hidden md:block rounded-xl overflow-hidden shadow-md">
-              <img
-                srcSet={`${livingImageMobile} 800w, ${livingImage} 3200w`}
-                sizes="48vw"
-                src={livingImage}
-                alt="Luxury living area at the villa"
-                width={3200}
-                height={2344}
-                loading="lazy"
-                decoding="async"
+                alt="Heated Bali stone pool"
+                width={3200} height={2344}
+                loading="lazy" decoding="async"
                 className="w-full h-52 object-cover"
               />
+            </div>
+
+            {/* Desktop: two images side by side */}
+            <div className="hidden md:grid grid-cols-2 gap-3">
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={poolImage}
+                  alt="Heated Bali stone pool"
+                  loading="lazy" decoding="async"
+                  className="w-full h-52 object-cover"
+                />
+              </div>
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <img
+                  srcSet={`${livingImageMobile} 800w, ${livingImage} 3200w`}
+                  sizes="24vw"
+                  src={livingImage}
+                  alt="Luxury living area"
+                  loading="lazy" decoding="async"
+                  className="w-full h-52 object-cover"
+                />
+              </div>
             </div>
           </div>
 
