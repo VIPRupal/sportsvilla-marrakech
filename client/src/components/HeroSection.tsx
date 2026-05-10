@@ -1,11 +1,8 @@
-import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { MessageCircle, MapPin, BedDouble, Waves, Trophy, ConciergeBell } from "lucide-react";
 import { whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 import heroImage from "@assets/generated_images/Villa_hero_sunset_view_049ff5ba.png";
-import heroVideo from "@assets/generated_images/hero_video_optimized.mp4";
-import heroPoster from "@assets/generated_images/hero_video_poster_new.jpg";
 
 const featureIcons = [
   { icon: BedDouble, label: "6 Bedrooms", sub: "Sleeps 12" },
@@ -21,52 +18,25 @@ const Star = () => (
 );
 
 export default function HeroSection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, "")}?text=${whatsappMessage}`;
 
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-    video.muted = true;
-    video.volume = 0;
-    const tryPlay = () => {
-      video.play().then(() => setVideoReady(true)).catch(() => {});
-    };
-    if (video.readyState >= 3) tryPlay();
-    else video.addEventListener("canplay", tryPlay, { once: true });
-    window.addEventListener("scroll", tryPlay, { once: true, passive: true });
-    window.addEventListener("touchstart", tryPlay, { once: true, passive: true });
-    return () => {
-      window.removeEventListener("scroll", tryPlay);
-      window.removeEventListener("touchstart", tryPlay);
-    };
-  }, []);
-
   return (
-    <section id="home" className="relative w-full overflow-hidden bg-gray-900" style={{ minHeight: "100svh" }}>
-
-      {/* Background: image shown first, video fades in on top */}
-      <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Luxury villa in Marrakech"
-          className="absolute inset-0 w-full h-full object-cover"
-          fetchpriority="high"
-        />
-        <video
-          ref={videoRef}
-          autoPlay loop muted playsInline preload="none"
-          poster={heroPoster}
-          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${videoReady ? "opacity-100" : "opacity-0"}`}
-        >
-          <source src={heroVideo} type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/45 to-black/70" />
-      </div>
+    <section
+      id="home"
+      className="relative w-full overflow-hidden bg-gray-900"
+      style={{ minHeight: "100svh" }}
+    >
+      {/* Background image */}
+      <img
+        src={heroImage}
+        alt="Luxury sports villa in Marrakech"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ objectPosition: "center 40%" }}
+      />
+      {/* Dark overlay — heavier at top and bottom, lighter in middle so villa shows */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/65" />
 
       {/* Top bar */}
       <div className="relative z-20 w-full px-4 md:px-8 pt-4 md:pt-5 flex items-center justify-between">
@@ -90,17 +60,20 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* Mobile: stars + count */}
+        {/* Mobile: stars + count right */}
         <div className="flex md:hidden items-center gap-1">
           {[...Array(5)].map((_, i) => <Star key={i} />)}
           <span className="text-white/70 text-[9px] ml-0.5">15,000+ guests</span>
         </div>
       </div>
 
-      {/* Hero content */}
-      <div className="relative z-10 flex flex-col justify-center px-4 md:px-12 lg:px-20 pt-8 pb-10 md:pt-16 md:pb-16" style={{ minHeight: "100svh" }}>
+      {/* Hero content — top-anchored, not centred */}
+      <div
+        className="relative z-10 flex flex-col px-4 md:px-12 lg:px-20"
+        style={{ paddingTop: "clamp(5rem, 18vh, 9rem)", paddingBottom: "clamp(3rem, 8vh, 5rem)" }}
+      >
         <div className="max-w-2xl">
-          <h1 className="font-serif font-bold text-[2.1rem] leading-[1.15] md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-2 md:mb-3">
+          <h1 className="font-serif font-bold text-[2.15rem] leading-[1.12] md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-2 md:mb-3">
             The Ultimate Sports Villa in Marrakech
           </h1>
 
@@ -108,7 +81,7 @@ export default function HeroSection() {
             For Groups, Events &amp; Unforgettable Stays
           </p>
 
-          {/* Feature icons — 2×2 on mobile, single row on desktop */}
+          {/* Feature icons — 2×2 grid on mobile, single row on desktop */}
           <div className="grid grid-cols-2 md:flex md:flex-row gap-y-3 gap-x-4 md:gap-6 mb-4 md:mb-5">
             {featureIcons.map((item, i) => {
               const Icon = item.icon;
@@ -127,27 +100,27 @@ export default function HeroSection() {
           </div>
 
           {/* Airport transfer badge */}
-          <div className="flex items-center gap-2 mb-5 md:mb-6">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded px-3 py-1.5">
-              <span className="text-white text-[11px] md:text-sm font-semibold tracking-wide uppercase">
-                Free Airport Transfer on Arrival
-              </span>
-            </div>
+          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded px-3 py-1.5 mb-5 md:mb-6">
+            <span className="text-white text-[11px] md:text-sm font-semibold tracking-wide uppercase">
+              Free Airport Transfer on Arrival
+            </span>
           </div>
 
           {/* CTA */}
-          <Button
-            asChild
-            size="lg"
-            className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold rounded-full shadow-lg text-sm w-full md:w-auto md:px-8 mb-2"
-            data-testid="button-whatsapp-hero"
-          >
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("hero_section")}>
-              <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
-              Check Availability on WhatsApp
-            </a>
-          </Button>
-          <p className="text-white/55 text-xs">Get a fast response within 15 minutes</p>
+          <div className="flex flex-col gap-2">
+            <Button
+              asChild
+              size="lg"
+              className="bg-[#25D366] hover:bg-[#20BA5A] text-white border-[#25D366] font-bold rounded-full shadow-lg text-sm w-full md:w-auto md:px-8"
+              data-testid="button-whatsapp-hero"
+            >
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("hero_section")}>
+                <MessageCircle className="w-5 h-5 mr-2 flex-shrink-0" />
+                Check Availability on WhatsApp
+              </a>
+            </Button>
+            <p className="text-white/55 text-xs">Get a fast response within 15 minutes</p>
+          </div>
         </div>
       </div>
     </section>
