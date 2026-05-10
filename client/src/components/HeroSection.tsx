@@ -67,13 +67,10 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Hero content — top-anchored, not centred */}
-      <div
-        className="relative z-10 flex flex-col px-4 md:px-12 lg:px-20"
-        style={{ paddingTop: "clamp(5rem, 18vh, 9rem)", paddingBottom: "clamp(3rem, 8vh, 5rem)" }}
-      >
-        <div className="max-w-2xl">
-          <h1 className="font-serif font-bold text-[2.15rem] leading-[1.12] md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-2 md:mb-3">
+      {/* Hero content — sits just below the top bar on mobile, left-aligned on desktop */}
+      <div className="relative z-10 flex flex-col px-4 md:px-12 lg:px-20 pt-6 pb-10 md:pt-28 md:pb-20">
+        <div className="w-full max-w-2xl mx-auto md:mx-0 flex flex-col items-center md:items-start text-center md:text-left">
+          <h1 className="font-serif font-bold text-[2.1rem] leading-[1.12] md:text-5xl lg:text-6xl text-white drop-shadow-lg mb-2 md:mb-3">
             The Ultimate Sports Villa in Marrakech
           </h1>
 
@@ -81,8 +78,8 @@ export default function HeroSection() {
             For Groups, Events &amp; Unforgettable Stays
           </p>
 
-          {/* Feature icons — 2×2 grid on mobile, single row on desktop */}
-          <div className="grid grid-cols-2 md:flex md:flex-row gap-y-3 gap-x-4 md:gap-6 mb-4 md:mb-5">
+          {/* Feature icons — 2×2 grid on mobile (centred), single row on desktop */}
+          <div className="grid grid-cols-2 md:flex md:flex-row gap-y-3 gap-x-4 md:gap-6 mb-4 md:mb-5 w-full md:w-auto">
             {featureIcons.map((item, i) => {
               const Icon = item.icon;
               return (
@@ -90,7 +87,7 @@ export default function HeroSection() {
                   <div className="flex-shrink-0 w-7 h-7 rounded-full bg-white/10 border border-white/20 flex items-center justify-center">
                     <Icon className="w-3.5 h-3.5 text-primary" />
                   </div>
-                  <div className="leading-none">
+                  <div className="leading-none text-left">
                     <p className="text-white text-[11px] font-semibold">{item.label}</p>
                     <p className="text-white/55 text-[9px] mt-0.5">{item.sub}</p>
                   </div>
@@ -107,7 +104,7 @@ export default function HeroSection() {
           </div>
 
           {/* CTA */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col items-center md:items-start gap-2 w-full">
             <Button
               asChild
               size="lg"
