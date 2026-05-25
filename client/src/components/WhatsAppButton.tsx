@@ -1,8 +1,10 @@
 import { MessageCircle } from "lucide-react";
+import { useState } from "react";
 import { whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
 export default function WhatsAppButton() {
+  const [isHovered, setIsHovered] = useState(false);
   const whatsappNumber = whatsappConfig.phoneNumber;
   const whatsappMessage = encodeURIComponent(whatsappConfig.defaultMessage);
   const whatsappLink = `https://wa.me/${whatsappNumber.replace(/[^0-9]/g, '')}?text=${whatsappMessage}`;
@@ -16,15 +18,23 @@ export default function WhatsAppButton() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50"
+      className="fixed bottom-6 right-6 z-50 group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       onClick={handleClick}
       data-testid="button-whatsapp-floating"
     >
       <div className="relative">
-        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-60" />
-        <div className="relative flex items-center gap-2 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-xl transition-all duration-300 hover:shadow-2xl px-4 py-3">
-          <MessageCircle className="w-5 h-5 flex-shrink-0" />
-          <span className="text-sm font-bold whitespace-nowrap">Check Availability</span>
+        <div className="absolute inset-0 bg-[#25D366] rounded-full animate-ping opacity-75" />
+        
+        <div className="relative flex items-center gap-1 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg transition-all duration-300 hover:shadow-xl pr-3 pl-2">
+          <div className="w-9 h-9 flex items-center justify-center">
+            <MessageCircle className="w-5 h-5" />
+          </div>
+          
+          <span className="text-xs font-semibold whitespace-nowrap">
+            Get Quote
+          </span>
         </div>
       </div>
     </a>
