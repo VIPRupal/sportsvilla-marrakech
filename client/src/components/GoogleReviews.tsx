@@ -23,7 +23,7 @@ const reviews = [
   {
     name: "Qammar Nazir",
     rating: 5,
-    date: "March 2025",
+    date: "July 2025",
     text: "Amazing Service by the VIP Group. From start to finish a smooth process. Highly recommend and will use again.",
     url: GOOGLE_REVIEWS_URL,
   },
