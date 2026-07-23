@@ -99,16 +99,27 @@ export default function VisualTour() {
           data-testid="lightbox-overlay"
         >
           <div
-            className="relative bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden"
+            className="relative rounded-xl shadow-2xl w-full max-w-4xl overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Modal header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 flex-shrink-0">
-              <span className="text-sm text-gray-500 font-medium">
+            {/* Image */}
+            <img
+              srcSet={`${galleryImages[lightboxIndex].srcMobile} 800w, ${galleryImages[lightboxIndex].src} 3200w`}
+              sizes="(max-width: 768px) 100vw, 90vw"
+              src={galleryImages[lightboxIndex].src}
+              alt={galleryImages[lightboxIndex].caption}
+              width={galleryImages[lightboxIndex].width}
+              height={galleryImages[lightboxIndex].height}
+              className="w-full h-auto max-h-[85vh] object-contain block"
+            />
+
+            {/* Counter + close — top overlay */}
+            <div className="absolute top-0 inset-x-0 flex items-center justify-between px-3 py-2 bg-gradient-to-b from-black/50 to-transparent">
+              <span className="text-xs text-white/90 font-medium">
                 {lightboxIndex + 1} of {galleryImages.length}
               </span>
               <button
-                className="text-gray-400 hover:text-gray-700 transition-colors"
+                className="text-white/80 hover:text-white transition-colors"
                 onClick={closeLightbox}
                 data-testid="button-close-lightbox"
               >
@@ -116,45 +127,32 @@ export default function VisualTour() {
               </button>
             </div>
 
-            {/* Image area */}
-            <div className="relative flex-1 flex items-center justify-center bg-gray-50 min-h-0">
-              <img
-                srcSet={`${galleryImages[lightboxIndex].srcMobile} 800w, ${galleryImages[lightboxIndex].src} 3200w`}
-                sizes="(max-width: 768px) 100vw, 90vw"
-                src={galleryImages[lightboxIndex].src}
-                alt={galleryImages[lightboxIndex].caption}
-                width={galleryImages[lightboxIndex].width}
-                height={galleryImages[lightboxIndex].height}
-                className="w-full h-full object-contain"
-              />
-
-              {/* Prev arrow */}
-              <button
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
-                onClick={(e) => { e.stopPropagation(); goPrev(); }}
-                data-testid="button-lightbox-prev"
-              >
-                <ChevronLeft className="w-5 h-5 text-gray-700" />
-              </button>
-
-              {/* Next arrow */}
-              <button
-                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
-                onClick={(e) => { e.stopPropagation(); goNext(); }}
-                data-testid="button-lightbox-next"
-              >
-                <ChevronRight className="w-5 h-5 text-gray-700" />
-              </button>
-            </div>
-
-            {/* Caption */}
+            {/* Caption — bottom overlay */}
             {galleryImages[lightboxIndex].caption && (
-              <div className="px-4 py-3 border-t border-gray-100 flex-shrink-0">
-                <p className="text-sm text-gray-600 text-center">
+              <div className="absolute bottom-0 inset-x-0 px-4 py-3 bg-gradient-to-t from-black/60 to-transparent">
+                <p className="text-sm text-white text-center">
                   {galleryImages[lightboxIndex].caption}
                 </p>
               </div>
             )}
+
+            {/* Prev arrow */}
+            <button
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
+              onClick={(e) => { e.stopPropagation(); goPrev(); }}
+              data-testid="button-lightbox-prev"
+            >
+              <ChevronLeft className="w-5 h-5 text-gray-700" />
+            </button>
+
+            {/* Next arrow */}
+            <button
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
+              onClick={(e) => { e.stopPropagation(); goNext(); }}
+              data-testid="button-lightbox-next"
+            >
+              <ChevronRight className="w-5 h-5 text-gray-700" />
+            </button>
           </div>
         </div>
       )}
