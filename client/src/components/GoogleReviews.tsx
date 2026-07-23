@@ -23,64 +23,64 @@ const TRUNCATE_AT = 130;
 
 const reviews = [
   {
+    name: "Jamie Llewellyn",
+    rating: 5,
+    date: "July 2026",
+    text: "i have used VIP Marrakesh three times now and the service gets better every trip. Excellent communication and personalised trip for me and 14 of my friends, they managed expectations and delivered on everything we asked for. Our driver Yusef was exceptional and always on call whenever we needed him, the chefs in the villa were also amazing. Highly recommend anyone travelling with a big group to use VIP Marrakesh.",
+  },
+  {
+    name: "Simran Ghai",
+    rating: 5,
+    date: "July 2026",
+    text: "Outstanding service from start to finish! VIP Marrakech sorted everything for our group trip; the villa, transport, transfers, supermarket runs, cash runs, and every booking. We changed plans and added last-minute requests constantly, and Rups and the team handled it all without a hitch. If you want a stress-free trip in Marrakech, use these guys. Can't recommend them enough.",
+  },
+  {
+    name: "Wafiq O",
+    rating: 5,
+    date: "July 2026",
+    text: "Better than you'd imagine it to be. The support team are also amazing, the staff on ground are amazing.",
+  },
+  {
+    name: "Harry Atwal",
+    rating: 5,
+    date: "June 2026",
+    text: "VIP from the moment I contacted them were professional and extremely accommodating. The staff engaged to identify what we wanted from our stay in Marrakech. Presented lovely villas and events to do throughout our stay. The hospitality was fantastic with the driver and at the events we attended. Occasionally checked in with me to see if we had settled and if we ever needed anything that they could support us on. Would highly recommend and would do the trip again. Thanks VIP.",
+  },
+  {
     name: "Cameron Lee",
     rating: 5,
     date: "March 2026",
     text: "",
   },
   {
-    name: "Jamie Llewellyn",
+    name: "Kishan Sankrecha",
     rating: 5,
-    date: "July 2025",
-    text: "i have used VIP Marrakesh three times now and the service gets better every trip. Excellent communication and personalised trip for me and 14 of my friends, they managed expectations and delivered on everything we asked for. Our driver Yusef was exceptional and always on call whenever we needed him, the chefs in the villa were also amazing. Highly recommend anyone travelling with a big group to use VIP Marrakesh.",
+    date: "February 2026",
+    text: "Brilliant from start to finish. Made our trip seamless with Hind and Selma on hand to support. Our driver Anouir was also fantastic. Will deffo use again.",
   },
   {
-    name: "Simran Ghai",
+    name: "Kacey Parmar",
     rating: 5,
-    date: "July 2025",
-    text: "Outstanding service from start to finish! VIP Marrakech sorted everything for our group trip; the villa, transport, transfers, supermarket runs, cash runs, and every booking. We changed plans and added last-minute requests constantly, and Rups and the team handled it all without a hitch. If you want a stress-free trip in Marrakech, use these guys. Can't recommend them enough.",
+    date: "January 2026",
+    text: "I can't thank VIP Concierge Marrakech enough for helping to organise my brother's stag. From the very beginning they were so helpful, supportive, and always quick to sort anything out. The villa they recommended was perfect, and the whole experience exceeded our expectations. Everyone on the trip kept saying how amazing it was and how smoothly everything ran. We genuinely can't recommend them highly enough and I'll 100% be using them again for my own holiday. Incredible service from an amazing team.",
   },
   {
-    name: "Wafiq O",
+    name: "Manoj Banger",
     rating: 5,
-    date: "July 2025",
-    text: "Better than you'd imagine it to be. The support team are also amazing, the staff on ground are amazing.",
+    date: "December 2025",
+    text: "Brilliant service quick and easy. From start to finish. I can not fault the team. They made every step of the trip simple and always gave good suggestions. I would recommend VIP to anyone looking to go.",
+  },
+  {
+    name: "Niren Patel",
+    rating: 5,
+    date: "December 2025",
+    text: "VIP at Marrakech were excellent. They made the whole trip so easy to plan. Really good communication all around. I would really recommend them for a big family trip to Marrakech!!",
   },
   {
     name: "Qammar Nazir",
     rating: 5,
     date: "July 2025",
     text: "Amazing Service by the VIP Group. From start to finish a smooth process. Highly recommend and will use again.",
-  },
-  {
-    name: "Harry Atwal",
-    rating: 5,
-    date: "June 2025",
-    text: "VIP from the moment I contacted them were professional and extremely accommodating. The staff engaged to identify what we wanted from our stay in Marrakech. Presented lovely villas and events to do throughout our stay. The hospitality was fantastic with the driver and at the events we attended. Occasionally checked in with me to see if we had settled and if we ever needed anything that they could support us on. Would highly recommend and would do the trip again. Thanks VIP.",
-  },
-  {
-    name: "Kishan Sankrecha",
-    rating: 5,
-    date: "February 2025",
-    text: "Brilliant from start to finish. Made our trip seamless with Hind and Selma on hand to support. Our driver Anouir was also fantastic. Will deffo use again.",
-  },
-  {
-    name: "Kacey Parmar",
-    rating: 5,
-    date: "January 2025",
-    text: "I can't thank VIP Concierge Marrakech enough for helping to organise my brother's stag. From the very beginning they were so helpful, supportive, and always quick to sort anything out. The villa they recommended was perfect, and the whole experience exceeded our expectations. Everyone on the trip kept saying how amazing it was and how smoothly everything ran. We genuinely can't recommend them highly enough and I'll 100% be using them again for my own holiday. Incredible service from an amazing team.",
-  },
-  {
-    name: "Manoj Banger",
-    rating: 5,
-    date: "December 2024",
-    text: "Brilliant service quick and easy. From start to finish. I can not fault the team. They made every step of the trip simple and always gave good suggestions. I would recommend VIP to anyone looking to go.",
-  },
-  {
-    name: "Niren Patel",
-    rating: 5,
-    date: "December 2024",
-    text: "VIP at Marrakech were excellent. They made the whole trip so easy to plan. Really good communication all around. I would really recommend them for a big family trip to Marrakech!!",
   },
 ];
 
