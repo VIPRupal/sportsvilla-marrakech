@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
 import { Button } from "@/components/ui/button";
 
-const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/search/?api=1&query=VIP+Groups+Marrakech";
+const GOOGLE_REVIEWS_URL = "https://www.google.com/maps/search/?api=1&query=VIP+at+Marrakech";
 
 const AVATAR_COLORS = [
   "bg-blue-500",
