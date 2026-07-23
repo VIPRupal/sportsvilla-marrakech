@@ -42,11 +42,11 @@ export default function VisualTour() {
         </p>
       </div>
 
-      {/* Images — edge to edge */}
-      <div className="w-full">
+      {/* Images — constrained on desktop, full-bleed on mobile */}
+      <div className="w-full max-w-5xl mx-auto md:px-6">
         {/* Big hero image */}
         <div
-          className="relative w-full aspect-[16/9] overflow-hidden cursor-pointer mb-1"
+          className="relative w-full aspect-[16/9] md:aspect-[16/7] overflow-hidden cursor-pointer mb-1 md:rounded-xl"
           onClick={() => openLightbox(0)}
           data-testid="image-gallery-main"
         >
@@ -63,11 +63,11 @@ export default function VisualTour() {
         </div>
 
         {/* Three thumbnails */}
-        <div className="grid grid-cols-3 gap-1">
+        <div className="grid grid-cols-3 gap-1 mt-1">
           {thumbImages.map((image, i) => (
             <div
               key={i}
-              className="relative aspect-[4/3] overflow-hidden cursor-pointer"
+              className="relative aspect-[4/3] overflow-hidden cursor-pointer md:rounded-xl"
               onClick={() => openLightbox(i + 1)}
               data-testid={`image-gallery-thumb-${i}`}
             >
