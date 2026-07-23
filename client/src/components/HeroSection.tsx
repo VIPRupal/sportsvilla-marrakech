@@ -113,18 +113,25 @@ export default function HeroSection() {
         </div>
       )}
       
-      {/* Title at top, subtitle at bottom */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-between pt-6 md:pt-10 lg:pt-12 pb-4 md:pb-6 lg:pb-8 px-4 md:px-6 lg:px-8">
-        <div className="text-center">
-          <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
-            {heroContent.title}
-          </h1>
-          <p className="text-xs md:text-base lg:text-lg text-white/80 mt-1 md:mt-2 drop-shadow-md tracking-wide">
-            6 Bed Marrakech Villa
-          </p>
-        </div>
-        <div className="w-full">
-          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
+      {/* Gold banner top, title+subtitle+icons grouped at bottom */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-between pt-4 md:pt-6 pb-4 md:pb-6 lg:pb-8 px-4 md:px-6 lg:px-8">
+        {/* Gold top banner */}
+        <p className="text-[10px] md:text-sm font-bold tracking-widest uppercase text-yellow-400 drop-shadow-lg">
+          Luxury Villa Specialists &nbsp;·&nbsp; 10+ Years in Marrakech
+        </p>
+
+        {/* Title + subtitle + icons grouped at bottom */}
+        <div className="w-full flex flex-col items-center gap-3 md:gap-4">
+          <div className="text-center">
+            <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
+              {heroContent.title}
+            </h1>
+            <p className="text-xs md:text-base lg:text-lg text-white/80 mt-1 md:mt-2 drop-shadow-md tracking-wide">
+              6 Bed Marrakech Villa
+            </p>
+          </div>
+          <div className="w-full">
+            <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
             {[
               { icon: FaSwimmer, label: "Heated Pool" },
               { icon: GiTennisRacket, label: "Padel Court" },
@@ -145,6 +152,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
