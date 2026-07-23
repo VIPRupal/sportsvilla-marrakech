@@ -115,10 +115,14 @@ export default function HeroSection() {
       
       {/* Gold banner top, title+subtitle+icons grouped at bottom */}
       <div className="relative z-10 h-full flex flex-col items-center justify-between pt-4 md:pt-6 pb-4 md:pb-6 lg:pb-8 px-4 md:px-6 lg:px-8">
-        {/* Gold top banner */}
-        <p className="text-[10px] md:text-sm font-bold tracking-widest uppercase text-yellow-400 drop-shadow-lg">
-          Luxury Villa Specialists &nbsp;·&nbsp; 10+ Years in Marrakech
-        </p>
+        {/* Refined top tagline */}
+        <div className="flex items-center gap-3 md:gap-5 w-full max-w-lg mx-auto px-2">
+          <span className="flex-1 h-px bg-white/30" />
+          <p className="text-[9px] md:text-[11px] font-light tracking-[0.2em] md:tracking-[0.25em] uppercase text-white/75 whitespace-nowrap">
+            Luxury Villa Specialists &nbsp;·&nbsp; 10+ Years in Marrakech
+          </p>
+          <span className="flex-1 h-px bg-white/30" />
+        </div>
 
         {/* Title + subtitle + icons grouped at bottom */}
         <div className="w-full flex flex-col items-center gap-3 md:gap-4">
