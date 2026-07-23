@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Waves, Trophy, CircleDot, Flag } from "lucide-react";
+import { FaSwimmer } from "react-icons/fa";
+import { GiTennisRacket, GiBasketballBall, GiSoccerBall } from "react-icons/gi";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
@@ -125,14 +126,14 @@ export default function HeroSection() {
         <div className="w-full">
           <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
             {[
-              { icon: Waves, label: "Heated Pool" },
-              { icon: Trophy, label: "Padel Court" },
-              { icon: CircleDot, label: "Basketball Court" },
-              { icon: Flag, label: "Football Pitch" },
+              { icon: FaSwimmer, label: "Heated Pool" },
+              { icon: GiTennisRacket, label: "Padel Court" },
+              { icon: GiBasketballBall, label: "Basketball Court" },
+              { icon: GiSoccerBall, label: "Football Pitch" },
             ].map(({ icon: Icon, label }, i, arr) => (
               <div key={label} className="flex items-center">
                 <div className="flex flex-col items-center gap-1.5">
-                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" strokeWidth={1.5} />
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   <span className="text-[10px] md:text-xs text-white/80 font-medium text-center leading-tight">
                     {label}
                   </span>
