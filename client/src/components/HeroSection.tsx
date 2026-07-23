@@ -119,20 +119,27 @@ export default function HeroSection() {
             {heroContent.title}
           </h1>
         </div>
-        <div className="w-full flex items-end justify-around px-2">
-          {[
-            { icon: Waves, label: "Heated Pool" },
-            { icon: Trophy, label: "Padel Court" },
-            { icon: CircleDot, label: "Basketball Court" },
-            { icon: Flag, label: "Football Pitch" },
-          ].map(({ icon: Icon, label }) => (
-            <div key={label} className="flex flex-col items-center gap-1">
-              <Icon className="w-5 h-5 md:w-8 md:h-8 text-white drop-shadow-lg" />
-              <span className="text-[9px] md:text-xs text-white/90 drop-shadow-md font-medium text-center leading-tight max-w-[60px] md:max-w-none">
-                {label}
-              </span>
-            </div>
-          ))}
+        <div className="w-full">
+          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
+            {[
+              { icon: Waves, label: "Heated Pool" },
+              { icon: Trophy, label: "Padel Court" },
+              { icon: CircleDot, label: "Basketball Court" },
+              { icon: Flag, label: "Football Pitch" },
+            ].map(({ icon: Icon, label }, i, arr) => (
+              <div key={label} className="flex items-center">
+                <div className="flex flex-col items-center gap-1.5">
+                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-white" strokeWidth={1.5} />
+                  <span className="text-[10px] md:text-xs text-white/80 font-medium text-center leading-tight">
+                    {label}
+                  </span>
+                </div>
+                {i < arr.length - 1 && (
+                  <div className="w-px h-8 bg-white/20 ml-4 md:ml-8 mr-4 md:mr-8 hidden sm:block" />
+                )}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
