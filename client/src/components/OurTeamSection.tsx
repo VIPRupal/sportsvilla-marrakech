@@ -1,64 +1,77 @@
-import { Card } from "@/components/ui/card";
-import { Award, Headphones, MessageCircle, Users, BadgeCheck, Star } from "lucide-react";
-import { ourTeamContent } from "@/data/villa-content";
+import { Award, Headphones, BadgeCheck, Star, Trophy, Lock } from "lucide-react";
+
+const benefits = [
+  {
+    icon: Award,
+    title: "Marrakech Specialists",
+    description: "10+ years experience in luxury villa rentals. We know every detail so you don't have to.",
+  },
+  {
+    icon: Headphones,
+    title: "Personal Concierge",
+    description: "One dedicated contact from enquiry to checkout. We plan everything around your group.",
+  },
+  {
+    icon: BadgeCheck,
+    title: "Best Price Guarantee",
+    description: "Found it cheaper online? We'll match the price — no questions asked.",
+  },
+];
+
+const trustBadges = [
+  { icon: Star, label: "4.9/5 Rated" },
+  { icon: Trophy, label: "Est. 2016" },
+  { icon: Lock, label: "Secure Booking" },
+];
 
 export default function OurTeamSection() {
-  const getIcon = (iconName: string) => {
-    const icons: Record<string, typeof Award> = {
-      Award,
-      Headphones,
-      MessageCircle,
-      Users,
-      BadgeCheck,
-      Star
-    };
-    return icons[iconName] || Award;
-  };
-
-  const filteredBenefits = ourTeamContent.benefits.filter(
-    benefit => benefit.title !== "Instant WhatsApp Response" && benefit.title !== "Trusted by 1000+ Guests" && benefit.title !== "UK & Marrakech Teams"
-  );
-
   return (
     <section id="team" className="py-6 md:py-8 bg-card below-fold-section">
-      <div className="max-w-7xl mx-auto px-4 md:px-6">
-        <div className="text-center mb-3 md:mb-6">
-          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-card-foreground">
-            {ourTeamContent.sectionTitle}
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+
+        {/* Heading */}
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold text-card-foreground mb-4">
+            Why Book With Us?
           </h2>
-          <p className="text-xs md:text-sm text-muted-foreground mt-2 md:mt-3">
-            ⭐ 4.9/5 Rated  🏆 Established 2016  🔒 Secure Booking
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-3 gap-2 md:gap-4">
-          {filteredBenefits.map((benefit, index) => {
-            const IconComponent = getIcon(benefit.icon);
-            return (
-              <Card 
-                key={index} 
-                className="p-3 md:p-6 hover-elevate active-elevate-2"
-                data-testid={`benefit-${index}`}
+
+          {/* Trust badges */}
+          <div className="inline-flex flex-wrap justify-center gap-3">
+            {trustBadges.map(({ icon: Icon, label }) => (
+              <div
+                key={label}
+                className="flex items-center gap-1.5 bg-background rounded-full px-3 py-1.5 border border-border"
               >
-                <div className="flex items-start gap-2 md:gap-3">
-                  <div className="flex-shrink-0">
-                    <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                      <IconComponent className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-sm md:text-lg font-semibold mb-0.5 md:mb-1 text-card-foreground leading-tight">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-xs md:text-base text-muted-foreground leading-snug md:leading-relaxed">
-                      {benefit.description}
-                    </p>
-                  </div>
-                </div>
-              </Card>
-            );
-          })}
+                <Icon className="w-3.5 h-3.5 text-primary" />
+                <span className="text-xs font-medium text-foreground">{label}</span>
+              </div>
+            ))}
+          </div>
         </div>
+
+        {/* Benefit cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+          {benefits.map(({ icon: Icon, title, description }, i) => (
+            <div
+              key={i}
+              className="bg-background rounded-xl border border-border p-5 md:p-6 flex flex-col items-center text-center gap-3"
+              data-testid={`benefit-${i}`}
+            >
+              <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <Icon className="w-5 h-5 text-primary" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-sm md:text-base text-foreground mb-1">
+                  {title}
+                </h3>
+                <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">
+                  {description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
