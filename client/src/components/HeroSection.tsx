@@ -112,9 +112,9 @@ export default function HeroSection() {
         </div>
       )}
       
-      {/* Content Layout - Bottom Aligned */}
-      <div className="relative z-10 h-full flex flex-col items-center justify-end pb-4 md:pb-6 lg:pb-8 px-4 md:px-6 lg:px-8">
-        {/* Bottom Aligned Title */}
+      {/* Content Layout - Top Aligned */}
+      <div className="relative z-10 h-full flex flex-col items-center justify-start pt-6 md:pt-10 lg:pt-12 px-4 md:px-6 lg:px-8">
+        {/* Top Aligned Title */}
         <div className="text-center">
           <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
             {heroContent.title}
