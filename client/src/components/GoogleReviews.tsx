@@ -124,8 +124,8 @@ export default function GoogleReviews() {
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Header */}
-        <div className="flex items-center justify-between mb-6 md:mb-8">
-          <div>
+        <div className="relative flex items-center justify-center mb-6 md:mb-8">
+          <div className="text-center">
             <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold text-foreground">
               Client Reviews
             </h2>
@@ -139,7 +139,7 @@ export default function GoogleReviews() {
               <span>See all reviews on Google</span>
             </a>
           </div>
-          <div className="hidden sm:flex items-center gap-2">
+          <div className="hidden sm:flex items-center gap-2 absolute right-0">
             <Button size="icon" variant="outline" onClick={scrollPrev} aria-label="Previous review" data-testid="button-reviews-prev">
               <ChevronLeft className="w-4 h-4" />
             </Button>
