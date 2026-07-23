@@ -124,14 +124,6 @@ export default function HeroSection() {
           </p>
         </div>
         
-        {/* Free Airport Transfer Banner - Bottom */}
-        <div className="mt-3">
-          <div className="bg-black/60 backdrop-blur-md rounded px-2 py-1 border border-primary/50">
-            <p className="text-white text-xs md:text-sm font-bold text-center whitespace-nowrap">
-              🚗 Free Airport Transfer on Arrival 🚗
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );
