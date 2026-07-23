@@ -151,43 +151,38 @@ export default function GoogleReviews() {
 
         {/* Carousel */}
         <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex gap-3 md:gap-4">
+          <div className="flex gap-2.5">
             {reviews.map((review, i) => (
               <a
                 key={i}
                 href={review.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-[0_0_85%] sm:flex-[0_0_42%] lg:flex-[0_0_30%] min-w-0 block"
+                className="flex-[0_0_78%] sm:flex-[0_0_38%] lg:flex-[0_0_24%] min-w-0 block"
                 data-testid={`card-review-${i}`}
               >
-                <div className="bg-white rounded-xl border border-gray-200 p-4 md:p-5 h-full flex flex-col gap-3 shadow-sm hover-elevate transition-shadow">
-                  {/* Top row: avatar + name + Google logo */}
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-2.5">
-                      <div className={`w-9 h-9 rounded-full ${AVATAR_COLORS[i % AVATAR_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
-                        <span className="text-white text-sm font-semibold">
-                          {review.name.charAt(0)}
-                        </span>
+                <div className="bg-white rounded-lg border border-gray-100 p-3 h-full flex flex-col gap-2 shadow-sm hover-elevate">
+                  {/* Top row */}
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-2">
+                      <div className={`w-7 h-7 rounded-full ${AVATAR_COLORS[i % AVATAR_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
+                        <span className="text-white text-xs font-semibold">{review.name.charAt(0)}</span>
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-gray-900 leading-tight">{review.name}</p>
-                        <p className="text-xs text-gray-400">{review.date}</p>
+                        <p className="text-xs font-semibold text-gray-800 leading-tight">{review.name}</p>
+                        <p className="text-[10px] text-gray-400">{review.date}</p>
                       </div>
                     </div>
-                    <FcGoogle className="w-5 h-5 flex-shrink-0 mt-0.5" />
+                    <FcGoogle className="w-4 h-4 flex-shrink-0" />
                   </div>
 
                   {/* Stars */}
                   <StarRating rating={review.rating} />
 
                   {/* Review text */}
-                  <p className="text-sm text-gray-600 leading-relaxed flex-1">
+                  <p className="text-xs text-gray-500 leading-relaxed flex-1 line-clamp-4">
                     "{review.text}"
                   </p>
-
-                  {/* Posted on Google */}
-                  <p className="text-xs text-gray-400">Posted on Google</p>
                 </div>
               </a>
             ))}
