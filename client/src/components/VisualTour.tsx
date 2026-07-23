@@ -60,9 +60,6 @@ export default function VisualTour() {
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.02]"
           />
-          <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">
-            View all {galleryImages.length} photos
-          </div>
         </div>
 
         {/* Three thumbnails */}
@@ -85,8 +82,8 @@ export default function VisualTour() {
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.04]"
               />
               {i === 2 && galleryImages.length > 4 && (
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <span className="text-white font-medium text-sm">+{galleryImages.length - 4} more</span>
+                <div className="absolute bottom-2 right-2 bg-black/60 text-white text-xs px-2 py-0.5 rounded backdrop-blur-sm">
+                  +{galleryImages.length - 4} more
                 </div>
               )}
             </div>
