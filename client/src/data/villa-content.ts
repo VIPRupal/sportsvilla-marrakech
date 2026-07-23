@@ -55,7 +55,7 @@ export const heroContent = {
     { text: "🚗 Free Airport Transfer on Arrival 🚗", icon: "" }
   ],
   
-  ctaText: "Check Dates & Get Instant Quote"
+  ctaText: "Get Live Quote"
 };
 
 // ==========================================
