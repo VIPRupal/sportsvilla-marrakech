@@ -33,7 +33,7 @@ export default function WhatsAppButton() {
           </div>
           
           <span className="text-xs font-semibold whitespace-nowrap">
-            Get Live Quote
+            Get Quote
           </span>
         </div>
       </div>
