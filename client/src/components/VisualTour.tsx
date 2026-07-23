@@ -91,59 +91,70 @@ export default function VisualTour() {
         </div>
       </div>
 
-      {/* Lightbox */}
+      {/* Gallery Modal */}
       {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
+          className="fixed inset-0 bg-black/60 z-50 flex items-center justify-center p-4 md:p-8"
           onClick={closeLightbox}
           data-testid="lightbox-overlay"
         >
-          {/* Close */}
-          <button
-            className="fixed top-4 right-4 z-10 text-white/80 hover:text-white transition-colors"
-            onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
-            data-testid="button-close-lightbox"
+          <div
+            className="relative bg-white rounded-xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
           >
-            <X className="w-7 h-7" />
-          </button>
+            {/* Modal header */}
+            <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100 flex-shrink-0">
+              <span className="text-sm text-gray-500 font-medium">
+                {lightboxIndex + 1} of {galleryImages.length}
+              </span>
+              <button
+                className="text-gray-400 hover:text-gray-700 transition-colors"
+                onClick={closeLightbox}
+                data-testid="button-close-lightbox"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
 
-          {/* Counter */}
-          <div className="fixed top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
-            {lightboxIndex + 1} / {galleryImages.length}
-          </div>
+            {/* Image area */}
+            <div className="relative flex-1 flex items-center justify-center bg-gray-50 min-h-0">
+              <img
+                srcSet={`${galleryImages[lightboxIndex].srcMobile} 800w, ${galleryImages[lightboxIndex].src} 3200w`}
+                sizes="(max-width: 768px) 100vw, 90vw"
+                src={galleryImages[lightboxIndex].src}
+                alt={galleryImages[lightboxIndex].caption}
+                width={galleryImages[lightboxIndex].width}
+                height={galleryImages[lightboxIndex].height}
+                className="w-full h-full object-contain"
+              />
 
-          {/* Prev */}
-          <button
-            className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors bg-black/30 rounded-full p-2"
-            onClick={(e) => { e.stopPropagation(); goPrev(); }}
-            data-testid="button-lightbox-prev"
-          >
-            <ChevronLeft className="w-7 h-7" />
-          </button>
+              {/* Prev arrow */}
+              <button
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
+                onClick={(e) => { e.stopPropagation(); goPrev(); }}
+                data-testid="button-lightbox-prev"
+              >
+                <ChevronLeft className="w-5 h-5 text-gray-700" />
+              </button>
 
-          {/* Next */}
-          <button
-            className="fixed right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors bg-black/30 rounded-full p-2"
-            onClick={(e) => { e.stopPropagation(); goNext(); }}
-            data-testid="button-lightbox-next"
-          >
-            <ChevronRight className="w-7 h-7" />
-          </button>
+              {/* Next arrow */}
+              <button
+                className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
+                onClick={(e) => { e.stopPropagation(); goNext(); }}
+                data-testid="button-lightbox-next"
+              >
+                <ChevronRight className="w-5 h-5 text-gray-700" />
+              </button>
+            </div>
 
-          {/* Image */}
-          <div className="relative max-w-5xl w-full px-16" onClick={(e) => e.stopPropagation()}>
-            <img
-              srcSet={`${galleryImages[lightboxIndex].srcMobile} 800w, ${galleryImages[lightboxIndex].src} 3200w`}
-              sizes="(max-width: 768px) 100vw, 90vw"
-              src={galleryImages[lightboxIndex].src}
-              alt={galleryImages[lightboxIndex].caption}
-              width={galleryImages[lightboxIndex].width}
-              height={galleryImages[lightboxIndex].height}
-              className="w-full h-auto rounded-lg max-h-[80vh] object-contain"
-            />
-            <p className="text-white/70 text-center mt-3 text-sm">
-              {galleryImages[lightboxIndex].caption}
-            </p>
+            {/* Caption */}
+            {galleryImages[lightboxIndex].caption && (
+              <div className="px-4 py-3 border-t border-gray-100 flex-shrink-0">
+                <p className="text-sm text-gray-600 text-center">
+                  {galleryImages[lightboxIndex].caption}
+                </p>
+              </div>
+            )}
           </div>
         </div>
       )}
