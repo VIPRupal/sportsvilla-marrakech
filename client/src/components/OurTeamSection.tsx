@@ -31,7 +31,7 @@ export default function OurTeamSection() {
 
         {/* Heading */}
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold text-card-foreground mb-4">
+          <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold text-card-foreground mb-4">
             Why Book With Us?
           </h2>
 

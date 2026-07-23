@@ -34,7 +34,7 @@ export default function VisualTour() {
     <section id="gallery" className="py-6 md:py-8 bg-background">
       {/* Section heading — constrained */}
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center mb-6 md:mb-8">
-        <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-foreground">
+        <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold mb-1 md:mb-2 text-foreground">
           {visualTourContent.sectionTitle}
         </h2>
         <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
@@ -46,7 +46,7 @@ export default function VisualTour() {
       <div className="w-full max-w-5xl mx-auto md:px-6">
         {/* Big hero image */}
         <div
-          className="relative w-full aspect-[16/9] md:aspect-[16/7] overflow-hidden cursor-pointer mb-1 md:rounded-xl"
+          className="relative w-full aspect-[16/9] md:aspect-[21/8] overflow-hidden cursor-pointer mb-1 md:rounded-xl"
           onClick={() => openLightbox(0)}
           data-testid="image-gallery-main"
         >
