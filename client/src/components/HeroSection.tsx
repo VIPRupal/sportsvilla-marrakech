@@ -119,7 +119,7 @@ export default function HeroSection() {
         {/* Tagline — pinned to top */}
         <div className="flex items-center gap-3 w-full max-w-xs sm:max-w-sm mx-auto px-4">
           <span className="flex-1 h-px bg-white/30" />
-          <p className="text-[9px] sm:text-[10px] font-light tracking-[0.15em] uppercase text-white/75 whitespace-nowrap">
+          <p className="text-[11px] sm:text-[13px] font-light tracking-[0.15em] uppercase text-white/75 whitespace-nowrap">
             Marrakech Villa Specialists
           </p>
           <span className="flex-1 h-px bg-white/30" />
