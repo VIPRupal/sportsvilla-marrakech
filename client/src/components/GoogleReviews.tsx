@@ -23,6 +23,12 @@ const TRUNCATE_AT = 130;
 
 const reviews = [
   {
+    name: "Cameron Lee",
+    rating: 5,
+    date: "March 2026",
+    text: "",
+  },
+  {
     name: "Jamie Llewellyn",
     rating: 5,
     date: "July 2025",
@@ -41,22 +47,16 @@ const reviews = [
     text: "Better than you'd imagine it to be. The support team are also amazing, the staff on ground are amazing.",
   },
   {
-    name: "Harry Atwal",
-    rating: 5,
-    date: "June 2025",
-    text: "VIP from the moment I contacted them were professional and extremely accommodating. The staff engaged to identify what we wanted from our stay in Marrakech. Presented lovely villas and events to do throughout our stay. The hospitality was fantastic with the driver and at the events we attended. Occasionally checked in with me to see if we had settled and if we ever needed anything that they could support us on. Would highly recommend and would do the trip again. Thanks VIP.",
-  },
-  {
     name: "Qammar Nazir",
     rating: 5,
     date: "July 2025",
     text: "Amazing Service by the VIP Group. From start to finish a smooth process. Highly recommend and will use again.",
   },
   {
-    name: "Cameron Lee",
+    name: "Harry Atwal",
     rating: 5,
-    date: "March 2026",
-    text: "",
+    date: "June 2025",
+    text: "VIP from the moment I contacted them were professional and extremely accommodating. The staff engaged to identify what we wanted from our stay in Marrakech. Presented lovely villas and events to do throughout our stay. The hospitality was fantastic with the driver and at the events we attended. Occasionally checked in with me to see if we had settled and if we ever needed anything that they could support us on. Would highly recommend and would do the trip again. Thanks VIP.",
   },
   {
     name: "Kishan Sankrecha",
