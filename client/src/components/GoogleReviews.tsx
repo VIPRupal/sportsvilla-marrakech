@@ -127,7 +127,7 @@ export default function GoogleReviews() {
         <div className="flex items-center justify-between mb-6 md:mb-8">
           <div>
             <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold text-foreground">
-              What Our Clients Think
+              Client Reviews
             </h2>
             <a
               href={GOOGLE_REVIEWS_URL}
