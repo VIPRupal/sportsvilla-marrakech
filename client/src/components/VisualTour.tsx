@@ -32,27 +32,27 @@ export default function VisualTour() {
 
   return (
     <section id="gallery" className="py-8 md:py-12 bg-background">
-      <div className="max-w-5xl mx-auto px-4 md:px-6">
+      {/* Section heading — constrained */}
+      <div className="max-w-5xl mx-auto px-4 md:px-6 text-center mb-6 md:mb-8">
+        <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-foreground">
+          {visualTourContent.sectionTitle}
+        </h2>
+        <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
+          {visualTourContent.sectionSubtitle}
+        </p>
+      </div>
 
-        {/* Section heading */}
-        <div className="text-center mb-6 md:mb-8">
-          <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-foreground">
-            {visualTourContent.sectionTitle}
-          </h2>
-          <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
-            {visualTourContent.sectionSubtitle}
-          </p>
-        </div>
-
+      {/* Images — edge to edge */}
+      <div className="w-full">
         {/* Big hero image */}
         <div
-          className="relative w-full aspect-[16/9] overflow-hidden rounded-lg cursor-pointer mb-2"
+          className="relative w-full aspect-[16/9] overflow-hidden cursor-pointer mb-1"
           onClick={() => openLightbox(0)}
           data-testid="image-gallery-main"
         >
           <img
             srcSet={`${mainImage.srcMobile} 800w, ${mainImage.src} 3200w`}
-            sizes="(max-width: 768px) 100vw, 80vw"
+            sizes="100vw"
             src={mainImage.src}
             alt={mainImage.caption}
             width={mainImage.width}
@@ -66,17 +66,17 @@ export default function VisualTour() {
         </div>
 
         {/* Three thumbnails */}
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-3 gap-1">
           {thumbImages.map((image, i) => (
             <div
               key={i}
-              className="relative aspect-[4/3] overflow-hidden rounded-lg cursor-pointer"
+              className="relative aspect-[4/3] overflow-hidden cursor-pointer"
               onClick={() => openLightbox(i + 1)}
               data-testid={`image-gallery-thumb-${i}`}
             >
               <img
                 srcSet={`${image.srcMobile} 800w, ${image.src} 3200w`}
-                sizes="(max-width: 768px) 33vw, 25vw"
+                sizes="33vw"
                 src={image.src}
                 alt={image.caption}
                 width={image.width}
@@ -85,7 +85,7 @@ export default function VisualTour() {
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.04]"
               />
               {i === 2 && galleryImages.length > 4 && (
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg">
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
                   <span className="text-white font-medium text-sm">+{galleryImages.length - 4} more</span>
                 </div>
               )}
