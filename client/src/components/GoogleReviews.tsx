@@ -120,7 +120,7 @@ export default function GoogleReviews() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section className="py-10 md:py-14 bg-background">
+    <section className="py-6 md:py-8 bg-background">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Header */}
