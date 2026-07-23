@@ -28,10 +28,10 @@ const reviews = [
     url: GOOGLE_REVIEWS_URL,
   },
   {
-    name: "Sophie Laurent",
+    name: "Cameron Lee",
     rating: 5,
     date: "February 2025",
-    text: "We've rented villas all over the world and this is genuinely one of the best. The sports facilities are unlike anything else — padel, basketball, football pitch. The team were so helpful with everything.",
+    text: "",
     url: GOOGLE_REVIEWS_URL,
   },
   {
