@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { FcGoogle } from "react-icons/fc";
@@ -19,76 +19,68 @@ const AVATAR_COLORS = [
   "bg-cyan-600",
 ];
 
+const TRUNCATE_AT = 130;
+
 const reviews = [
+  {
+    name: "Jamie Llewellyn",
+    rating: 5,
+    date: "July 2025",
+    text: "i have used VIP Marrakesh three times now and the service gets better every trip. Excellent communication and personalised trip for me and 14 of my friends, they managed expectations and delivered on everything we asked for. Our driver Yusef was exceptional and always on call whenever we needed him, the chefs in the villa were also amazing. Highly recommend anyone travelling with a big group to use VIP Marrakesh.",
+  },
+  {
+    name: "Simran Ghai",
+    rating: 5,
+    date: "July 2025",
+    text: "Outstanding service from start to finish! VIP Marrakech sorted everything for our group trip; the villa, transport, transfers, supermarket runs, cash runs, and every booking. We changed plans and added last-minute requests constantly, and Rups and the team handled it all without a hitch. If you want a stress-free trip in Marrakech, use these guys. Can't recommend them enough.",
+  },
+  {
+    name: "Wafiq O",
+    rating: 5,
+    date: "July 2025",
+    text: "Better than you'd imagine it to be. The support team are also amazing, the staff on ground are amazing.",
+  },
+  {
+    name: "Harry Atwal",
+    rating: 5,
+    date: "June 2025",
+    text: "VIP from the moment I contacted them were professional and extremely accommodating. The staff engaged to identify what we wanted from our stay in Marrakech. Presented lovely villas and events to do throughout our stay. The hospitality was fantastic with the driver and at the events we attended. Occasionally checked in with me to see if we had settled and if we ever needed anything that they could support us on. Would highly recommend and would do the trip again. Thanks VIP.",
+  },
   {
     name: "Qammar Nazir",
     rating: 5,
     date: "July 2025",
     text: "Amazing Service by the VIP Group. From start to finish a smooth process. Highly recommend and will use again.",
-    url: GOOGLE_REVIEWS_URL,
   },
   {
     name: "Cameron Lee",
     rating: 5,
     date: "March 2026",
     text: "",
-    url: GOOGLE_REVIEWS_URL,
   },
   {
-    name: "Tom Richardson",
+    name: "Kishan Sankrecha",
+    rating: 5,
+    date: "February 2025",
+    text: "Brilliant from start to finish. Made our trip seamless with Hind and Selma on hand to support. Our driver Anouir was also fantastic. Will deffo use again.",
+  },
+  {
+    name: "Kacey Parmar",
     rating: 5,
     date: "January 2025",
-    text: "Booked this for my 40th birthday and it exceeded every expectation. The villa is stunning, the location is perfect, and having a private chef included meant we could just relax and enjoy. Highly recommend.",
-    url: GOOGLE_REVIEWS_URL,
+    text: "I can't thank VIP Concierge Marrakech enough for helping to organise my brother's stag. From the very beginning they were so helpful, supportive, and always quick to sort anything out. The villa they recommended was perfect, and the whole experience exceeded our expectations. Everyone on the trip kept saying how amazing it was and how smoothly everything ran. We genuinely can't recommend them highly enough and I'll 100% be using them again for my own holiday. Incredible service from an amazing team.",
   },
   {
-    name: "Amelia Patel",
+    name: "Manoj Banger",
     rating: 5,
     date: "December 2024",
-    text: "Our corporate retreat was made exceptional by this villa. The facilities kept everyone engaged and the outdoor TV by the pool was a brilliant touch. The Rupal and the team were incredibly responsive throughout.",
-    url: GOOGLE_REVIEWS_URL,
+    text: "Brilliant service quick and easy. From start to finish. I can not fault the team. They made every step of the trip simple and always gave good suggestions. I would recommend VIP to anyone looking to go.",
   },
   {
-    name: "Daniel Murphy",
+    name: "Niren Patel",
     rating: 5,
-    date: "November 2024",
-    text: "Perfect stag trip. 12 lads, padel tournament during the day, evenings by the heated pool. The chef cooked incredible food every night. Nothing was too much trouble. Already planning next year's trip.",
-    url: GOOGLE_REVIEWS_URL,
-  },
-  {
-    name: "Charlotte Evans",
-    rating: 5,
-    date: "October 2024",
-    text: "We were a group of families — kids and adults — and the villa worked perfectly for everyone. The pool, the courts, the gym. Beautiful grounds and only 20 minutes from the city. Faultless service.",
-    url: GOOGLE_REVIEWS_URL,
-  },
-  {
-    name: "Marcus Webb",
-    rating: 5,
-    date: "September 2024",
-    text: "Stayed for a week with friends and we didn't want to leave. The villa is exactly as pictured — the padel court under floodlights at night was surreal. Rupal's team handled everything seamlessly.",
-    url: GOOGLE_REVIEWS_URL,
-  },
-  {
-    name: "Isabella Costa",
-    rating: 5,
-    date: "August 2024",
-    text: "We hired the villa for a hen party and it was absolutely magical. The pool area alone is worth it. Add in padel, basketball, a private chef... it's the full luxury experience. Couldn't recommend more.",
-    url: GOOGLE_REVIEWS_URL,
-  },
-  {
-    name: "Oliver Chen",
-    rating: 5,
-    date: "July 2024",
-    text: "Best holiday we've had as a group. Everything was organised perfectly — from arrival to checkout. The villa itself is beautiful, well-equipped, and the outdoor spaces are stunning. 10/10.",
-    url: GOOGLE_REVIEWS_URL,
-  },
-  {
-    name: "Hannah Brooks",
-    rating: 5,
-    date: "June 2024",
-    text: "We came for a fitness retreat and the villa was perfect for it. Morning runs, gym sessions, padel — all on-site. The pool for recovery and the chef keeping us fuelled. Exceptional from start to finish.",
-    url: GOOGLE_REVIEWS_URL,
+    date: "December 2024",
+    text: "VIP at Marrakech were excellent. They made the whole trip so easy to plan. Really good communication all around. I would really recommend them for a big family trip to Marrakech!!",
   },
 ];
 
@@ -115,9 +107,20 @@ export default function GoogleReviews() {
     loop: false,
     dragFree: true,
   });
+  const [expanded, setExpanded] = useState<Set<number>>(new Set());
 
   const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
+
+  const toggleExpand = (i: number, e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setExpanded(prev => {
+      const next = new Set(prev);
+      next.has(i) ? next.delete(i) : next.add(i);
+      return next;
+    });
+  };
 
   return (
     <section className="py-6 md:py-8 bg-background">
@@ -152,40 +155,78 @@ export default function GoogleReviews() {
         {/* Carousel */}
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex gap-2.5">
-            {reviews.map((review, i) => (
-              <a
-                key={i}
-                href={review.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-[0_0_78%] sm:flex-[0_0_38%] lg:flex-[0_0_24%] min-w-0 block"
-                data-testid={`card-review-${i}`}
-              >
-                <div className="bg-white rounded-lg border border-gray-100 p-3 h-full flex flex-col gap-2 shadow-sm hover-elevate">
-                  {/* Top row */}
-                  <div className="flex items-center justify-between gap-2">
-                    <div className="flex items-center gap-2">
-                      <div className={`w-7 h-7 rounded-full ${AVATAR_COLORS[i % AVATAR_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
-                        <span className="text-white text-xs font-semibold">{review.name.charAt(0)}</span>
+            {reviews.map((review, i) => {
+              const isExpanded = expanded.has(i);
+              const isLong = review.text.length > TRUNCATE_AT;
+              const displayText = isLong && !isExpanded
+                ? review.text.slice(0, TRUNCATE_AT).trimEnd()
+                : review.text;
+
+              return (
+                <div
+                  key={i}
+                  className="flex-[0_0_78%] sm:flex-[0_0_38%] lg:flex-[0_0_24%] min-w-0"
+                  data-testid={`card-review-${i}`}
+                >
+                  <div className="bg-white rounded-lg border border-gray-100 p-3 h-full flex flex-col gap-2 shadow-sm">
+                    {/* Top row */}
+                    <div className="flex items-center justify-between gap-2">
+                      <div className="flex items-center gap-2">
+                        <div className={`w-7 h-7 rounded-full ${AVATAR_COLORS[i % AVATAR_COLORS.length]} flex items-center justify-center flex-shrink-0`}>
+                          <span className="text-white text-xs font-semibold">{review.name.charAt(0)}</span>
+                        </div>
+                        <div>
+                          <p className="text-xs font-semibold text-gray-800 leading-tight">{review.name}</p>
+                          <p className="text-[10px] text-gray-400">{review.date}</p>
+                        </div>
                       </div>
-                      <div>
-                        <p className="text-xs font-semibold text-gray-800 leading-tight">{review.name}</p>
-                        <p className="text-[10px] text-gray-400">{review.date}</p>
-                      </div>
+                      <a
+                        href={GOOGLE_REVIEWS_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <FcGoogle className="w-4 h-4 flex-shrink-0" />
+                      </a>
                     </div>
-                    <FcGoogle className="w-4 h-4 flex-shrink-0" />
+
+                    {/* Stars */}
+                    <StarRating rating={review.rating} />
+
+                    {/* Review text */}
+                    {review.text ? (
+                      <p className="text-xs text-gray-500 leading-relaxed flex-1">
+                        &ldquo;{displayText}{isLong && !isExpanded && (
+                          <>
+                            {"... "}
+                            <button
+                              className="text-gray-700 font-medium underline underline-offset-2 hover:text-gray-900"
+                              onClick={(e) => toggleExpand(i, e)}
+                            >
+                              more
+                            </button>
+                          </>
+                        )}
+                        {isLong && isExpanded && (
+                          <>
+                            {" "}
+                            <button
+                              className="text-gray-700 font-medium underline underline-offset-2 hover:text-gray-900"
+                              onClick={(e) => toggleExpand(i, e)}
+                            >
+                              less
+                            </button>
+                          </>
+                        )}
+                        &rdquo;
+                      </p>
+                    ) : (
+                      <p className="text-xs text-gray-400 italic flex-1">No written review</p>
+                    )}
                   </div>
-
-                  {/* Stars */}
-                  <StarRating rating={review.rating} />
-
-                  {/* Review text */}
-                  <p className="text-xs text-gray-500 leading-relaxed flex-1 line-clamp-4">
-                    "{review.text}"
-                  </p>
                 </div>
-              </a>
-            ))}
+              );
+            })}
           </div>
         </div>
 
