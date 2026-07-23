@@ -21,10 +21,10 @@ const AVATAR_COLORS = [
 
 const reviews = [
   {
-    name: "James Hartley",
+    name: "Qammar Nazir",
     rating: 5,
     date: "March 2025",
-    text: "Absolutely incredible villa. The padel court was immaculate, the pool was heated perfectly, and the cook prepared the most amazing meals every day. Our group of 10 had the time of our lives. Will 100% be back.",
+    text: "Amazing Service by the VIP Group. From start to finish a smooth process. Highly recommend and will use again.",
     url: GOOGLE_REVIEWS_URL,
   },
   {
