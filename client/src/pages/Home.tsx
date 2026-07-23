@@ -2,6 +2,7 @@ import HeroSection from "@/components/HeroSection";
 import VisualTour from "@/components/VisualTour";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import PricingSection from "@/components/PricingSection";
+import GoogleReviews from "@/components/GoogleReviews";
 import OurTeamSection from "@/components/OurTeamSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -14,6 +15,7 @@ export default function Home() {
       <HeroSection />
       <VisualTour />
       <PricingSection />
+      <GoogleReviews />
       {/* <WhoThisIsFor /> */}
       <OurTeamSection />
       <TestimonialsSection />
