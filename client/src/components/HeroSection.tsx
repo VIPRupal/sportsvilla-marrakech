@@ -130,7 +130,7 @@ export default function HeroSection() {
           <h1 className="font-serif font-bold text-xl md:text-3xl lg:text-4xl text-white leading-tight drop-shadow-lg">
             {heroContent.title}
           </h1>
-          <p className="mt-2 text-sm md:text-base font-light tracking-widest uppercase text-white/70 drop-shadow-md">
+          <p className="mt-2 text-base md:text-xl font-serif italic font-normal tracking-wide text-white/60 drop-shadow-md">
             Make Memories
           </p>
         </div>
