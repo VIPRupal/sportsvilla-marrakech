@@ -295,8 +295,7 @@ export const pricingContent = {
   ],
   
   badges: [
-    { text: "Dates are going quickly", icon: "Calendar" },
-    { text: "Free Airport Transfer Included", icon: "Gift" }
+    { text: "Dates are going quickly", icon: "Calendar" }
   ],
   
   bonusText: ""

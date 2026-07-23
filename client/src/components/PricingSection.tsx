@@ -53,10 +53,6 @@ export default function PricingSection() {
                 <p className="text-[9px] md:text-sm text-muted-foreground mb-1">
                   Sleeps {pricingContent.guestCount}
                 </p>
-                
-                <p className="text-[9px] md:text-sm text-primary font-semibold">
-                  Free Airport Transfer
-                </p>
               </div>
             </Card>
           ))}
@@ -93,16 +89,6 @@ export default function PricingSection() {
             >
               <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
                 Check Dates & Get Instant Quote
-              </a>
-            </Button>
-            <Button 
-              asChild
-              size="default"
-              className="flex-1 text-xs md:text-base"
-              data-testid="button-enquiry-form-pricing"
-            >
-              <a href="#contact">
-                More info on this / other villas? Fill in form
               </a>
             </Button>
           </div>
