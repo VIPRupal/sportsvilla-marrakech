@@ -119,7 +119,7 @@ export default function HeroSection() {
             {heroContent.title}
           </h1>
         </div>
-        <div className="flex items-end gap-6 md:gap-10">
+        <div className="w-full flex items-end justify-around px-2">
           {[
             { icon: Waves, label: "Heated Pool" },
             { icon: Trophy, label: "Padel Court" },
@@ -127,8 +127,8 @@ export default function HeroSection() {
             { icon: Flag, label: "Football Pitch" },
           ].map(({ icon: Icon, label }) => (
             <div key={label} className="flex flex-col items-center gap-1">
-              <Icon className="w-6 h-6 md:w-8 md:h-8 text-white drop-shadow-lg" />
-              <span className="text-[10px] md:text-xs text-white/90 drop-shadow-md font-medium text-center whitespace-nowrap">
+              <Icon className="w-5 h-5 md:w-8 md:h-8 text-white drop-shadow-lg" />
+              <span className="text-[9px] md:text-xs text-white/90 drop-shadow-md font-medium text-center leading-tight max-w-[60px] md:max-w-none">
                 {label}
               </span>
             </div>
