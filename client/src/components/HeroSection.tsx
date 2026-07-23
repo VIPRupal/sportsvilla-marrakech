@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { FaSwimmer } from "react-icons/fa";
+import { FaSwimmer, FaBed } from "react-icons/fa";
 import { GiTennisRacket, GiBasketballBall, GiSoccerBall } from "react-icons/gi";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
@@ -130,13 +130,11 @@ export default function HeroSection() {
             <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
               {heroContent.title}
             </h1>
-            <p className="text-xs md:text-base lg:text-lg text-white/80 mt-1 md:mt-2 drop-shadow-md tracking-wide">
-              6 Bed Marrakech Villa
-            </p>
           </div>
           <div className="w-full">
             <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
             {[
+              { icon: FaBed, label: "6 Bed Villa" },
               { icon: FaSwimmer, label: "Heated Pool" },
               { icon: GiTennisRacket, label: "Padel Court" },
               { icon: GiBasketballBall, label: "Basketball Court" },
