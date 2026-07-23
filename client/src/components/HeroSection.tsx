@@ -113,9 +113,10 @@ export default function HeroSection() {
         </div>
       )}
       
-      {/* Gold banner top, title+subtitle+icons grouped at bottom */}
+      {/* Layout: tagline top, title centred, icons bottom */}
       <div className="relative z-10 h-full flex flex-col items-center justify-between pt-4 md:pt-6 pb-4 md:pb-6 lg:pb-8 px-4 md:px-6 lg:px-8">
-        {/* Refined top tagline */}
+
+        {/* Tagline — pinned to top */}
         <div className="flex items-center gap-3 w-full max-w-xs sm:max-w-sm mx-auto px-4">
           <span className="flex-1 h-px bg-white/30" />
           <p className="text-[9px] sm:text-[10px] font-light tracking-[0.15em] uppercase text-white/75 whitespace-nowrap">
@@ -124,15 +125,16 @@ export default function HeroSection() {
           <span className="flex-1 h-px bg-white/30" />
         </div>
 
-        {/* Title + subtitle + icons grouped at bottom */}
-        <div className="w-full flex flex-col items-center gap-3 md:gap-4">
-          <div className="text-center">
-            <h1 className="font-serif font-bold text-base md:text-2xl lg:text-3xl text-white leading-tight drop-shadow-lg">
-              {heroContent.title}
-            </h1>
-          </div>
-          <div className="w-full">
-            <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
+        {/* Title — absolutely centred */}
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-center px-4">
+          <h1 className="font-serif font-bold text-xl md:text-3xl lg:text-4xl text-white leading-tight drop-shadow-lg">
+            {heroContent.title}
+          </h1>
+        </div>
+
+        {/* Icons bar — pinned to bottom */}
+        <div className="w-full">
+          <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
             {[
               { icon: FaBed, label: "6 Bed Villa" },
               { icon: FaSwimmer, label: "Heated Pool" },
@@ -154,7 +156,7 @@ export default function HeroSection() {
             ))}
           </div>
         </div>
-      </div>
+
       </div>
     </section>
   );
