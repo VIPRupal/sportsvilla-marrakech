@@ -1,139 +1,151 @@
-import { useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-import useEmblaCarousel from "embla-carousel-react";
+import { useState, useEffect, useCallback } from "react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { galleryImages, visualTourContent } from "@/data/villa-content";
-import { Button } from "@/components/ui/button";
 
 export default function VisualTour() {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  const [emblaRef, emblaApi] = useEmblaCarousel({
-    align: "start",
-    loop: false,
-    slidesToScroll: 1,
-    breakpoints: {
-      '(min-width: 768px)': { slidesToScroll: 2 },
-      '(min-width: 1024px)': { slidesToScroll: 3 }
-    }
-  });
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const scrollPrev = useCallback(() => {
-    if (emblaApi) emblaApi.scrollPrev();
-  }, [emblaApi]);
+  const openLightbox = (index: number) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
 
-  const scrollNext = useCallback(() => {
-    if (emblaApi) emblaApi.scrollNext();
-  }, [emblaApi]);
+  const goPrev = useCallback(() => {
+    setLightboxIndex(i => i === null ? null : (i - 1 + galleryImages.length) % galleryImages.length);
+  }, []);
+
+  const goNext = useCallback(() => {
+    setLightboxIndex(i => i === null ? null : (i + 1) % galleryImages.length);
+  }, []);
+
+  useEffect(() => {
+    if (lightboxIndex === null) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "ArrowLeft") goPrev();
+      if (e.key === "ArrowRight") goNext();
+      if (e.key === "Escape") closeLightbox();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [lightboxIndex, goPrev, goNext]);
+
+  const mainImage = galleryImages[0];
+  const thumbImages = galleryImages.slice(1, 4);
 
   return (
-    <section id="gallery" className="pt-4 pb-0 md:pt-6 md:pb-1 lg:pt-8 lg:pb-1 bg-background">
-      <div className="max-w-7xl mx-auto px-4 md:px-6 mb-3 md:mb-6">
-        <div className="text-center">
+    <section id="gallery" className="py-8 md:py-12 bg-background">
+      <div className="max-w-5xl mx-auto px-4 md:px-6">
+
+        {/* Section heading */}
+        <div className="text-center mb-6 md:mb-8">
           <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-foreground">
             {visualTourContent.sectionTitle}
           </h2>
-          <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto whitespace-pre-line">
+          <p className="text-xs md:text-base text-muted-foreground max-w-2xl mx-auto">
             {visualTourContent.sectionSubtitle}
           </p>
         </div>
-      </div>
-      
-      {/* Full-width carousel container on mobile, constrained on desktop */}
-      <div className="relative w-screen left-0 md:w-full md:left-auto md:max-w-7xl md:mx-auto md:px-6">
-        <div className="relative w-screen md:w-full md:mx-14">
-          {/* Carousel Container */}
-          <div className="overflow-hidden w-full" ref={emblaRef}>
-            <div className="flex gap-0 md:gap-4">
-              {galleryImages.map((image, index) => (
-                <div
-                  key={index}
-                  className="flex-[0_0_100%] md:flex-[0_0_calc(50%-1rem)] lg:flex-[0_0_calc(33.333%-1.33rem)] min-w-0"
-                >
-                  <div
-                    className="group relative aspect-[4/3] overflow-hidden cursor-pointer hover-elevate active-elevate-2 md:rounded-lg"
-                    onClick={() => setSelectedImage(index)}
-                    data-testid={`image-gallery-${index}`}
-                  >
-                    <img
-                      srcSet={`${image.srcMobile} 800w, ${image.src} 3200w`}
-                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      src={image.src}
-                      alt={image.caption}
-                      width={image.width}
-                      height={image.height}
-                      loading="lazy"
-                      decoding="async"
-                      {...({ fetchpriority: "low" } as any)}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <p className="text-white text-sm md:text-base font-medium">
-                          {image.caption}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+
+        {/* Big hero image */}
+        <div
+          className="relative w-full aspect-[16/9] overflow-hidden rounded-lg cursor-pointer mb-2"
+          onClick={() => openLightbox(0)}
+          data-testid="image-gallery-main"
+        >
+          <img
+            srcSet={`${mainImage.srcMobile} 800w, ${mainImage.src} 3200w`}
+            sizes="(max-width: 768px) 100vw, 80vw"
+            src={mainImage.src}
+            alt={mainImage.caption}
+            width={mainImage.width}
+            height={mainImage.height}
+            loading="lazy"
+            className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.02]"
+          />
+          <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2 py-1 rounded-md backdrop-blur-sm">
+            View all {galleryImages.length} photos
           </div>
-          
-          {/* Navigation Arrows - smaller on mobile to prevent overlap */}
-          <Button
-            size="icon"
-            variant="outline"
-            className="absolute left-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-9 md:h-9 md:left-2 md:-translate-x-full bg-white/95 backdrop-blur-sm border-white/30 shadow-lg p-1"
-            onClick={scrollPrev}
-            aria-label="Previous slide"
-            data-testid="button-carousel-prev"
-          >
-            <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
-          </Button>
-          
-          <Button
-            size="icon"
-            variant="outline"
-            className="absolute right-1 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-9 md:h-9 md:right-2 md:translate-x-full bg-white/95 backdrop-blur-sm border-white/30 shadow-lg p-1"
-            onClick={scrollNext}
-            aria-label="Next slide"
-            data-testid="button-carousel-next"
-          >
-            <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
-          </Button>
+        </div>
+
+        {/* Three thumbnails */}
+        <div className="grid grid-cols-3 gap-2">
+          {thumbImages.map((image, i) => (
+            <div
+              key={i}
+              className="relative aspect-[4/3] overflow-hidden rounded-lg cursor-pointer"
+              onClick={() => openLightbox(i + 1)}
+              data-testid={`image-gallery-thumb-${i}`}
+            >
+              <img
+                srcSet={`${image.srcMobile} 800w, ${image.src} 3200w`}
+                sizes="(max-width: 768px) 33vw, 25vw"
+                src={image.src}
+                alt={image.caption}
+                width={image.width}
+                height={image.height}
+                loading="lazy"
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.04]"
+              />
+              {i === 2 && galleryImages.length > 4 && (
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center rounded-lg">
+                  <span className="text-white font-medium text-sm">+{galleryImages.length - 4} more</span>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
-      
+
       {/* Lightbox */}
-      {selectedImage !== null && (
+      {lightboxIndex !== null && (
         <div
-          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 bg-black/95 z-50 flex items-center justify-center"
+          onClick={closeLightbox}
           data-testid="lightbox-overlay"
         >
-          {/* Close button - positioned relative to fixed overlay */}
+          {/* Close */}
           <button
-            className="fixed top-4 right-4 z-10 text-white text-4xl hover:text-white/70 transition-colors"
-            onClick={(e) => {
-              e.stopPropagation();
-              setSelectedImage(null);
-            }}
+            className="fixed top-4 right-4 z-10 text-white/80 hover:text-white transition-colors"
+            onClick={(e) => { e.stopPropagation(); closeLightbox(); }}
             data-testid="button-close-lightbox"
           >
-            ×
+            <X className="w-7 h-7" />
           </button>
-          
-          <div className="relative max-w-6xl w-full" onClick={(e) => e.stopPropagation()}>
+
+          {/* Counter */}
+          <div className="fixed top-4 left-1/2 -translate-x-1/2 text-white/60 text-sm">
+            {lightboxIndex + 1} / {galleryImages.length}
+          </div>
+
+          {/* Prev */}
+          <button
+            className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors bg-black/30 rounded-full p-2"
+            onClick={(e) => { e.stopPropagation(); goPrev(); }}
+            data-testid="button-lightbox-prev"
+          >
+            <ChevronLeft className="w-7 h-7" />
+          </button>
+
+          {/* Next */}
+          <button
+            className="fixed right-3 md:right-6 top-1/2 -translate-y-1/2 z-10 text-white/80 hover:text-white transition-colors bg-black/30 rounded-full p-2"
+            onClick={(e) => { e.stopPropagation(); goNext(); }}
+            data-testid="button-lightbox-next"
+          >
+            <ChevronRight className="w-7 h-7" />
+          </button>
+
+          {/* Image */}
+          <div className="relative max-w-5xl w-full px-16" onClick={(e) => e.stopPropagation()}>
             <img
-              srcSet={`${galleryImages[selectedImage].srcMobile} 800w, ${galleryImages[selectedImage].src} 3200w`}
+              srcSet={`${galleryImages[lightboxIndex].srcMobile} 800w, ${galleryImages[lightboxIndex].src} 3200w`}
               sizes="(max-width: 768px) 100vw, 90vw"
-              src={galleryImages[selectedImage].src}
-              alt={galleryImages[selectedImage].caption}
-              width={galleryImages[selectedImage].width}
-              height={galleryImages[selectedImage].height}
-              className="w-full h-auto rounded-lg"
+              src={galleryImages[lightboxIndex].src}
+              alt={galleryImages[lightboxIndex].caption}
+              width={galleryImages[lightboxIndex].width}
+              height={galleryImages[lightboxIndex].height}
+              className="w-full h-auto rounded-lg max-h-[80vh] object-contain"
             />
-            <p className="text-white text-center mt-4 text-lg">
-              {galleryImages[selectedImage].caption}
+            <p className="text-white/70 text-center mt-3 text-sm">
+              {galleryImages[lightboxIndex].caption}
             </p>
           </div>
         </div>
