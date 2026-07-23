@@ -1,6 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
-import { MapPin, Users, Home } from "lucide-react";
+import { Waves, Trophy, CircleDot, Flag } from "lucide-react";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
@@ -119,10 +119,20 @@ export default function HeroSection() {
             {heroContent.title}
           </h1>
         </div>
-        <div className="text-center">
-          <p className="text-xs md:text-sm lg:text-base text-white/90 drop-shadow-md whitespace-pre-line">
-            {heroContent.subtitle}
-          </p>
+        <div className="flex items-end gap-6 md:gap-10">
+          {[
+            { icon: Waves, label: "Heated Pool" },
+            { icon: Trophy, label: "Padel Court" },
+            { icon: CircleDot, label: "Basketball Court" },
+            { icon: Flag, label: "Football Pitch" },
+          ].map(({ icon: Icon, label }) => (
+            <div key={label} className="flex flex-col items-center gap-1">
+              <Icon className="w-6 h-6 md:w-8 md:h-8 text-white drop-shadow-lg" />
+              <span className="text-[10px] md:text-xs text-white/90 drop-shadow-md font-medium text-center whitespace-nowrap">
+                {label}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
