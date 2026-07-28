@@ -1,0 +1,1 @@
+- [GitHub push auth fallback](git-push-auth.md) — INDEX_LOCKED causes gitPush() to fail; clear locks then retry, shell fallback uses $GITHUB_PERSONAL_ACCESS_TOKEN.
