@@ -326,33 +326,6 @@ export const portfolioVillas = [
     highlights: ["Private Indoor & Outdoor Pool", "Maid & Breakfast Included", "Padel Court"],
     photos: [villa2Photo4, villa2Photo3, villa2Photo2, villa2Photo1],
   },
-  {
-    name: "Villa Three — Add Name Here",
-    location: "Marrakech, Morocco",
-    guests: 8,
-    bedrooms: 4,
-    priceFrom: "£600/night",
-    highlights: ["Rooftop Terrace", "Chef Included", "City Views"],
-    photos: [portfolioLiving, portfolioKitchen, portfolioBedroom],
-  },
-  {
-    name: "Villa Four — Add Name Here",
-    location: "Marrakech, Morocco",
-    guests: 20,
-    bedrooms: 10,
-    priceFrom: "£1,100/night",
-    highlights: ["2 Pools", "Basketball Court", "Gym & Spa"],
-    photos: [portfolioBasketball, portfolioPool, portfolioGym],
-  },
-  {
-    name: "Villa Five — Add Name Here",
-    location: "Marrakech, Morocco",
-    guests: 10,
-    bedrooms: 5,
-    priceFrom: "£700/night",
-    highlights: ["Bali Pool", "Maid Service", "Gardens"],
-    photos: [portfolioBaliPool, portfolioGarden, portfolioBedroom],
-  },
 ];
 
 // ==========================================
