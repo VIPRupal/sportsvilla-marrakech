@@ -147,11 +147,11 @@ export default function PortfolioSection() {
 
                       {/* Features */}
                       {villa.highlights.length > 0 && (
-                        <ul className="flex flex-wrap gap-1 mt-0.5">
+                        <ul className="flex flex-nowrap gap-1 mt-0.5 overflow-hidden">
                           {villa.highlights.map((h, j) => (
                             <li
                               key={j}
-                              className="text-[10px] bg-gray-50 border border-gray-100 rounded-full px-2 py-0.5 text-gray-600"
+                              className="text-[10px] bg-gray-50 border border-gray-100 rounded-full px-2 py-0.5 text-gray-600 whitespace-nowrap flex-shrink-0"
                             >
                               {h}
                             </li>
