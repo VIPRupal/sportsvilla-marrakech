@@ -31,7 +31,7 @@ export default function VisualTour() {
   const thumbImages = galleryImages.slice(1, 4);
 
   return (
-    <section id="gallery" className="py-6 md:py-8 bg-background">
+    <section id="gallery" className="py-3 md:py-5 bg-background">
       {/* Section heading — constrained */}
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center mb-6 md:mb-8">
         <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold mb-1 md:mb-2 text-foreground">

@@ -26,7 +26,7 @@ const trustBadges = [
 
 export default function OurTeamSection() {
   return (
-    <section id="team" className="py-6 md:py-8 bg-card below-fold-section">
+    <section id="team" className="py-3 md:py-5 bg-card below-fold-section">
       <div className="max-w-5xl mx-auto px-4 md:px-6">
 
         {/* Heading */}

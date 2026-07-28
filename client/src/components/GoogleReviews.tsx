@@ -123,7 +123,7 @@ export default function GoogleReviews() {
   };
 
   return (
-    <section className="py-6 md:py-8 bg-background">
+    <section className="py-3 md:py-5 bg-background">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Header */}
