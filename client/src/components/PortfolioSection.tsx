@@ -124,7 +124,7 @@ export default function PortfolioSection() {
 
                       {/* Name + location */}
                       <div>
-                        <h3 className="font-semibold text-sm text-gray-900 leading-tight">{villa.name}</h3>
+                        <h3 className="font-semibold text-sm text-gray-900 leading-tight line-clamp-2">{villa.name}</h3>
                         <p className="text-xs text-muted-foreground">{villa.location}</p>
                       </div>
 
