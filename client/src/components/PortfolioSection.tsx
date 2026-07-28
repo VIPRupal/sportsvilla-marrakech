@@ -24,6 +24,8 @@ function PhotoSlider({ photos, villaName }: { photos: string[]; villaName: strin
           key={i}
           src={src}
           alt={`${villaName} photo ${i + 1}`}
+          loading={i === 0 ? "eager" : "lazy"}
+          decoding="async"
           className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-300 ${
             i === current ? "opacity-100" : "opacity-0"
           }`}

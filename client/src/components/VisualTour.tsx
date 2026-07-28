@@ -48,6 +48,10 @@ export default function VisualTour() {
         <div
           className="relative w-full aspect-[16/9] md:aspect-[21/8] overflow-hidden cursor-pointer mb-1 md:rounded-xl"
           onClick={() => openLightbox(0)}
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => e.key === "Enter" && openLightbox(0)}
+          aria-label={`Open gallery – ${mainImage.caption}`}
           data-testid="image-gallery-main"
         >
           <img
@@ -69,6 +73,10 @@ export default function VisualTour() {
               key={i}
               className="relative aspect-[4/3] overflow-hidden cursor-pointer md:rounded-xl"
               onClick={() => openLightbox(i + 1)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === "Enter" && openLightbox(i + 1)}
+              aria-label={`Open gallery – ${image.caption}`}
               data-testid={`image-gallery-thumb-${i}`}
             >
               <img
@@ -121,6 +129,7 @@ export default function VisualTour() {
               <button
                 className="text-white/80 hover:text-white transition-colors"
                 onClick={closeLightbox}
+                aria-label="Close gallery"
                 data-testid="button-close-lightbox"
               >
                 <X className="w-5 h-5" />
@@ -140,6 +149,7 @@ export default function VisualTour() {
             <button
               className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
               onClick={(e) => { e.stopPropagation(); goPrev(); }}
+              aria-label="Previous photo"
               data-testid="button-lightbox-prev"
             >
               <ChevronLeft className="w-5 h-5 text-gray-700" />
@@ -149,6 +159,7 @@ export default function VisualTour() {
             <button
               className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white shadow-md rounded-full p-2 transition-colors"
               onClick={(e) => { e.stopPropagation(); goNext(); }}
+              aria-label="Next photo"
               data-testid="button-lightbox-next"
             >
               <ChevronRight className="w-5 h-5 text-gray-700" />

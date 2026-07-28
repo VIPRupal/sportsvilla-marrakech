@@ -12,8 +12,8 @@ import { seoContent } from "./seo-content";
 
 import heroVideo from "@assets/generated_images/hero_video_optimized.mp4";
 import heroPoster from "@assets/generated_images/hero_video_poster_new.jpg";
-import poolImage from "@assets/ChatGPT_Image_Jul_23,_2026,_03_46_01_PM_1784818014625.png";
-import poolImageMobile from "@assets/ChatGPT_Image_Jul_23,_2026,_03_46_01_PM_1784818014625.png";
+import poolImage from "@assets/ChatGPT_Image_Jul_23,_2026,_03_46_01_PM_1784818014625.webp";
+import poolImageMobile from "@assets/ChatGPT_Image_Jul_23,_2026,_03_46_01_PM_1784818014625.webp";
 import padelImage from "@assets/generated_images/Bali_stone_pool.webp";
 import padelImageMobile from "@assets/generated_images/Bali_stone_pool_mobile.webp";
 import basketballImage from "@assets/generated_images/Padel_court.webp";
@@ -266,10 +266,10 @@ import portfolioFootball from "@assets/generated_images/Football_Pitch.webp";
 import portfolioBaliPool from "@assets/generated_images/Bali_stone_pool.webp";
 
 // Villa 1 photos
-import villa1Photo1 from "@assets/1_1785234978164.png";
-import villa1Photo2 from "@assets/2_1785234978166.png";
-import villa1Photo3 from "@assets/3_1785234978167.png";
-import villa1Photo4 from "@assets/4_1785234978168.png";
+import villa1Photo1 from "@assets/1_1785234978164.webp";
+import villa1Photo2 from "@assets/2_1785234978166.webp";
+import villa1Photo3 from "@assets/3_1785234978167.webp";
+import villa1Photo4 from "@assets/4_1785234978168.webp";
 
 // Villa A photos (card 1)
 import villaAPhoto1 from "@assets/0_WhatsApp_Image_2024-07-17_at_10.27.20_(43)_1785248041030.jpeg";
@@ -284,16 +284,16 @@ import villaBPhoto3 from "@assets/2_WhatsApp_Image_2025-08-03_at_13.45.53_178524
 import villaBPhoto4 from "@assets/3_WhatsApp_Image_2025-08-03_at_13.45.59_(2)_1785248604059.jpeg";
 
 // Villa 2 photos
-import villa2Photo1 from "@assets/0_4_1785235502769.png";
-import villa2Photo2 from "@assets/1_3_1785235502770.png";
-import villa2Photo3 from "@assets/2_2_1785235502771.png";
-import villa2Photo4 from "@assets/3_1_1785235502771.png";
+import villa2Photo1 from "@assets/0_4_1785235502769.webp";
+import villa2Photo2 from "@assets/1_3_1785235502770.webp";
+import villa2Photo3 from "@assets/2_2_1785235502771.webp";
+import villa2Photo4 from "@assets/3_1_1785235502771.webp";
 
 // Villa 5 photos (10 bed with Padel Court)
-import villa5Photo1 from "@assets/0_1_1785255375115.png";
-import villa5Photo2 from "@assets/1_2_1785255375120.png";
-import villa5Photo3 from "@assets/2_3_1785255375123.png";
-import villa5Photo4 from "@assets/3_4_1785255375125.png";
+import villa5Photo1 from "@assets/0_1_1785255375115.webp";
+import villa5Photo2 from "@assets/1_2_1785255375120.webp";
+import villa5Photo3 from "@assets/2_3_1785255375123.webp";
+import villa5Photo4 from "@assets/3_4_1785255375125.webp";
 
 export const portfolioVillas = [
   {
