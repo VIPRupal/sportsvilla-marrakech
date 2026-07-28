@@ -87,6 +87,9 @@ export default function PortfolioSection() {
             <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold text-card-foreground">
               Some of Our Villas
             </h2>
+            <p className="text-sm text-muted-foreground mt-1">
+              More stunning properties available for your group
+            </p>
           </div>
           <div className="hidden sm:flex items-center gap-2 absolute right-0">
             <Button size="icon" variant="outline" onClick={scrollPrev} aria-label="Previous villa">
