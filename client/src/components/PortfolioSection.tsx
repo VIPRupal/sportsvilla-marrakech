@@ -125,7 +125,7 @@ export default function PortfolioSection() {
                       {/* Name + location */}
                       <div>
                         <h3 className="font-semibold text-xs text-gray-900 leading-tight whitespace-nowrap overflow-hidden" style={{fontSize: "clamp(9px, 2vw, 13px)"}}>{villa.name}</h3>
-                        <p className="text-xs text-muted-foreground">{villa.location}</p>
+                        <p className="text-[10px] text-muted-foreground">{villa.location}</p>
                       </div>
 
                       {/* Stats row */}
