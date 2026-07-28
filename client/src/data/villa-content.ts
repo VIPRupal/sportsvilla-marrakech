@@ -337,7 +337,7 @@ export const portfolioVillas = [
     location: "Marrakech, Morocco",
     guests: 30,
     bedrooms: 10,
-    priceFrom: "£2500 per night",
+    priceFrom: "from £2500 per night",
     highlights: ["Private Pool", "Padel Court", "Sauna", "Jacuzzi", "2 x Pickel Ball Courts", "Conference Room"],
     photos: [villa5Photo1, villa5Photo2, villa5Photo3, villa5Photo4],
   },
