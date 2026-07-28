@@ -98,6 +98,7 @@ export default function HeroSection() {
             playsInline={true}
             preload="none"
             poster={heroContent.videoPoster}
+            fetchPriority="high"
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
