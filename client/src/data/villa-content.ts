@@ -272,16 +272,16 @@ import villa1Photo3 from "@assets/3_1785234978167.webp";
 import villa1Photo4 from "@assets/4_1785234978168.webp";
 
 // Villa A photos (card 1)
-import villaAPhoto1 from "@assets/0_WhatsApp_Image_2024-07-17_at_10.27.20_(43)_1785248041030.jpeg";
-import villaAPhoto2 from "@assets/1_WhatsApp_Image_2024-07-17_at_10.27.20_(13)_1785248041035.jpeg";
-import villaAPhoto3 from "@assets/2_WhatsApp_Image_2024-07-17_at_10.27.20_(17)_1785248041036.jpeg";
-import villaAPhoto4 from "@assets/3_WhatsApp_Image_2024-07-17_at_10.27.20_(27)_1785248041038.jpeg";
+import villaAPhoto1 from "@assets/0_WhatsApp_Image_2024-07-17_at_10.27.20_(43)_1785248041030.webp";
+import villaAPhoto2 from "@assets/1_WhatsApp_Image_2024-07-17_at_10.27.20_(13)_1785248041035.webp";
+import villaAPhoto3 from "@assets/2_WhatsApp_Image_2024-07-17_at_10.27.20_(17)_1785248041036.webp";
+import villaAPhoto4 from "@assets/3_WhatsApp_Image_2024-07-17_at_10.27.20_(27)_1785248041038.webp";
 
 // Villa B photos (card 2)
-import villaBPhoto1 from "@assets/0_WhatsApp_Image_2025-08-03_at_13.45.50_1785248604055.jpeg";
-import villaBPhoto2 from "@assets/1_WhatsApp_Image_2025-08-03_at_13.45.51_1785248604057.jpeg";
-import villaBPhoto3 from "@assets/2_WhatsApp_Image_2025-08-03_at_13.45.53_1785248604058.jpeg";
-import villaBPhoto4 from "@assets/3_WhatsApp_Image_2025-08-03_at_13.45.59_(2)_1785248604059.jpeg";
+import villaBPhoto1 from "@assets/0_WhatsApp_Image_2025-08-03_at_13.45.50_1785248604055.webp";
+import villaBPhoto2 from "@assets/1_WhatsApp_Image_2025-08-03_at_13.45.51_1785248604057.webp";
+import villaBPhoto3 from "@assets/2_WhatsApp_Image_2025-08-03_at_13.45.53_1785248604058.webp";
+import villaBPhoto4 from "@assets/3_WhatsApp_Image_2025-08-03_at_13.45.59_(2)_1785248604059.webp";
 
 // Villa 2 photos
 import villa2Photo1 from "@assets/0_4_1785235502769.webp";
