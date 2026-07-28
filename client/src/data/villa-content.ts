@@ -271,6 +271,12 @@ import villa1Photo2 from "@assets/2_1785234978166.png";
 import villa1Photo3 from "@assets/3_1785234978167.png";
 import villa1Photo4 from "@assets/4_1785234978168.png";
 
+// Villa 2 photos
+import villa2Photo1 from "@assets/0_4_1785235502769.png";
+import villa2Photo2 from "@assets/1_3_1785235502770.png";
+import villa2Photo3 from "@assets/2_2_1785235502771.png";
+import villa2Photo4 from "@assets/3_1_1785235502771.png";
+
 export const portfolioVillas = [
   {
     name: "Luxury 7 bed Villa (with Padel Court)",
@@ -282,13 +288,13 @@ export const portfolioVillas = [
     photos: [villa1Photo1, villa1Photo2, villa1Photo3, villa1Photo4],
   },
   {
-    name: "Villa Two — Add Name Here",
+    name: "Luxury 8 bed Villa (with Padel Court)",
     location: "Marrakech, Morocco",
-    guests: 16,
+    guests: 18,
     bedrooms: 8,
-    priceFrom: "£950/night",
-    highlights: ["Heated Pool", "Football Pitch", "Gym"],
-    photos: [portfolioFootball, portfolioGym, portfolioBaliPool],
+    priceFrom: "from £1250 per night",
+    highlights: ["Private Indoor & Outdoor Pool", "Maid & Breakfast Included", "Padel Court"],
+    photos: [villa2Photo1, villa2Photo2, villa2Photo3, villa2Photo4],
   },
   {
     name: "Villa Three — Add Name Here",
