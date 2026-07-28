@@ -267,12 +267,12 @@ import portfolioBaliPool from "@assets/generated_images/Bali_stone_pool.webp";
 
 export const portfolioVillas = [
   {
-    name: "Villa One — Add Name Here",
+    name: "Luxury 7 bed Villa (with Padel Court)",
     location: "Marrakech, Morocco",
-    guests: 12,
-    bedrooms: 6,
-    priceFrom: "£750/night",
-    highlights: ["Private Pool", "Chef Included", "Padel Court"],
+    guests: 14,
+    bedrooms: 7,
+    priceFrom: "from £795/Night",
+    highlights: ["Private Pool", "Maid & Cook Included", "Padel Court"],
     photos: [portfolioPool, portfolioPadel, portfolioGarden],
   },
   {
