@@ -46,11 +46,11 @@ export default function PricingSection() {
                 <div className="mb-1 md:mb-2">
                   <div className="flex items-baseline justify-center gap-0.5 md:gap-1">
                     <span className="text-base md:text-2xl font-bold text-primary">{season.onlinePrice}</span>
-                    <span className="text-[10px] md:text-xs text-muted-foreground">/nt</span>
+                    <span className="text-xs text-muted-foreground">/nt</span>
                   </div>
                 </div>
                 
-                <p className="text-[9px] md:text-xs text-muted-foreground">
+                <p className="text-xs text-muted-foreground">
                   Sleeps {pricingContent.guestCount}
                 </p>
               </div>
