@@ -294,7 +294,7 @@ export const portfolioVillas = [
     bedrooms: 8,
     priceFrom: "from £1250 per night",
     highlights: ["Private Indoor & Outdoor Pool", "Maid & Breakfast Included", "Padel Court"],
-    photos: [villa2Photo3, villa2Photo4, villa2Photo2, villa2Photo1],
+    photos: [villa2Photo4, villa2Photo3, villa2Photo2, villa2Photo1],
   },
   {
     name: "Villa Three — Add Name Here",
