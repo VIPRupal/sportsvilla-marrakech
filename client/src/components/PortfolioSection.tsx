@@ -49,14 +49,13 @@ function PhotoSlider({ photos, villaName }: { photos: string[]; villaName: strin
           </button>
 
           {/* Dots */}
-          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1">
+          <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
             {photos.map((_, i) => (
-              <button
+              <span
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
-                className={`w-1.5 h-1.5 rounded-full transition-all ${
-                  i === current ? "bg-white scale-125" : "bg-white/50"
-                }`}
+                style={{ width: 8, height: 8, borderRadius: "50%", flexShrink: 0, display: "block", cursor: "pointer" }}
+                className={`transition-colors ${i === current ? "bg-white" : "bg-white/40"}`}
                 aria-label={`Photo ${i + 1}`}
               />
             ))}
