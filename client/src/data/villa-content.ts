@@ -289,6 +289,12 @@ import villa2Photo2 from "@assets/1_3_1785235502770.png";
 import villa2Photo3 from "@assets/2_2_1785235502771.png";
 import villa2Photo4 from "@assets/3_1_1785235502771.png";
 
+// Villa 5 photos (10 bed with Padel Court)
+import villa5Photo1 from "@assets/0_1_1785255375115.png";
+import villa5Photo2 from "@assets/1_2_1785255375120.png";
+import villa5Photo3 from "@assets/2_3_1785255375123.png";
+import villa5Photo4 from "@assets/3_4_1785255375125.png";
+
 export const portfolioVillas = [
   {
     name: "Luxury 5 Bed villa (Ultra-Modern)",
@@ -325,6 +331,15 @@ export const portfolioVillas = [
     priceFrom: "from £1250 per night",
     highlights: ["Private Indoor & Outdoor Pool", "Maid & Breakfast Included", "Padel Court"],
     photos: [villa2Photo4, villa2Photo3, villa2Photo2, villa2Photo1],
+  },
+  {
+    name: "Luxury 10 Bed Villa (with Padel Court)",
+    location: "Marrakech, Morocco",
+    guests: 30,
+    bedrooms: 10,
+    priceFrom: "£2500 per night",
+    highlights: ["Private Pool", "Padel Court", "Sauna", "Jacuzzi", "2 x Pickel Ball Courts", "Conference Room"],
+    photos: [villa5Photo1, villa5Photo2, villa5Photo3, villa5Photo4],
   },
 ];
 
