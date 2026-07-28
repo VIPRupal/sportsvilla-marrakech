@@ -277,6 +277,12 @@ import villaAPhoto2 from "@assets/1_WhatsApp_Image_2024-07-17_at_10.27.20_(13)_1
 import villaAPhoto3 from "@assets/2_WhatsApp_Image_2024-07-17_at_10.27.20_(17)_1785248041036.jpeg";
 import villaAPhoto4 from "@assets/3_WhatsApp_Image_2024-07-17_at_10.27.20_(27)_1785248041038.jpeg";
 
+// Villa B photos (card 2)
+import villaBPhoto1 from "@assets/0_WhatsApp_Image_2025-08-03_at_13.45.50_1785248604055.jpeg";
+import villaBPhoto2 from "@assets/1_WhatsApp_Image_2025-08-03_at_13.45.51_1785248604057.jpeg";
+import villaBPhoto3 from "@assets/2_WhatsApp_Image_2025-08-03_at_13.45.53_1785248604058.jpeg";
+import villaBPhoto4 from "@assets/3_WhatsApp_Image_2025-08-03_at_13.45.59_(2)_1785248604059.jpeg";
+
 // Villa 2 photos
 import villa2Photo1 from "@assets/0_4_1785235502769.png";
 import villa2Photo2 from "@assets/1_3_1785235502770.png";
@@ -292,6 +298,15 @@ export const portfolioVillas = [
     priceFrom: "£1250 per night",
     highlights: ["Infinity Edge Pool", "Maid and Cook Included"],
     photos: [villaAPhoto3, villaAPhoto2, villaAPhoto1, villaAPhoto4],
+  },
+  {
+    name: "Luxury 6 Bed Villa (Ultra-Modern)",
+    location: "Marrakech, Morocco",
+    guests: 12,
+    bedrooms: 6,
+    priceFrom: "£1250 per night",
+    highlights: ["Private Pool", "Jacuzzi", "Games/TV Room", "Maid & Cook Included"],
+    photos: [villaBPhoto1, villaBPhoto2, villaBPhoto3, villaBPhoto4],
   },
   {
     name: "Luxury 7 bed Villa (with Padel Court)",
