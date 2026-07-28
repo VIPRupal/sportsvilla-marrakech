@@ -265,6 +265,12 @@ import portfolioBasketball from "@assets/generated_images/Basketball_Court.webp"
 import portfolioFootball from "@assets/generated_images/Football_Pitch.webp";
 import portfolioBaliPool from "@assets/generated_images/Bali_stone_pool.webp";
 
+// Villa 1 photos
+import villa1Photo1 from "@assets/1_1785234978164.png";
+import villa1Photo2 from "@assets/2_1785234978166.png";
+import villa1Photo3 from "@assets/3_1785234978167.png";
+import villa1Photo4 from "@assets/4_1785234978168.png";
+
 export const portfolioVillas = [
   {
     name: "Luxury 7 bed Villa (with Padel Court)",
@@ -273,7 +279,7 @@ export const portfolioVillas = [
     bedrooms: 7,
     priceFrom: "from £795/Night",
     highlights: ["Private Pool", "Maid & Cook Included", "Padel Court"],
-    photos: [portfolioPool, portfolioPadel, portfolioGarden],
+    photos: [villa1Photo1, villa1Photo2, villa1Photo3, villa1Photo4],
   },
   {
     name: "Villa Two — Add Name Here",
