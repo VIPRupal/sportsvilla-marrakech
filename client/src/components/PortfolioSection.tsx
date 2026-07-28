@@ -124,7 +124,7 @@ export default function PortfolioSection() {
 
                       {/* Name + location */}
                       <div>
-                        <h3 className="font-semibold text-sm text-gray-900 leading-tight truncate">{villa.name}</h3>
+                        <h3 className="font-semibold text-xs text-gray-900 leading-tight whitespace-nowrap overflow-hidden" style={{fontSize: "clamp(9px, 2vw, 13px)"}}>{villa.name}</h3>
                         <p className="text-xs text-muted-foreground">{villa.location}</p>
                       </div>
 
@@ -140,7 +140,7 @@ export default function PortfolioSection() {
                         </span>
                         {villa.priceFrom && (
                           <span className="ml-auto font-semibold text-gray-800">
-                            from {villa.priceFrom}
+                            {villa.priceFrom}
                           </span>
                         )}
                       </div>
