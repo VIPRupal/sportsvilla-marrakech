@@ -3,6 +3,7 @@ import VisualTour from "@/components/VisualTour";
 import WhoThisIsFor from "@/components/WhoThisIsFor";
 import PricingSection from "@/components/PricingSection";
 import GoogleReviews from "@/components/GoogleReviews";
+import PortfolioSection from "@/components/PortfolioSection";
 import OurTeamSection from "@/components/OurTeamSection";
 import FinalCTA from "@/components/FinalCTA";
 import WhatsAppButton from "@/components/WhatsAppButton";
@@ -15,6 +16,7 @@ export default function Home() {
       <VisualTour />
       <PricingSection />
       <GoogleReviews />
+      <PortfolioSection />
       {/* <WhoThisIsFor /> */}
       <OurTeamSection />
       <FinalCTA />

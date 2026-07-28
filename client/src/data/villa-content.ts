@@ -249,6 +249,71 @@ export const ourTeamContent = {
 };
 
 // ==========================================
+// PORTFOLIO VILLAS SECTION
+// ==========================================
+// Add your 5 other villas here.
+// photos: array of image paths (import them at the top of this file, or use URLs)
+// highlights: short feature tags shown as pills on each card
+import portfolioPool from "@assets/generated_images/swimming_pool.webp";
+import portfolioPadel from "@assets/generated_images/Padel_court.webp";
+import portfolioGarden from "@assets/generated_images/Garden_3.webp";
+import portfolioLiving from "@assets/generated_images/Living_Area.webp";
+import portfolioBedroom from "@assets/generated_images/Bedroom_3.webp";
+import portfolioKitchen from "@assets/generated_images/Kitchen.webp";
+import portfolioGym from "@assets/generated_images/Gym.webp";
+import portfolioBasketball from "@assets/generated_images/Basketball_Court.webp";
+import portfolioFootball from "@assets/generated_images/Football_Pitch.webp";
+import portfolioBaliPool from "@assets/generated_images/Bali_stone_pool.webp";
+
+export const portfolioVillas = [
+  {
+    name: "Villa One — Add Name Here",
+    location: "Marrakech, Morocco",
+    guests: 12,
+    bedrooms: 6,
+    priceFrom: "£750/night",
+    highlights: ["Private Pool", "Chef Included", "Padel Court"],
+    photos: [portfolioPool, portfolioPadel, portfolioGarden],
+  },
+  {
+    name: "Villa Two — Add Name Here",
+    location: "Marrakech, Morocco",
+    guests: 16,
+    bedrooms: 8,
+    priceFrom: "£950/night",
+    highlights: ["Heated Pool", "Football Pitch", "Gym"],
+    photos: [portfolioFootball, portfolioGym, portfolioBaliPool],
+  },
+  {
+    name: "Villa Three — Add Name Here",
+    location: "Marrakech, Morocco",
+    guests: 8,
+    bedrooms: 4,
+    priceFrom: "£600/night",
+    highlights: ["Rooftop Terrace", "Chef Included", "City Views"],
+    photos: [portfolioLiving, portfolioKitchen, portfolioBedroom],
+  },
+  {
+    name: "Villa Four — Add Name Here",
+    location: "Marrakech, Morocco",
+    guests: 20,
+    bedrooms: 10,
+    priceFrom: "£1,100/night",
+    highlights: ["2 Pools", "Basketball Court", "Gym & Spa"],
+    photos: [portfolioBasketball, portfolioPool, portfolioGym],
+  },
+  {
+    name: "Villa Five — Add Name Here",
+    location: "Marrakech, Morocco",
+    guests: 10,
+    bedrooms: 5,
+    priceFrom: "£700/night",
+    highlights: ["Bali Pool", "Maid Service", "Gardens"],
+    photos: [portfolioBaliPool, portfolioGarden, portfolioBedroom],
+  },
+];
+
+// ==========================================
 // SOCIAL MEDIA LINKS
 // ==========================================
 export const socialLinks = {
