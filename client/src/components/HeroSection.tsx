@@ -103,7 +103,7 @@ export default function HeroSection() {
             className="absolute inset-0 w-full h-full object-cover"
           >
             <source src={heroContent.videoUrl} type="video/mp4" />
-            <track kind="captions" src="" label="No dialogue" default />
+            <track kind="captions" src="/captions.vtt" label="No dialogue" default />
           </video>
           <div className="absolute inset-0 bg-gradient-to-t from-gray-700/50 via-gray-600/25 to-transparent" />
         </div>

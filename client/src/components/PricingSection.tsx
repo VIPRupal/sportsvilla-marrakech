@@ -24,7 +24,7 @@ export default function PricingSection() {
   };
 
   return (
-    <section id="pricing" className="py-3 md:py-5 bg-card below-fold-section">
+    <section id="pricing" aria-label="Pricing and packages" className="py-3 md:py-5 bg-card below-fold-section">
       <div className="max-w-xl mx-auto px-4 md:px-6">
         <div className="text-center mb-3 md:mb-6">
           <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold mb-1 md:mb-2 text-card-foreground">

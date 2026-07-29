@@ -31,7 +31,7 @@ export default function VisualTour() {
   const thumbImages = galleryImages.slice(1, 4);
 
   return (
-    <section id="gallery" className="py-3 md:py-5 bg-background">
+    <section id="gallery" aria-label="Photo gallery" className="py-3 md:py-5 bg-background">
       {/* Section heading — constrained */}
       <div className="max-w-5xl mx-auto px-4 md:px-6 text-center mb-6 md:mb-8">
         <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold mb-1 md:mb-2 text-foreground">
@@ -45,12 +45,9 @@ export default function VisualTour() {
       {/* Images — constrained on desktop, full-bleed on mobile */}
       <div className="w-full max-w-5xl mx-auto md:px-6">
         {/* Big hero image */}
-        <div
-          className="relative w-full aspect-[16/9] md:aspect-[21/8] overflow-hidden cursor-pointer mb-1 md:rounded-xl"
+        <button
+          className="relative w-full aspect-[16/9] md:aspect-[21/8] overflow-hidden cursor-pointer mb-1 md:rounded-xl block"
           onClick={() => openLightbox(0)}
-          role="button"
-          tabIndex={0}
-          onKeyDown={(e) => e.key === "Enter" && openLightbox(0)}
           aria-label={`Open gallery – ${mainImage.caption}`}
           data-testid="image-gallery-main"
         >
@@ -64,18 +61,15 @@ export default function VisualTour() {
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-[1.02]"
           />
-        </div>
+        </button>
 
         {/* Three thumbnails */}
         <div className="grid grid-cols-3 gap-1 mt-1">
           {thumbImages.map((image, i) => (
-            <div
+            <button
               key={i}
-              className="relative aspect-[4/3] overflow-hidden cursor-pointer md:rounded-xl"
+              className="relative aspect-[4/3] overflow-hidden cursor-pointer md:rounded-xl block w-full"
               onClick={() => openLightbox(i + 1)}
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => e.key === "Enter" && openLightbox(i + 1)}
               aria-label={`Open gallery – ${image.caption}`}
               data-testid={`image-gallery-thumb-${i}`}
             >
@@ -94,7 +88,7 @@ export default function VisualTour() {
                   +{galleryImages.length - 4} more
                 </div>
               )}
-            </div>
+            </button>
           ))}
         </div>
       </div>

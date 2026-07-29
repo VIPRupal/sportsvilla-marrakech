@@ -5,7 +5,7 @@ import { testimonials, testimonialsContent } from "@/data/villa-content";
 
 export default function TestimonialsSection() {
   return (
-    <section id="testimonials" className="py-6 md:py-8 bg-background">
+    <section id="testimonials" aria-label="Guest testimonials" className="py-6 md:py-8 bg-background">
       <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center mb-3 md:mb-6">
           <h2 className="font-serif text-xl md:text-3xl lg:text-4xl font-semibold mb-1 md:mb-2 text-foreground">

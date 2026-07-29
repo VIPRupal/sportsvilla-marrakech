@@ -79,7 +79,7 @@ export default function PortfolioSection() {
   const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
 
   return (
-    <section id="portfolio" className="py-3 md:py-5 bg-card">
+    <section id="portfolio" aria-label="Villa portfolio" className="py-3 md:py-5 bg-card">
       <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* Header */}
