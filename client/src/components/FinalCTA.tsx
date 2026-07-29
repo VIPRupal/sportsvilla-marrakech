@@ -24,7 +24,7 @@ export default function FinalCTA() {
           className="text-sm md:text-base px-6 md:px-8 bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
           data-testid="button-final-cta"
         >
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Get a live quote on WhatsApp" onClick={handleWhatsAppClick}>
             <MessageCircle className="w-4 h-4 md:w-5 md:h-5 mr-2" />
             Get Live Quote
           </a>

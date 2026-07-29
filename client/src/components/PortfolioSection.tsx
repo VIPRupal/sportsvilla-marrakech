@@ -53,10 +53,10 @@ function PhotoSlider({ photos, villaName }: { photos: string[]; villaName: strin
           {/* Dots */}
           <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1.5">
             {photos.map((_, i) => (
-              <span
+              <button
                 key={i}
                 onClick={(e) => { e.stopPropagation(); setCurrent(i); }}
-                style={{ width: 8, height: 8, borderRadius: "50%", flexShrink: 0, display: "block", cursor: "pointer" }}
+                style={{ width: 8, height: 8, borderRadius: "50%", flexShrink: 0, display: "block", cursor: "pointer", padding: 0, border: "none", background: "none" }}
                 className={`transition-colors ${i === current ? "bg-white" : "bg-white/40"}`}
                 aria-label={`Photo ${i + 1}`}
               />

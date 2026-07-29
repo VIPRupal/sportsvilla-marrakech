@@ -64,7 +64,7 @@ export default function PricingSection() {
           className="w-full text-xs md:text-sm bg-[#25D366] hover:bg-[#20BD5A] text-white border-[#25D366]"
           data-testid="button-whatsapp-pricing"
         >
-          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" onClick={handleWhatsAppClick}>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Check pricing and get a quote on WhatsApp" onClick={handleWhatsAppClick}>
             Get Live Quote
           </a>
         </Button>

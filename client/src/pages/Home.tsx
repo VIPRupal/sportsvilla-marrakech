@@ -14,17 +14,19 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background">
       <HeroSection />
-      <Suspense fallback={null}>
-        <VisualTour />
-        <PricingSection />
-        <GoogleReviews />
-        <PortfolioSection />
-        {/* <WhoThisIsFor /> */}
-        <OurTeamSection />
-        <FinalCTA />
-        <WhatsAppButton />
-        <Footer />
-      </Suspense>
+      <main>
+        <Suspense fallback={null}>
+          <VisualTour />
+          <PricingSection />
+          <GoogleReviews />
+          <PortfolioSection />
+          {/* <WhoThisIsFor /> */}
+          <OurTeamSection />
+          <FinalCTA />
+          <WhatsAppButton />
+          <Footer />
+        </Suspense>
+      </main>
     </div>
   );
 }
