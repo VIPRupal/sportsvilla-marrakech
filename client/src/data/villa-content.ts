@@ -10,8 +10,8 @@ import { seoContent } from "./seo-content";
 // To add your own images: Place them in the 'attached_assets' folder and import like this:
 // import myImage from "@assets/my-image.jpg";
 
-import heroVideo from "@assets/generated_images/hero_video_optimized.mp4";
-import heroPoster from "@assets/generated_images/hero_video_poster_new.webp";
+const heroVideo = "/hero-video.mp4";
+const heroPoster = "/hero-poster.webp";
 import poolImage from "@assets/ChatGPT_Image_Jul_23,_2026,_03_46_01_PM_1784818014625.webp";
 import poolImageMobile from "@assets/ChatGPT_Image_Jul_23,_2026,_03_46_01_PM_1784818014625.webp";
 import padelImage from "@assets/generated_images/Bali_stone_pool.webp";
