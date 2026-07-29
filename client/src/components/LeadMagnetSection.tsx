@@ -105,6 +105,7 @@ export default function LeadMagnetSection() {
           {/* Button */}
           <button 
             type="submit" 
+            aria-busy={mutation.isPending}
             disabled={mutation.isPending}
             data-testid="button-submit-lead"
             className="transition-colors hover:opacity-90 disabled:opacity-50"
@@ -126,7 +127,9 @@ export default function LeadMagnetSection() {
               verticalAlign: 'middle'
             }}
           >
-            {mutation.isPending ? "..." : "Send Me Guide"}
+            {mutation.isPending ? (
+              <><span aria-hidden="true">...</span><span className="sr-only">Sending…</span></>
+            ) : "Send Me Guide"}
           </button>
         </form>
         
@@ -136,9 +139,8 @@ export default function LeadMagnetSection() {
             style={{ 
               fontSize: '10px',
               textAlign: 'center',
-              color: '#6B583F',
+              color: '#5C4A32',
               fontWeight: 400,
-              opacity: 0.8,
               fontStyle: 'italic'
             }}
           >

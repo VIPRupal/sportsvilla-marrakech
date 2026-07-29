@@ -177,16 +177,17 @@ export default function GoogleReviews() {
                         </div>
                         <div>
                           <p className="text-xs font-semibold text-gray-800 leading-tight">{review.name}</p>
-                          <p className="text-[10px] text-gray-400">{review.date}</p>
+                          <p className="text-[10px] text-gray-500">{review.date}</p>
                         </div>
                       </div>
                       <a
                         href={GOOGLE_REVIEWS_URL}
                         target="_blank"
                         rel="noopener noreferrer"
+                        aria-label="Read full review on Google"
                         onClick={(e) => e.stopPropagation()}
                       >
-                        <FcGoogle className="w-4 h-4 flex-shrink-0" />
+                        <FcGoogle className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
                       </a>
                     </div>
 
@@ -195,7 +196,7 @@ export default function GoogleReviews() {
 
                     {/* Review text */}
                     {review.text ? (
-                      <p className="text-xs text-gray-500 leading-relaxed flex-1">
+                      <p className="text-xs text-gray-600 leading-relaxed flex-1">
                         &ldquo;{displayText}{isLong && !isExpanded && (
                           <>
                             {"... "}
@@ -221,7 +222,7 @@ export default function GoogleReviews() {
                         &rdquo;
                       </p>
                     ) : (
-                      <p className="text-xs text-gray-400 italic flex-1">No written review</p>
+                      <p className="text-xs text-gray-500 italic flex-1">No written review</p>
                     )}
                   </div>
                 </div>
