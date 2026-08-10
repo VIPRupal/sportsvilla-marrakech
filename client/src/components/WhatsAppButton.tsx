@@ -34,7 +34,7 @@ export default function WhatsAppButton() {
           </div>
           
           <span className="text-xs font-semibold whitespace-nowrap">
-            Get Quote
+            Check Availability
           </span>
         </div>
       </div>
