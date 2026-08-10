@@ -134,7 +134,7 @@ export default function HeroSection() {
             {heroContent.title}
           </h1>
           <p className="mt-1 text-xs md:text-sm tracking-[0.12em] text-white/80 drop-shadow-md">
-            Make Memories in Marrakech
+            6 Bedrooms | Sleeps 12
           </p>
         </div>
 
