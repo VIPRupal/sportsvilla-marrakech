@@ -65,7 +65,7 @@ export default function PricingSection() {
           data-testid="button-whatsapp-pricing"
         >
           <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Check pricing and get a quote on WhatsApp" onClick={handleWhatsAppClick}>
-            Get Live Quote
+            Check Availability & Price
           </a>
         </Button>
       </div>
