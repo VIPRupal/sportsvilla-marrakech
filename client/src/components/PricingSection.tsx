@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Check, Calendar, Gift, Sparkles } from "lucide-react";
+import { Check, Calendar, Gift, Sparkles, Star } from "lucide-react";
+import { FcGoogle } from "react-icons/fc";
 import { whatsappConfig, pricingContent, heroContent } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
 
@@ -68,6 +69,20 @@ export default function PricingSection() {
             Check Availability & Price
           </a>
         </Button>
+
+        {/* Google reviews trust badge */}
+        <div className="flex items-center justify-center gap-2 mt-2">
+          <FcGoogle className="w-4 h-4 flex-shrink-0" aria-hidden="true" />
+          <div className="flex items-center gap-1">
+            <span className="text-xs font-semibold text-gray-800">4.9</span>
+            <div className="flex items-center gap-0.5" aria-label="5 stars">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-3 h-3 fill-[#FBBC04] text-[#FBBC04]" aria-hidden="true" />
+              ))}
+            </div>
+            <span className="text-xs text-gray-500">from 151 Google Reviews</span>
+          </div>
+        </div>
       </div>
     </section>
   );
