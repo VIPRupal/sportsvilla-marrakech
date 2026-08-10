@@ -401,7 +401,7 @@ export const pricingContent = {
 // ==========================================
 export const visualTourContent = {
   sectionTitle: "Play. Relax. Repeat.",
-  sectionSubtitle: "Your own private padel court, football pitch, basketball court and heated pool - exclusively for your group."
+  sectionSubtitle: "Sunrise workouts. Sunset swims. Your own private padel court, football pitch, basketball court and heated pool - exclusively for your group."
 };
 
 // ==========================================
