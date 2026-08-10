@@ -86,7 +86,7 @@ export default function PortfolioSection() {
         <div className="relative flex items-center justify-center mb-6 md:mb-8">
           <div className="text-center">
             <h2 className="font-serif text-xl md:text-2xl lg:text-3xl font-semibold text-card-foreground">
-              Some of Our Villas
+              Similar Villas
             </h2>
             <p className="text-sm text-muted-foreground mt-1">
               More stunning properties available for your group
