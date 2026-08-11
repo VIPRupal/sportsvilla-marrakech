@@ -5,6 +5,7 @@ This project is a high-conversion, single-page React landing page for a luxury 6
 
 ## User Preferences
 Preferred communication style: Simple, everyday language.
+Always flag and get approval before installing any packages or making changes that could affect the build or deployment.
 
 ## System Architecture
 
