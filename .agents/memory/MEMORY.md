@@ -1,1 +1,2 @@
 - [GitHub push auth fallback](git-push-auth.md) — INDEX_LOCKED causes gitPush() to fail; clear locks then retry, shell fallback uses $GITHUB_PERSONAL_ACCESS_TOKEN.
+- [Mockup isolation](mockup-isolation.md) — preview styling must stay independent of the legacy site's build pipeline.

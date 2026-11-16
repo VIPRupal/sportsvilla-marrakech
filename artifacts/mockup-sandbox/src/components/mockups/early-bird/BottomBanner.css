@@ -1,0 +1,111 @@
+.bottom-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: min(100%, 1040px);
+  margin-inline: auto;
+  padding: 0.72rem 1.25rem;
+  color: #f8f2e8;
+  background: rgba(31, 38, 31, 0.82);
+  border: 1px solid rgba(223, 197, 151, 0.54);
+  border-radius: 0.7rem;
+  box-shadow: 0 8px 24px rgba(20, 24, 20, 0.14);
+  backdrop-filter: blur(12px);
+  transform: translateY(0);
+  transition: transform 180ms ease;
+}
+
+.bottom-banner:hover {
+  transform: translateY(-2px);
+}
+
+.bottom-banner__lead,
+.bottom-banner__included {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  min-width: 0;
+  margin: 0;
+}
+
+.bottom-banner__eyebrow,
+.bottom-banner__included-label {
+  color: #e3c99a;
+  font-family: var(--font-sans);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.bottom-banner__saving {
+  color: #fffaf0;
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-weight: 700;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.bottom-banner__divider {
+  width: 1px;
+  align-self: stretch;
+  flex: 0 0 1px;
+  background: rgba(227, 201, 154, 0.48);
+}
+
+.bottom-banner__included {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.16rem;
+  color: #fffaf0;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.bottom-banner__included-label {
+  font-size: 0.58rem;
+  color: rgba(248, 242, 232, 0.72);
+}
+
+@media (max-width: 640px) {
+  .bottom-banner {
+    gap: 0.75rem;
+    padding: 0.65rem 0.8rem;
+    border-radius: 0.6rem;
+  }
+
+  .bottom-banner__lead {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.24rem;
+  }
+
+  .bottom-banner__eyebrow {
+    font-size: 0.57rem;
+    letter-spacing: 0.1em;
+  }
+
+  .bottom-banner__saving {
+    font-size: clamp(0.92rem, 4vw, 1.12rem);
+  }
+
+  .bottom-banner__included {
+    font-size: 0.78rem;
+  }
+
+  .bottom-banner__included-label {
+    font-size: 0.52rem;
+    letter-spacing: 0.08em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bottom-banner {
+    transition: none;
+  }
+}
