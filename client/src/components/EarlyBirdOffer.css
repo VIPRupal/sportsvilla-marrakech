@@ -4,9 +4,9 @@
   align-items: center;
   width: 100%;
   max-width: 980px;
-  min-height: 32px;
+  min-height: 28px;
   margin: 0 auto 8px;
-  padding: 2px 5px;
+  padding: 1px 5px;
   color: #ffdb73;
   border: 1px solid #d8b54e;
   border-radius: 999px;
@@ -17,7 +17,7 @@
 
 .early-bird-offer__badge {
   justify-self: center;
-  padding: 3px 5px;
+  padding: 2px 5px;
   border-radius: 999px;
   background: linear-gradient(110deg, #ffe697, #f8ca4c 65%, #e9b63a);
   color: #17140c;
@@ -88,8 +88,8 @@
     width: fit-content;
     max-width: 100%;
     column-gap: 14px;
-    min-height: 34px;
-    padding: 3px 12px;
+    min-height: 28px;
+    padding: 1px 12px;
   }
 
   .early-bird-offer__saving {
@@ -97,7 +97,7 @@
   }
 
   .early-bird-offer__badge {
-    padding: 4px 12px;
+    padding: 2px 12px;
   }
 
   .early-bird-offer__pool {
