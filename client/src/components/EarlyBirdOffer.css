@@ -47,7 +47,7 @@
 }
 
 .early-bird-offer__saving strong {
-  font-size: clamp(17px, 4.6vw, 21px);
+  font-size: clamp(15px, 4.1vw, 18px);
   font-weight: 700;
   font-variant-numeric: lining-nums;
   letter-spacing: -0.04em;
@@ -84,9 +84,16 @@
 
 @media (min-width: 768px) {
   .early-bird-offer {
-    grid-template-columns: 1fr 1.4fr 1fr;
+    grid-template-columns: repeat(3, auto);
+    width: fit-content;
+    max-width: 100%;
+    column-gap: 14px;
     min-height: 34px;
     padding: 3px 12px;
+  }
+
+  .early-bird-offer__saving {
+    padding-inline: 18px;
   }
 
   .early-bird-offer__badge {
