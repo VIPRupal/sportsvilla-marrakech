@@ -4,3 +4,7 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Local design previews are separate from the Cloudflare landing-page build.
+/artifacts/mockup-sandbox/
+/pnpm-lock.yaml
