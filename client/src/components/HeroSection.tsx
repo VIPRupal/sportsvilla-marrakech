@@ -4,6 +4,7 @@ import { FaSwimmer, FaBed } from "react-icons/fa";
 import { GiTennisRacket, GiBasketballBall, GiSoccerBall } from "react-icons/gi";
 import { heroContent, whatsappConfig } from "@/data/villa-content";
 import { trackWhatsAppClick } from "@/lib/tracking";
+import EarlyBirdOffer from "./EarlyBirdOffer";
 
 export default function HeroSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -138,8 +139,9 @@ export default function HeroSection() {
           </p>
         </div>
 
-        {/* Icons bar — pinned to bottom */}
+        {/* Offer and existing icons — pinned together to the bottom */}
         <div className="w-full">
+          <EarlyBirdOffer />
           <div className="bg-black/40 backdrop-blur-md border border-white/10 rounded-xl px-4 py-3 flex items-center justify-around">
             {[
               { icon: FaBed, label: "6 Bed Villa" },
