@@ -1,27 +1,27 @@
 .early-bird-offer {
   display: grid;
-  grid-template-columns: 1fr 1.25fr 1.1fr;
+  grid-template-columns: 0.95fr 1.45fr 1fr;
   align-items: center;
   width: 100%;
   max-width: 980px;
-  min-height: 46px;
-  margin: 0 auto 10px;
-  padding: 5px 8px;
+  min-height: 32px;
+  margin: 0 auto 8px;
+  padding: 2px 5px;
   color: #ffdb73;
   border: 1px solid #d8b54e;
   border-radius: 999px;
-  background: linear-gradient(105deg, rgb(12 13 13 / 86%), rgb(17 22 23 / 76%));
-  box-shadow: 0 0 12px rgb(232 186 62 / 18%), inset 0 0 6px rgb(232 186 62 / 6%);
+  background: linear-gradient(105deg, rgb(12 13 13 / 76%), rgb(17 22 23 / 66%));
+  box-shadow: 0 0 7px rgb(232 186 62 / 12%);
   font-family: var(--font-sans);
 }
 
 .early-bird-offer__badge {
   justify-self: center;
-  padding: 5px 8px;
+  padding: 3px 5px;
   border-radius: 999px;
   background: linear-gradient(110deg, #ffe697, #f8ca4c 65%, #e9b63a);
   color: #17140c;
-  font-size: clamp(8px, 2.35vw, 12px);
+  font-size: clamp(7.5px, 2.05vw, 11px);
   font-weight: 700;
   line-height: 1.15;
   letter-spacing: 0.025em;
@@ -30,16 +30,28 @@
 }
 
 .early-bird-offer__saving {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
   margin: 0;
-  padding: 2px 5px;
+  padding: 0 3px;
   border-inline: 1px solid rgb(232 194 87 / 72%);
   color: #fffdf6;
-  font-family: var(--font-serif);
-  font-size: clamp(9px, 2.6vw, 15px);
+  font-family: var(--font-sans);
+  font-size: clamp(7.5px, 2vw, 11px);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1;
   text-align: center;
   text-transform: uppercase;
+}
+
+.early-bird-offer__saving strong {
+  font-size: clamp(17px, 4.6vw, 21px);
+  font-weight: 700;
+  font-variant-numeric: lining-nums;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
 }
 
 .early-bird-offer__saving span {
@@ -50,21 +62,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  padding-left: 5px;
+  gap: 4px;
+  padding-left: 3px;
 }
 
 .early-bird-offer__pool svg {
-  width: clamp(12px, 3.8vw, 22px);
-  height: 22px;
+  width: clamp(11px, 3vw, 18px);
+  height: 16px;
   flex-shrink: 0;
 }
 
 .early-bird-offer__pool p {
   margin: 0;
-  font-size: clamp(7.5px, 2.05vw, 11px);
+  font-size: clamp(7px, 1.9vw, 10px);
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.15;
   letter-spacing: 0.04em;
   text-align: center;
   text-transform: uppercase;
@@ -73,12 +85,12 @@
 @media (min-width: 768px) {
   .early-bird-offer {
     grid-template-columns: 1fr 1.4fr 1fr;
-    min-height: 48px;
-    padding: 6px 16px;
+    min-height: 34px;
+    padding: 3px 12px;
   }
 
   .early-bird-offer__badge {
-    padding: 6px 16px;
+    padding: 4px 12px;
   }
 
   .early-bird-offer__pool {

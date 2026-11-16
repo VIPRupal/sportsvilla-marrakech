@@ -5,7 +5,7 @@ export default function EarlyBirdOffer() {
     <aside className="early-bird-offer" aria-label="Early bird offer: save £100 per night, heated pool included free">
       <span className="early-bird-offer__badge">Early Bird Offer</span>
       <p className="early-bird-offer__saving">
-        <span>Save £100</span>{" "}<span>per night</span>
+        <span>Save</span>{" "}<strong>£100</strong>{" "}<span>per night</span>
       </p>
       <div className="early-bird-offer__pool">
         <svg
